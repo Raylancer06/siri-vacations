@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#001b3d", "surface-container-high": "#dbe9ff", "surface": "#f8f9ff", "surface-container-low": "#eff4ff", "primary-fixed-dim": "#a9c7ff", "inverse-on-surface": "#eaf1ff", "on-surface-variant": "#424752", "on-secondary-fixed-variant": "#2b4772", "error-container": "#ffdad6", "surface-tint": "#085db5", "surface-container-highest": "#d2e4ff", "on-primary-fixed-variant": "#00468c", "primary": "#00468c", "tertiary-fixed": "#ffdcc2", "on-primary": "#ffffff", "on-primary-container": "#c6d9ff", "secondary-fixed": "#d6e3ff", "outline": "#727783", "secondary": "#435f8c", "tertiary": "#6d3a00", "on-secondary": "#ffffff", "primary-fixed": "#d6e3ff", "surface-variant": "#d2e4ff", "secondary-fixed-dim": "#acc7fa", "on-secondary-fixed": "#001b3d", "on-tertiary-fixed": "#2e1500", "on-secondary-container": "#395581", "tertiary-fixed-dim": "#ffb77a", "on-surface": "#081d31", "outline-variant": "#c2c6d4", "surface-container-lowest": "#ffffff", "background": "#f8f9ff", "on-error-container": "#93000a", "tertiary-container": "#8f4e00", "secondary-container": "#aecafd", "surface-bright": "#f8f9ff", "inverse-primary": "#a9c7ff", "on-background": "#081d31", "on-error": "#ffffff", "surface-container": "#e5eeff", "on-tertiary-fixed-variant": "#6d3a00", "on-tertiary-container": "#ffd0aa", "on-tertiary": "#ffffff", "surface-dim": "#c8dcf7", "inverse-surface": "#1f3247", "primary-container": "#075db5", "error": "#ba1a1a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "gutter-sm": "1rem", "space-sm": "0.5rem", "margin": "3rem", "space-xl": "2.5rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem", "gutter": "1.5rem", "space-md": "1rem" }, "fontFamily": { "label-sm": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "title-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "caption": ["Inter"], "headline-xl": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"] }, "fontSize": { "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}], "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}], "headline-xl-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}], "title-lg": ["18px", {"lineHeight": "26px", "fontWeight": "600"}], "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}], "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}], "caption": ["11px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}], "headline-xl": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "headline-sm": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.005em", "fontWeight": "600"}] } } } };</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_4px_20px_-2px_rgba(8,43,85,0.06)]"><div class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm shrink-0"><img alt="Siri Vacations Travel Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WxWnWGJbkoGmm6Ur6LzR82t6XEaa0aGClXmIa6OBfxIH-VE69aQ7BYEgJcLlL1HOxJpAH6OEcHRj-wWTJ7qrjzkNPBcmZg7_jC_Q-tk01Z4oEPr0kFYM5-n25GXPSq5cGZbuzmB_DMNf8PrBI6g1Wb7-jzBjn3RWUBzGI_TyKrLYEoYj1enbi-nNgPvnruOGQosnK3YZZ8GtAh6fk8p_OQJD0kTTtP1mpylvwYI9qNE1fTarXXYsme1vynUVITBAhMkepUHTPeFQ"/><div class="flex flex-col"><span class="font-title-lg text-title-lg text-primary tracking-tight leading-none">Siri Vacations</span><span class="font-caption text-caption text-secondary tracking-wider uppercase">Bengaluru</span></div></div><nav class="hidden xl:flex items-center gap-space-lg whitespace-nowrap" data-active-classes="text-primary font-label-md"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="domestic-packages" href="#">Domestic Packages</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="international-packages" href="#">International Packages</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="destinations" href="#">Destinations</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="car-rentals" href="#">Car Rentals</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="group-departures" href="#">Group Departures</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact-us" href="#">Contact Us</a></nav><div class="flex items-center gap-space-md shrink-0"><a class="hidden sm:flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px] text-primary">chat</span><span class="font-label-md text-label-md">WhatsApp</span></a><a class="px-space-md py-space-sm rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md shadow-[0_4px_16px_rgba(143,78,0,0.25)] transition-all shrink-0" data-path="plan-your-trip" href="#">Plan Your Trip</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-64 -right-24 w-80 h-80 bg-tertiary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin pt-space-lg pb-space-xl">
+<!-- Header Banner / Eyebrow -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md mb-space-xl">
+<div class="max-w-2xl">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container text-primary font-caption text-caption uppercase tracking-wider mb-space-sm shadow-sm">
+<span class="material-symbols-outlined text-[15px]">explore</span>
+            CUSTOM HOLIDAY DESIGNER
+          </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            Tell Us Your <span class="text-primary-container">Travel Dream.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm leading-relaxed">
+            Share a few details about your ideal escape, and our Bengaluru travel designers will curate a personalized day-by-day itinerary just for you.
+          </p>
+</div>
+<!-- Quick Summary Ribbon -->
+<div class="flex items-center gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm self-start lg:self-auto">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[28px]">schedule</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">4 Business Hours</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Guaranteed draft turnaround</span>
+</div>
+</div>
+</div>
+<!-- Main Layout: Planner (Col 8) + Concierge Sidebar (Col 4) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Planner Left Panel -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Multi-Step Container Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_-2px_rgba(8,43,85,0.06),0_2px_6px_-1px_rgba(8,43,85,0.03)] p-space-lg lg:p-space-xl relative transition-all duration-300" id="plannerCard">
+<!-- Progress Tracker -->
+<div class="mb-space-xl">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-md text-label-md text-primary font-semibold" id="stepIndicatorLabel">
+                  Step 1 of 5 • Choose Your Travel Style
+                </span>
+<span class="font-caption text-caption text-on-surface-variant bg-surface-container px-space-sm py-0.5 rounded-full" id="stepCounterBadge">
+                  20% Completed
+                </span>
+</div>
+<!-- Multi-Segment Visual Bar -->
+<div class="grid grid-cols-5 gap-space-xs h-2 rounded-full overflow-hidden bg-surface-container">
+<div class="h-full bg-primary-container transition-all duration-300" id="bar-1"></div>
+<div class="h-full bg-surface-container transition-all duration-300" id="bar-2"></div>
+<div class="h-full bg-surface-container transition-all duration-300" id="bar-3"></div>
+<div class="h-full bg-surface-container transition-all duration-300" id="bar-4"></div>
+<div class="h-full bg-surface-container transition-all duration-300" id="bar-5"></div>
+</div>
+<!-- Compact Step Navigation Pills -->
+<div class="flex items-center justify-between text-caption font-caption text-on-surface-variant pt-space-xs px-1">
+<span class="step-pill font-semibold text-primary" data-step="1">1. Style</span>
+<span class="step-pill" data-step="2">2. Destination</span>
+<span class="step-pill" data-step="3">3. Timeline</span>
+<span class="step-pill" data-step="4">4. Budget &amp; Stay</span>
+<span class="step-pill" data-step="5">5. Contact</span>
+</div>
+</div>
+<!-- STEP 1: TRAVEL STYLE -->
+<div class="step-pane flex flex-col gap-space-md" id="step-content-1">
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">What style of trip are you envisioning?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Select the mood that best captures your journey. You can adjust this later with your designer.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm mt-space-xs">
+<!-- Style Card: Family -->
+<div class="style-choice-card cursor-pointer group bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-all shadow-sm flex items-start gap-space-md" data-value="Family Holiday">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest group-hover:bg-primary-container group-hover:text-on-primary flex items-center justify-center text-primary shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[24px]">family_restroom</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Family Holiday</span>
+<span class="material-symbols-outlined check-icon text-[20px] text-primary opacity-0 transition-opacity">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kids-friendly pacing, relaxed resort stays &amp; private cabs</span>
+</div>
+</div>
+<!-- Style Card: Honeymoon -->
+<div class="style-choice-card cursor-pointer group bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-all shadow-sm flex items-start gap-space-md" data-value="Honeymoon &amp; Romance">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest group-hover:bg-primary-container group-hover:text-on-primary flex items-center justify-center text-primary shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[24px]">favorite</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Honeymoon &amp; Romance</span>
+<span class="material-symbols-outlined check-icon text-[20px] text-primary opacity-0 transition-opacity">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Private candle-lit dinners, villa pools &amp; scenic seclusion</span>
+</div>
+</div>
+<!-- Style Card: Friends Roadtrip -->
+<div class="style-choice-card cursor-pointer group bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-all shadow-sm flex items-start gap-space-md" data-value="Friends Roadtrip">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest group-hover:bg-primary-container group-hover:text-on-primary flex items-center justify-center text-primary shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[24px]">directions_car</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Friends Roadtrip</span>
+<span class="material-symbols-outlined check-icon text-[20px] text-primary opacity-0 transition-opacity">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Western Ghats, Goa trails, SUVs &amp; campfire stays</span>
+</div>
+</div>
+<!-- Style Card: Solo Wanderlust -->
+<div class="style-choice-card cursor-pointer group bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-all shadow-sm flex items-start gap-space-md" data-value="Solo Wanderlust">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest group-hover:bg-primary-container group-hover:text-on-primary flex items-center justify-center text-primary shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[24px]">hiking</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Solo Wanderlust</span>
+<span class="material-symbols-outlined check-icon text-[20px] text-primary opacity-0 transition-opacity">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Safe boutique retreats, curated offbeat local experiences</span>
+</div>
+</div>
+<!-- Style Card: Group Departure -->
+<div class="style-choice-card cursor-pointer group bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-all shadow-sm flex items-start gap-space-md" data-value="Group Departure">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest group-hover:bg-primary-container group-hover:text-on-primary flex items-center justify-center text-primary shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[24px]">groups</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Group Departure</span>
+<span class="material-symbols-outlined check-icon text-[20px] text-primary opacity-0 transition-opacity">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Escorted fixed departures with tour captains &amp; meal inclusions</span>
+</div>
+</div>
+<!-- Style Card: Spiritual Circuit -->
+<div class="style-choice-card cursor-pointer group bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-all shadow-sm flex items-start gap-space-md" data-value="Spiritual &amp; Temple Circuit">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest group-hover:bg-primary-container group-hover:text-on-primary flex items-center justify-center text-primary shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[24px]">temple_hindu</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Spiritual Circuit</span>
+<span class="material-symbols-outlined check-icon text-[20px] text-primary opacity-0 transition-opacity">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">VIP Darshans, heritage temples &amp; comfortable senior pacing</span>
+</div>
+</div>
+<!-- Style Card: Wildlife & Adventure -->
+<div class="style-choice-card sm:col-span-2 cursor-pointer group bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-all shadow-sm flex items-start gap-space-md" data-value="Wildlife &amp; Adventure">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest group-hover:bg-primary-container group-hover:text-on-primary flex items-center justify-center text-primary shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[24px]">forest</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors">Wildlife &amp; Adventure</span>
+<span class="material-symbols-outlined check-icon text-[20px] text-primary opacity-0 transition-opacity">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kabini &amp; Bandipur safaris, Himalayan treks, and water sports in the Andaman &amp; Lakshadweep lagoons</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STEP 2: DESTINATIONS -->
+<div class="step-pane hidden flex flex-col gap-space-md" id="step-content-2">
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Where is your heart set on traveling?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Choose your geographic preference or let our specialists suggest seasonal gems.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md mt-space-xs">
+<!-- Dest: South India -->
+<div class="destination-card cursor-pointer group bg-surface-container-low hover:bg-surface-container rounded-xl overflow-hidden shadow-sm transition-all flex flex-col" data-value="South India">
+<div class="h-36 bg-cover bg-center relative" data-alt="Serene emerald green tea gardens of Munnar Kerala with morning mist gently rolling over rolling hills in soft sunlight with palm fronds framing the valley in Siri Vacations blue and warm gold palette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuClCDAuZyxdDD4tczzMajVOYmW20_digaj4jUA_o6DL58MVL6TPg55jl9cR0tzISv-mOh-DpfsJF2ag_dsPrXTaEofrVP5VYbLwcxl8hMxg8WVmjUI3pLgzcAl-xd-PQ6xwrUMRpuvXPSltp7jfgc8u-81r9H1XbmXWppr299ldGiNpWDvyy4qmRbD5AOX8O6iH3h4mfbD0guRyiR06csh07Pc6MOdzSpXUxZPiVUUMSp8dqYn8Cloq')">
+<span class="absolute top-2 right-2 px-space-xs py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md text-caption font-caption text-primary font-semibold">Most Popular</span>
+</div>
+<div class="p-space-md flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">South India</span>
+<span class="material-symbols-outlined check-icon text-[20px] text-primary opacity-0 transition-opacity">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Karnataka, Kerala, Tamil Nadu &amp; Pondicherry getaways</span>
+</div>
+</div>
+<!-- Dest: North India -->
+<div class="destination-card cursor-pointer group bg-surface-container-low hover:bg-surface-container rounded-xl overflow-hidden shadow-sm transition-all flex flex-col" data-value="North India &amp; Himalayas">
+<div class="h-36 bg-cover bg-center relative" data-alt="Majestic snow-capped Himalayan peaks towering above lush pine valleys and wooden alpine chalet cottages under deep blue azure skies with crisp morning sunlight." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCLbpTukKB186MgILtadwozGi-Xm8IdCRw_aSUaCH9cP-D9ZbkcMvLzJVux0M9RQbqr4L1kwB3_LOatAyC27sA6kqOnS610NlgL5TGInHs3ZQVeNZJUxogjoSjl74aHLOuZq1XfOj28_slgeYbi9zWtRUDZS0il6LyiWUldmhj2onEwCZb0dWg3e4AOSy26t152t4yiMF1XZPxCEyvOLDk1n103gPctNgfmYUKXs_aMteDnzcM6tc0')">
+<span class="absolute top-2 right-2 px-space-xs py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md text-caption font-caption text-secondary font-semibold">Scenic Escapes</span>
+</div>
+<div class="p-space-md flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">North India &amp; Himalayas</span>
+<span class="material-symbols-outlined check-icon text-[20px] text-primary opacity-0 transition-opacity">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Kashmir valleys, Himachal roads, Uttarakhand &amp; Rajasthan forts</span>
+</div>
+</div>
+<!-- Dest: International -->
+<div class="destination-card cursor-pointer group bg-surface-container-low hover:bg-surface-container rounded-xl overflow-hidden shadow-sm transition-all flex flex-col" data-value="International Gateways">
+<div class="h-36 bg-cover bg-center relative" data-alt="Overwater luxury villas in turquoise Maldives lagoon waters during vivid golden sunset with calm ripple reflections and lush tropical shoreline." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAfqJ629klJetAbCn-c12CTdH9dGp7te01tsLTiuZIYg2krBfJjGb8xF3-OEpYeNJj67pbP7yMAJXfCyrVvDK1xrXiImnefUlh73jTB-4nXyXB3f8tpvpOCR7ZG1AI6szTvT6WBiaF5zf5HWhFAlBaGPgOxT3z54Qk9k1v9Rpu4cQmnrJwlRjVNT6VHDW-30UZp0eCk8wVh3ADpAomExj76PXNY4RLW4m58i3-_il4i6VXhq6QdwtKA')">
+<span class="absolute top-2 right-2 px-space-xs py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md text-caption font-caption text-tertiary-container font-semibold">Global Wonders</span>
+</div>
+<div class="p-space-md flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">International Escapes</span>
+<span class="material-symbols-outlined check-icon text-[20px] text-primary opacity-0 transition-opacity">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Bali, Thailand, Dubai, Maldives, Singapore &amp; Sri Lanka</span>
+</div>
+</div>
+<!-- Dest: Undecided / Concierge Selection -->
+<div class="destination-card cursor-pointer group bg-surface-container-low hover:bg-surface-container rounded-xl overflow-hidden shadow-sm transition-all flex flex-col" data-value="Help Me Choose">
+<div class="h-36 bg-surface-container-high flex flex-col items-center justify-center p-space-md text-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary mb-2 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">psychology_alt</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">Surprise Me / Undecided</span>
+</div>
+<div class="p-space-md flex flex-col">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Bengaluru Concierge Pick</span>
+<span class="material-symbols-outlined check-icon text-[20px] text-primary opacity-0 transition-opacity">check_circle</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">We will recommend 3 bespoke routes tailored to current weather and festivals</span>
+</div>
+</div>
+</div>
+</div>
+<!-- STEP 3: TIMELINE & GROUP DETAILS -->
+<div class="step-pane hidden flex flex-col gap-space-lg" id="step-content-3">
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">When would you like to depart &amp; who is coming along?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Flexible timelines give us room to unlock complimentary hotel upgrades and scenic timings.</p>
+</div>
+<!-- Month Selection Pills -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">Target Travel Window</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs">
+<button class="month-pill py-space-sm px-space-md rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all text-center" type="button">This Month</button>
+<button class="month-pill py-space-sm px-space-md rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all text-center" type="button">Next Month</button>
+<button class="month-pill py-space-sm px-space-md rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all text-center" type="button">Upcoming Quarter</button>
+<button class="month-pill py-space-sm px-space-md rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all text-center" type="button">Festival Holidays</button>
+</div>
+</div>
+<!-- Dates & Duration Input Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface" for="travelDate">Tentative Start Date</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all pr-10" id="travelDate" type="date"/>
+<span class="material-symbols-outlined text-[20px] text-primary absolute right-3 top-2.5 pointer-events-none">calendar_month</span>
+</div>
+<label class="inline-flex items-center gap-space-xs mt-1 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 bg-surface-container accent-primary" id="flexibleDatesCheck" type="checkbox"/>
+<span class="font-caption text-caption text-on-surface-variant">My departure dates are flexible (+/- 3 days)</span>
+</label>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">Estimated Trip Duration</label>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="duration-pill py-space-sm rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all text-center" data-duration="2-3 Days" type="button">2–3 Days</button>
+<button class="duration-pill py-space-sm rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all text-center active-choice bg-primary-container text-on-primary" data-duration="4-6 Days" type="button">4–6 Days</button>
+<button class="duration-pill py-space-sm rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all text-center" data-duration="7-10 Days" type="button">7–10 Days</button>
+<button class="duration-pill py-space-sm rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all text-center" data-duration="10+ Days" type="button">10+ Days</button>
+</div>
+</div>
+</div>
+<!-- Group Travelers Counter -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<!-- Adults -->
+<div class="flex items-center justify-between w-full sm:w-auto sm:gap-space-lg">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Adults</span>
+<span class="font-caption text-caption text-on-surface-variant">Ages 12+ years</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="w-8 h-8 rounded-full bg-surface-container-highest hover:bg-surface-container flex items-center justify-center text-on-surface transition-colors font-bold" onclick="decrementCounter('adultsCounter')" type="button">−</button>
+<span class="font-title-lg text-title-lg text-primary w-8 text-center" id="adultsCounter">2</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-highest hover:bg-surface-container flex items-center justify-center text-on-surface transition-colors font-bold" onclick="incrementCounter('adultsCounter')" type="button">+</button>
+</div>
+</div>
+<div class="hidden sm:block w-px h-10 bg-outline-variant/40"></div>
+<!-- Children -->
+<div class="flex items-center justify-between w-full sm:w-auto sm:gap-space-lg">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Children</span>
+<span class="font-caption text-caption text-on-surface-variant">Ages 0–11 years</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="w-8 h-8 rounded-full bg-surface-container-highest hover:bg-surface-container flex items-center justify-center text-on-surface transition-colors font-bold" onclick="decrementCounter('childrenCounter')" type="button">−</button>
+<span class="font-title-lg text-title-lg text-primary w-8 text-center" id="childrenCounter">0</span>
+<button class="w-8 h-8 rounded-full bg-surface-container-highest hover:bg-surface-container flex items-center justify-center text-on-surface transition-colors font-bold" onclick="incrementCounter('childrenCounter')" type="button">+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- STEP 4: BUDGET & STAY PREFERENCES -->
+<div class="step-pane hidden flex flex-col gap-space-lg" id="step-content-4">
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Hospitality level &amp; travel logistics</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">We align hotels and verified chauffeur fleets to your exact comfort standards.</p>
+</div>
+<!-- Budget Range Tier -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">Preferred Budget Profile (Per Person)</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="budget-pill cursor-pointer p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col" data-budget="Budget Friendly">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Budget Friendly</span>
+<span class="font-title-md text-title-md text-primary font-bold">₹</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Clean verified stays, cost-effective scenic transfers</span>
+</div>
+<div class="budget-pill cursor-pointer p-space-md rounded-xl bg-surface-container hover:bg-surface-container transition-all flex flex-col active-budget bg-surface-container-high" data-budget="Premium Comfort">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-primary font-bold">Premium Comfort</span>
+<span class="font-title-md text-title-md text-primary font-bold">₹₹</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Handpicked 4-star resorts, private dedicated vehicle</span>
+</div>
+<div class="budget-pill cursor-pointer p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col" data-budget="Luxury Heritage">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md text-on-surface">Luxury Heritage</span>
+<span class="font-title-md text-title-md text-tertiary font-bold">₹₹₹</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">5-star heritage palaces, luxury villas, private concierge</span>
+</div>
+</div>
+</div>
+<!-- Accommodation Style -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">Accommodation Preference</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs">
+<button class="hotel-pill py-space-sm px-space-xs rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md text-center transition-all" type="button">Homestay &amp; Estate</button>
+<button class="hotel-pill py-space-sm px-space-xs rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md text-center transition-all" type="button">3-Star Comfort</button>
+<button class="hotel-pill py-space-sm px-space-xs rounded-lg bg-primary-container text-on-primary font-label-md text-label-md text-center transition-all" type="button">4-Star Resort</button>
+<button class="hotel-pill py-space-sm px-space-xs rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md text-center transition-all" type="button">5-Star Luxury</button>
+</div>
+</div>
+<!-- Vehicle Fleet Option -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface">Chauffeur / Fleet Preference</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs">
+<div class="vehicle-pill cursor-pointer p-space-sm rounded-lg bg-surface-container text-center font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-all">
+                    Sedan (Etios / Dzire)
+                  </div>
+<div class="vehicle-pill cursor-pointer p-space-sm rounded-lg bg-primary-container text-on-primary text-center font-label-md text-label-md transition-all">
+                    Innova Crysta / SUV
+                  </div>
+<div class="vehicle-pill cursor-pointer p-space-sm rounded-lg bg-surface-container text-center font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-all">
+                    Tempo Traveller (12-16)
+                  </div>
+<div class="vehicle-pill cursor-pointer p-space-sm rounded-lg bg-surface-container text-center font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-all">
+                    Self-Drive / Not Needed
+                  </div>
+</div>
+</div>
+</div>
+<!-- STEP 5: CONTACT & CUSTOM NOTES -->
+<div class="step-pane hidden flex flex-col gap-space-lg" id="step-content-5">
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Where should we deliver your custom proposal?</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Our Bengaluru team will send the detailed PDF plan and connect directly on WhatsApp.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="leadFullName">Full Name <span class="text-tertiary">*</span></label>
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all" id="leadFullName" placeholder="e.g. Ramesh Hegde" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="leadPhone">Phone / WhatsApp Number <span class="text-tertiary">*</span></label>
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all" id="leadPhone" placeholder="+91 98450 00000" type="tel"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="leadEmail">Email Address <span class="text-tertiary">*</span></label>
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all" id="leadEmail" placeholder="ramesh@example.com" type="email"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="leadCity">Departure City</label>
+<input class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all" id="leadCity" type="text" value="Bengaluru"/>
+</div>
+</div>
+<!-- Special Requests Textarea -->
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="leadNotes">Special Requests, Dietary Needs or Must-Visit Sights</label>
+<textarea class="w-full bg-surface-container-low px-space-md py-space-sm rounded-lg text-on-surface font-body-md text-body-md focus:outline-none focus:bg-surface-container-lowest focus:shadow-md transition-all resize-none" id="leadNotes" placeholder="Tell us if you need pure veg meals, pool villas, wheelchair friendly transport, or anniversary surprises..." rows="3"></textarea>
+</div>
+<!-- Reassurance Privacy Note -->
+<div class="flex items-start gap-space-xs p-space-sm rounded-lg bg-surface-container text-on-surface-variant font-caption text-caption">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">verified_user</span>
+<span>We respect your privacy. No spam guarantee. A local Bengaluru travel specialist will respond within 4 business hours with an initial draft itinerary tailored to your inputs.</span>
+</div>
+</div>
+<!-- Wizard Bottom Action Bar -->
+<div class="flex items-center justify-between pt-space-xl mt-space-lg border-t-0">
+<button class="opacity-0 pointer-events-none px-space-md py-space-sm rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md flex items-center gap-space-xs transition-all" id="prevBtn" onclick="goToStep(currentStep - 1)" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                Previous
+              </button>
+<div class="flex items-center gap-space-sm">
+<!-- Save Draft Indicator -->
+<span class="hidden sm:inline-block font-caption text-caption text-on-surface-variant">Auto-saved draft</span>
+<button class="px-space-lg py-space-sm rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-space-xs shadow-md transition-all" id="nextBtn" onclick="nextStep()" type="button">
+                  Next: Destination
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<!-- Final Submit Button (Hidden Until Step 5) -->
+<button class="hidden px-space-lg py-space-sm rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md flex items-center gap-space-xs shadow-[0_4px_16px_rgba(143,78,0,0.25)] transition-all" id="submitBtn" onclick="submitEnquiry()" type="button">
+                  Submit My Travel Enquiry
+                  <span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</div>
+<!-- Simulated Confirmation Modal / State Inside Card -->
+<div class="hidden absolute inset-0 bg-surface-container-lowest/95 backdrop-blur-md rounded-xl p-space-xl flex flex-col items-center justify-center text-center z-20" id="successOverlay">
+<div class="w-20 h-20 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container mb-space-md shadow-lg animate-bounce">
+<span class="material-symbols-outlined text-[44px]">flight_takeoff</span>
+</div>
+<span class="px-space-md py-0.5 rounded-full bg-surface-container text-primary font-caption text-caption uppercase tracking-wider mb-space-xs">Enquiry Received #SR-8492</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Your Dream Trip is in Motion!</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-lg mt-space-xs">
+                Our Bengaluru concierge has received your preferences. You will receive an initial day-by-day customized itinerary on WhatsApp and email within <strong>4 business hours</strong>.
+              </p>
+<!-- Action Confirmation Buttons -->
+<div class="flex flex-wrap items-center justify-center gap-space-sm mt-space-lg">
+<a class="px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary font-label-md text-label-md flex items-center gap-space-xs shadow-sm hover:bg-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                  Chat on WhatsApp Now
+                </a>
+<button class="px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" onclick="resetForm()" type="button">
+                  Create Another Plan
+                </button>
+</div>
+</div>
+</div>
+<!-- Bottom Live FAQ / Process Micro-Tidbit -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-primary font-title-md text-title-md">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+                1. Free Iterations
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Fine-tune hotels, pacing, or meals until the route fits your vision.</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-primary font-title-md text-title-md">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+                2. Dedicated Concierge
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">One single point of contact from airport pickup to journey conclusion.</p>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-primary font-title-md text-title-md">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+                3. Zero Hidden Fees
+              </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">All toll gates, state taxes, driver batta, and permits included upfront.</p>
+</div>
+</div>
+</div>
+<!-- Concierge Trust & Helpline Sidebar (Col 4) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Concierge Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_-2px_rgba(8,43,85,0.06),0_2px_6px_-1px_rgba(8,43,85,0.03)] p-space-lg flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-16 h-16 rounded-full object-cover shadow-sm" data-alt="Warm and smiling Indian hospitality travel consultant wearing modern professional smart casual attire in a sunny bright travel agency office in Bengaluru." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsYmgsj94N8UoJUdhFENFwmwruM3CtTDw3F9eDIioBd2bG5W-0y27it1QV0WsfM-i0hIimSUZLUzL45WVwEY06GodBBn_mX5uXLUG_LjJ2Ua7jKqBC5cHY7NTfZqNEzFF_LOeWHwQhmX5oDlf_BLm_wrnG-3hCChvAYLwRknWVWDz4XeQt3yRkPAudTuGHnoVrOJ6hkkKhixLsTO_-4NtcUDMlDBPoAZuKuHRS1JUtggXwkpiJGXnv"/>
+<span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-emerald-500 ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-title-md text-on-surface">Pooja &amp; Ananya</span>
+<span class="font-caption text-caption text-primary font-semibold uppercase">Senior Holiday Designers</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bengaluru Office Team</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              "Prefer talking over coffee or a quick phone call? Reach out directly. We love crafting customized routes for families, groups, and honeymoons."
+            </p>
+<!-- WhatsApp Direct Call-to-action Button -->
+<a class="w-full py-space-sm px-space-md rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-label-md text-label-md flex items-center justify-center gap-space-xs shadow-sm transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+              Quick WhatsApp Chat (+91 98450 12345)
+            </a>
+<!-- Desk Contacts Info List -->
+<div class="flex flex-col gap-space-sm pt-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">call</span>
+<span>080 4123 4567 / +91 98450 12345</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0">schedule</span>
+<span>Mon–Sat: 9:30 AM – 7:30 PM IST</span>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">location_on</span>
+<span>#42, 100 Feet Rd, Indiranagar, Bengaluru</span>
+</div>
+</div>
+</div>
+<!-- Trust & Social Proof Pillar Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_4px_20px_-2px_rgba(8,43,85,0.06),0_2px_6px_-1px_rgba(8,43,85,0.03)] p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface font-bold">4.9 / 5</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">1,420+ Reviews</span>
+</div>
+<!-- Mini Testimonial Quote -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1">
+<p class="font-body-sm text-body-sm text-on-surface italic">
+                “Siri Vacations curated our 7-day Coorg &amp; Wayanad trip seamlessly. Immaculate cab, driver was very polite, and the plantation stay was unmatched.”
+              </p>
+<span class="font-caption text-caption text-on-surface-variant font-semibold">
+                — Sandeep &amp; Revathi, Whitefield Bengaluru
+              </span>
+</div>
+<!-- Guarantees Checklist -->
+<div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">check_circle</span>
+<span>100% Tailor-Made Private Itineraries</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">check_circle</span>
+<span>Sanitized Company-Owned Fleet Options</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">check_circle</span>
+<span>Flexible Rescheduling &amp; Booking Protection</span>
+</div>
+</div>
+</div>
+<!-- Featured Inspiration Snippet Card -->
+<div class="rounded-xl overflow-hidden shadow-sm relative group bg-surface-container">
+<div class="h-44 bg-cover bg-center" data-alt="Traditional luxury Kerala houseboat cruising along peaceful calm palm fringed backwaters of Alleppey during sunset with golden reflections on water." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAelLvemugQoVOrdipU_a4QwwkyKDzBFTzSRkxqekgZNRqT3oJnctqi1eK_hWs6HPQNA-l67ZmgbAIZUmzhnueMKzsDlJMwCaWGgcCyiCJbBf9bXs1LOURMIM2OF8WmoxePDZE9W6yZN_Pn5Gv8nZhgugAyWwC8D_UFmRMJK8JLHlGCx9tpnfJR6k3FkAR3MAHTKbBC6cAnZxsTJlp0tr_l2l1obbB8cP14yCxjyFC1w5GbjnDXWQCH')"></div>
+<div class="p-space-md bg-surface-container-lowest flex flex-col">
+<span class="font-caption text-caption text-primary font-semibold uppercase">Seasonal Special</span>
+<h4 class="font-title-md text-title-md text-on-surface">Alleppey Houseboat &amp; Marari Beach</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Starting from ₹16,999/person with private cruise &amp; driver.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let currentStep = 1;
+  const totalSteps = 5;
+
+  const stepLabels = [
+    "Step 1 of 5 • Choose Your Travel Style",
+    "Step 2 of 5 • Choose Your Destination",
+    "Step 3 of 5 • Travel Timeline & Group Details",
+    "Step 4 of 5 • Budget & Stay Preferences",
+    "Step 5 of 5 • Contact & Delivery Details"
+  ];
+
+  const nextButtonLabels = [
+    "Next: Destination",
+    "Next: Timeline",
+    "Next: Budget & Stay",
+    "Next: Contact Info",
+    "Submit My Travel Enquiry"
+  ];
+
+  function updateStepUI() {
+    // Show/hide panes
+    for (let i = 1; i <= totalSteps; i++) {
+      const pane = document.getElementById(`step-content-${i}`);
+      const bar = document.getElementById(`bar-${i}`);
+      if (pane) {
+        pane.classList.toggle('hidden', i !== currentStep);
+      }
+      if (bar) {
+        if (i <= currentStep) {
+          bar.className = 'h-full bg-primary-container transition-all duration-300';
+        } else {
+          bar.className = 'h-full bg-surface-container transition-all duration-300';
+        }
+      }
+    }
+
+    // Step Indicator text
+    const labelElem = document.getElementById('stepIndicatorLabel');
+    if (labelElem) labelElem.textContent = stepLabels[currentStep - 1];
+
+    const badgeElem = document.getElementById('stepCounterBadge');
+    if (badgeElem) badgeElem.textContent = `${Math.round((currentStep / totalSteps) * 100)}% Completed`;
+
+    // Step pills state
+    document.querySelectorAll('.step-pill').forEach(pill => {
+      const stepNum = parseInt(pill.getAttribute('data-step'), 10);
+      if (stepNum === currentStep) {
+        pill.className = 'step-pill font-semibold text-primary';
+      } else if (stepNum < currentStep) {
+        pill.className = 'step-pill text-on-surface font-medium';
+      } else {
+        pill.className = 'step-pill text-on-surface-variant';
+      }
+    });
+
+    // Buttons
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const submitBtn = document.getElementById('submitBtn');
+
+    if (currentStep === 1) {
+      prevBtn.classList.add('opacity-0', 'pointer-events-none');
+    } else {
+      prevBtn.classList.remove('opacity-0', 'pointer-events-none');
+    }
+
+    if (currentStep === totalSteps) {
+      nextBtn.classList.add('hidden');
+      submitBtn.classList.remove('hidden');
+    } else {
+      nextBtn.classList.remove('hidden');
+      submitBtn.classList.add('hidden');
+      nextBtn.innerHTML = `${nextButtonLabels[currentStep - 1]} <span class="material-symbols-outlined text-[18px]">arrow_forward</span>`;
+    }
+
+    // Scroll to planner top smoothly
+    const card = document.getElementById('plannerCard');
+    if (card) {
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
+
+  function goToStep(step) {
+    if (step >= 1 && step <= totalSteps) {
+      currentStep = step;
+      updateStepUI();
+    }
+  }
+
+  function nextStep() {
+    if (currentStep < totalSteps) {
+      currentStep++;
+      updateStepUI();
+    }
+  }
+
+  function incrementCounter(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      let val = parseInt(el.textContent, 10);
+      el.textContent = val + 1;
+    }
+  }
+
+  function decrementCounter(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      let val = parseInt(el.textContent, 10);
+      if (id === 'adultsCounter' && val > 1) {
+        el.textContent = val - 1;
+      } else if (id === 'childrenCounter' && val > 0) {
+        el.textContent = val - 1;
+      }
+    }
+  }
+
+  // Interactive Card Selection: Style
+  document.querySelectorAll('.style-choice-card').forEach(card => {
+    card.addEventListener('click', () => {
+      document.querySelectorAll('.style-choice-card').forEach(c => {
+        c.classList.remove('bg-surface-container', 'shadow-md');
+        const check = c.querySelector('.check-icon');
+        if (check) check.classList.add('opacity-0');
+      });
+      card.classList.add('bg-surface-container', 'shadow-md');
+      const check = card.querySelector('.check-icon');
+      if (check) check.classList.remove('opacity-0');
+    });
+  });
+
+  // Interactive Card Selection: Destination
+  document.querySelectorAll('.destination-card').forEach(card => {
+    card.addEventListener('click', () => {
+      document.querySelectorAll('.destination-card').forEach(c => {
+        c.classList.remove('bg-surface-container', 'shadow-md');
+        const check = c.querySelector('.check-icon');
+        if (check) check.classList.add('opacity-0');
+      });
+      card.classList.add('bg-surface-container', 'shadow-md');
+      const check = card.querySelector('.check-icon');
+      if (check) check.classList.remove('opacity-0');
+    });
+  });
+
+  // Interactive Pills: Duration
+  document.querySelectorAll('.duration-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.duration-pill').forEach(p => {
+        p.className = 'duration-pill py-space-sm rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all text-center';
+      });
+      pill.className = 'duration-pill py-space-sm rounded-lg bg-primary-container text-on-primary font-label-md text-label-md transition-all text-center';
+    });
+  });
+
+  // Interactive Pills: Month
+  document.querySelectorAll('.month-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.month-pill').forEach(p => {
+        p.className = 'month-pill py-space-sm px-space-md rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md transition-all text-center';
+      });
+      pill.className = 'month-pill py-space-sm px-space-md rounded-lg bg-primary-container text-on-primary font-label-md text-label-md transition-all text-center';
+    });
+  });
+
+  // Interactive Pills: Budget
+  document.querySelectorAll('.budget-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.budget-pill').forEach(p => {
+        p.classList.remove('bg-surface-container-high', 'shadow-md');
+        p.classList.add('bg-surface-container-low');
+      });
+      pill.classList.remove('bg-surface-container-low');
+      pill.classList.add('bg-surface-container-high', 'shadow-md');
+    });
+  });
+
+  // Interactive Pills: Hotel
+  document.querySelectorAll('.hotel-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.hotel-pill').forEach(p => {
+        p.className = 'hotel-pill py-space-sm px-space-xs rounded-lg bg-surface-container text-on-surface-variant hover:bg-surface-container-high font-label-md text-label-md text-center transition-all';
+      });
+      pill.className = 'hotel-pill py-space-sm px-space-xs rounded-lg bg-primary-container text-on-primary font-label-md text-label-md text-center transition-all';
+    });
+  });
+
+  // Interactive Pills: Vehicle
+  document.querySelectorAll('.vehicle-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.vehicle-pill').forEach(p => {
+        p.className = 'vehicle-pill cursor-pointer p-space-sm rounded-lg bg-surface-container text-center font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high transition-all';
+      });
+      pill.className = 'vehicle-pill cursor-pointer p-space-sm rounded-lg bg-primary-container text-on-primary text-center font-label-md text-label-md transition-all';
+    });
+  });
+
+  function submitEnquiry() {
+    const successOverlay = document.getElementById('successOverlay');
+    if (successOverlay) {
+      successOverlay.classList.remove('hidden');
+    }
+  }
+
+  function resetForm() {
+    const successOverlay = document.getElementById('successOverlay');
+    if (successOverlay) {
+      successOverlay.classList.add('hidden');
+    }
+    currentStep = 1;
+    updateStepUI();
+  }
+
+  // Initialize UI
+  updateStepUI();
+</script></main><footer class="w-full bg-inverse-surface text-inverse-on-surface pt-space-xl pb-space-lg"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-gutter pb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md pr-space-md"><div class="flex items-center gap-space-sm"><img alt="Siri Vacations Travel Logo.png" class="h-8 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AEtjO1WxWnWGJbkoGmm6Ur6LzR82t6XEaa0aGClXmIa6OBfxIH-VE69aQ7BYEgJcLlL1HOxJpAH6OEcHRj-wWTJ7qrjzkNPBcmZg7_jC_Q-tk01Z4oEPr0kFYM5-n25GXPSq5cGZbuzmB_DMNf8PrBI6g1Wb7-jzBjn3RWUBzGI_TyKrLYEoYj1enbi-nNgPvnruOGQosnK3YZZ8GtAh6fk8p_OQJD0kTTtP1mpylvwYI9qNE1fTarXXYsme1vynUVITBAhMkepUHTPeFQ"/><div class="flex flex-col"><span class="font-title-lg text-title-lg text-surface-container-lowest tracking-tight leading-none">Siri Vacations</span><span class="font-caption text-caption text-secondary-fixed tracking-wider uppercase">Bengaluru</span></div></div><p class="font-title-md text-title-md text-tertiary-fixed">Plan • Travel • Create Memories</p><p class="font-body-sm text-body-sm text-secondary-fixed leading-relaxed">Premier travel management company in Bengaluru offering handcrafted holiday experiences, luxury car rentals, corporate travel services, and memorable international group tours.</p><div class="flex items-center gap-space-sm pt-space-xs"><a class="w-9 h-9 rounded-full bg-surface-container-high/10 hover:bg-surface-container-high/20 flex items-center justify-center text-inverse-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a class="w-9 h-9 rounded-full bg-surface-container-high/10 hover:bg-surface-container-high/20 flex items-center justify-center text-inverse-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a class="w-9 h-9 rounded-full bg-surface-container-high/10 hover:bg-surface-container-high/20 flex items-center justify-center text-inverse-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">forum</span></a><a class="w-9 h-9 rounded-full bg-surface-container-high/10 hover:bg-surface-container-high/20 flex items-center justify-center text-inverse-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">mail</span></a></div></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-md text-label-md text-surface-container-lowest uppercase tracking-wider">Domestic Packages</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-secondary-fixed"><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Karnataka Getaways</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Kerala Backwaters</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Tamil Nadu Heritage</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">North India Wonders</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Goa Beach Retreats</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-md text-label-md text-surface-container-lowest uppercase tracking-wider">International Packages</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-secondary-fixed"><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Bali Tropical Escapes</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Dubai City &amp; Safari</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Thailand Island Hopping</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Maldives Luxury Stays</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Singapore &amp; Malaysia</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-md text-label-md text-surface-container-lowest uppercase tracking-wider">Travel Services</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-secondary-fixed"><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Car &amp; Coach Rentals</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Fixed Group Departures</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Customized Family Tours</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Honeymoon Specials</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Corporate MICE Travel</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-md text-label-md text-surface-container-lowest uppercase tracking-wider">Contact &amp; Office</h4><div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-secondary-fixed"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed shrink-0 mt-0.5">location_on</span><span>#42, 100 Feet Road, Indiranagar, Bengaluru, Karnataka 560038</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed shrink-0">call</span><span>+91 98450 12345 / 080 4123 4567</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed shrink-0">mail</span><span>trips@sirivacations.com</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed shrink-0">schedule</span><span>Mon - Sat: 9:30 AM - 7:30 PM</span></div></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-secondary-fixed"><p>© 2025 Siri Vacations, Bengaluru. All rights reserved.</p><div class="flex items-center gap-space-lg font-caption text-caption"><a class="hover:text-surface-container-lowest transition-colors" href="#">Privacy Policy</a><a class="hover:text-surface-container-lowest transition-colors" href="#">Terms of Service</a><a class="hover:text-surface-container-lowest transition-colors" href="#">Cancellation &amp; Refund Policy</a><a class="hover:text-surface-container-lowest transition-colors" href="#">Sitemap</a></div></div></div></footer></body></html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#001b3d", "surface-container-high": "#dbe9ff", "surface": "#f8f9ff", "surface-container-low": "#eff4ff", "primary-fixed-dim": "#a9c7ff", "inverse-on-surface": "#eaf1ff", "on-surface-variant": "#424752", "on-secondary-fixed-variant": "#2b4772", "error-container": "#ffdad6", "surface-tint": "#085db5", "surface-container-highest": "#d2e4ff", "on-primary-fixed-variant": "#00468c", "primary": "#00468c", "tertiary-fixed": "#ffdcc2", "on-primary": "#ffffff", "on-primary-container": "#c6d9ff", "secondary-fixed": "#d6e3ff", "outline": "#727783", "secondary": "#435f8c", "tertiary": "#6d3a00", "on-secondary": "#ffffff", "primary-fixed": "#d6e3ff", "surface-variant": "#d2e4ff", "secondary-fixed-dim": "#acc7fa", "on-secondary-fixed": "#001b3d", "on-tertiary-fixed": "#2e1500", "on-secondary-container": "#395581", "tertiary-fixed-dim": "#ffb77a", "on-surface": "#081d31", "outline-variant": "#c2c6d4", "surface-container-lowest": "#ffffff", "background": "#f8f9ff", "on-error-container": "#93000a", "tertiary-container": "#8f4e00", "secondary-container": "#aecafd", "surface-bright": "#f8f9ff", "inverse-primary": "#a9c7ff", "on-background": "#081d31", "on-error": "#ffffff", "surface-container": "#e5eeff", "on-tertiary-fixed-variant": "#6d3a00", "on-tertiary-container": "#ffd0aa", "on-tertiary": "#ffffff", "surface-dim": "#c8dcf7", "inverse-surface": "#1f3247", "primary-container": "#075db5", "error": "#ba1a1a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "gutter-sm": "1rem", "space-sm": "0.5rem", "margin": "3rem", "space-xl": "2.5rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem", "gutter": "1.5rem", "space-md": "1rem" }, "fontFamily": { "label-sm": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "title-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "caption": ["Inter"], "headline-xl": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"] }, "fontSize": { "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}], "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}], "headline-xl-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}], "title-lg": ["18px", {"lineHeight": "26px", "fontWeight": "600"}], "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}], "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}], "caption": ["11px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}], "headline-xl": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "headline-sm": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.005em", "fontWeight": "600"}] } } } };</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_4px_20px_-2px_rgba(8,43,85,0.06)]"><div class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm shrink-0"><img alt="Siri Vacations Travel Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WxWnWGJbkoGmm6Ur6LzR82t6XEaa0aGClXmIa6OBfxIH-VE69aQ7BYEgJcLlL1HOxJpAH6OEcHRj-wWTJ7qrjzkNPBcmZg7_jC_Q-tk01Z4oEPr0kFYM5-n25GXPSq5cGZbuzmB_DMNf8PrBI6g1Wb7-jzBjn3RWUBzGI_TyKrLYEoYj1enbi-nNgPvnruOGQosnK3YZZ8GtAh6fk8p_OQJD0kTTtP1mpylvwYI9qNE1fTarXXYsme1vynUVITBAhMkepUHTPeFQ"/><div class="flex flex-col"><span class="font-title-lg text-title-lg text-primary tracking-tight leading-none">Siri Vacations</span><span class="font-caption text-caption text-secondary tracking-wider uppercase">Bengaluru</span></div></div><nav class="hidden xl:flex items-center gap-space-lg whitespace-nowrap" data-active-classes="text-primary font-label-md"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a aria-current="page" class="transition-colors text-primary font-label-md" data-path="about-us" href="#">About Us</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="domestic-packages" href="#">Domestic Packages</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="international-packages" href="#">International Packages</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="destinations" href="#">Destinations</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="car-rentals" href="#">Car Rentals</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="group-departures" href="#">Group Departures</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact-us" href="#">Contact Us</a></nav><div class="flex items-center gap-space-md shrink-0"><a class="hidden sm:flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px] text-primary">chat</span><span class="font-label-md text-label-md">WhatsApp</span></a><a class="px-space-md py-space-sm rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md shadow-[0_4px_16px_rgba(143,78,0,0.25)] transition-all shrink-0" data-path="plan-your-trip" href="#">Plan Your Trip</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- HERO SECTION: Bleed underneath shell with soft gradient scrim -->
+<section class="relative w-full -mt-20 overflow-hidden">
+<div class="bg-cover bg-center w-full min-h-[580px] lg:min-h-[640px] flex items-center relative" data-alt="Majestic panoramic aerial vista of mist-laden Western Ghats mountain ridges in South India at sunrise, emerald tea gardens, golden sun rays piercing through clouds, ambient coastal morning light, editorial luxury travel magazine style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCgrudF3XEyY-Q6b0FdlUCioznsMLvyJj8MxGt5wHHEmAdyz3zLs4TmqWV7RPfApTX4bstQP560ho9iliqyN9uQTf6YA2VwNYBpUTykoLTDtOgMVIg98EzvM6maI_-rrU7pTva5VSq8UlhLxNKK7m30dHAHF02vQGbMP2wleJVH8p7_njE5iH85gaMvEOBGRlSGxMiBTvoYDlw7f_Y6kH55NBjQBoUbW3PJRO1cyfQOZhvRpf4VDN8i')">
+<div class="absolute inset-0 bg-gradient-to-r from-on-primary-fixed/90 via-on-primary-fixed/75 to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="relative z-10 max-w-[1280px] w-full mx-auto px-margin-mobile lg:px-margin pt-32 pb-16 flex flex-col items-start">
+<div class="inline-flex items-center gap-space-xs px-3.5 py-1.5 rounded-full bg-surface-container-lowest/15 backdrop-blur-md shadow-sm mb-6">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-surface-container-lowest tracking-wider uppercase">ABOUT SIRI VACATIONS • BENGALURU</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-surface-container-lowest max-w-3xl leading-tight tracking-tight mb-6">
+          Every Great Journey Begins With a Story.
+        </h1>
+<p class="font-body-lg text-body-lg text-secondary-fixed max-w-2xl leading-relaxed mb-8">
+          Discover the thinking behind Siri Vacations and our approach to planning memorable holidays across South India, the Himalayas, and beyond.
+        </p>
+<div class="flex flex-wrap items-center gap-space-md">
+<a class="px-space-md py-3 rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md shadow-md transition-all flex items-center gap-2" href="#heritage">
+<span>Our Heritage</span>
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+<div class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-surface-container-lowest/10 backdrop-blur-md text-surface-container-lowest text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]">verified</span>
+<span>12+ Years of Thoughtful Curation in Karnataka</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- STATS RIBBON (Floating Overlap) -->
+<div class="max-w-[1280px] w-full mx-auto px-margin-mobile lg:px-margin -mt-10 relative z-20">
+<div class="bg-surface-container-lowest rounded-xl shadow-xl p-6 lg:p-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="flex flex-col border-none">
+<span class="font-caption text-caption text-secondary uppercase tracking-widest mb-1">Travellers Hosted</span>
+<span class="font-headline-lg text-headline-lg text-primary font-bold">18,500+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Families, couples &amp; corporate groups</span>
+</div>
+<div class="flex flex-col border-none">
+<span class="font-caption text-caption text-secondary uppercase tracking-widest mb-1">Private Chauffeurs</span>
+<span class="font-headline-lg text-headline-lg text-primary font-bold">65+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Uniformed, verified &amp; multilingual</span>
+</div>
+<div class="flex flex-col border-none">
+<span class="font-caption text-caption text-secondary uppercase tracking-widest mb-1">Handpicked Stays</span>
+<span class="font-headline-lg text-headline-lg text-primary font-bold">340+</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Boutique estates, villas &amp; heritage havens</span>
+</div>
+<div class="flex flex-col border-none">
+<span class="font-caption text-caption text-secondary uppercase tracking-widest mb-1">Client Satisfaction</span>
+<span class="font-headline-lg text-headline-lg text-tertiary-container font-bold">4.94 / 5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Across Google Reviews &amp; direct feedback</span>
+</div>
+</div>
+</div>
+<!-- SECTION 1: HERITAGE & INTRODUCTION (Editorial Split) -->
+<section class="max-w-[1280px] w-full mx-auto px-margin-mobile lg:px-margin pt-24 pb-16" id="heritage">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-6 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2">
+<span class="font-caption text-caption tracking-widest uppercase text-tertiary-container font-bold">Our Roots</span>
+<span class="h-px w-12 bg-secondary-container"></span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary leading-tight">
+          Rooted in Bengaluru, Inspiring Journeys Across the Globe.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          Founded in the cultural and technological hub of Indiranagar, Bengaluru, Siri Vacations began with a singular conviction: travel should never feel like a packaged checklist. It should breathe with the relaxed cadence of an unhurried morning and the assurance of a personal travel concierge.
+        </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          We combine authentic South Indian warmth with strict operational discipline. From the coffee mist of Coorg to the snowbound mountain passes of Ladakh, every itinerary is designed by people who have personally walked the trails, tested the private cars, and dined in the homestays.
+        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+<div class="flex items-start gap-3 p-4 rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-primary text-[24px] mt-0.5">verified_user</span>
+<div>
+<p class="font-title-md text-title-md text-primary">Certified Chauffeurs</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Courteous, seasoned drivers with route fluency.</p>
+</div>
+</div>
+<div class="flex items-start gap-3 p-4 rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-tertiary-container text-[24px] mt-0.5">cottage</span>
+<div>
+<p class="font-title-md text-title-md text-primary">Handpicked Stays</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Audited for cleanliness, scenic appeal &amp; warmth.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Asymmetric Editorial Visual Grid -->
+<div class="lg:col-span-6 relative">
+<div class="relative grid grid-cols-12 gap-4">
+<div class="col-span-8 rounded-2xl overflow-hidden shadow-xl aspect-[4/5]">
+<img class="w-full h-full object-cover" data-alt="Elegant luxury heritage colonial coffee planter estate bungalow in Coorg Karnataka surrounded by rainforest trees, warm veranda lighting, peaceful morning coffee ambiance, high editorial quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU6y482wQrOfEYepMIHfZ4S18ioeNIoO2v2Osxhh_qZvELjLj5qEK3RkavJinRam3vR7QzvesEGJEl5uIAZjokiNd1MXy9pld2Q-56GlbtPw-YmYri1jC_h1N5k8LMbnzpm5kvmjslpASc8mh5o-lSHmQxC3x1zW-RtYsfW8dMo5NTg0XrknVx3--hZyV6AiekdXOsLDqcgsmljbAGF4uhvpCF900awkUiWxqVdHOl1kOsuVGqT9-4"/>
+</div>
+<div class="col-span-4 flex flex-col gap-4 pt-8">
+<div class="rounded-xl overflow-hidden shadow-md aspect-square">
+<img class="w-full h-full object-cover" data-alt="Traditional South Indian spice brass kettle and porcelain cups served on an open teak terrace overlooking Munnar tea hills, bright natural daylight, editorial travel detail shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7OIEbsvdt7t1WEDU5wK_wIL13j2-wweFNW1EWPPb-cgOfuT9jkWvbGugwajMympUCHh5rr8ul7lO2CfuE9y4D7frMte1u775V42lElL5GzHRTw-MTMnHzwwv43LKo5drNXJZhbdSgTUPR8KaVsgqo6UxEK8d4tLnqxPRFXmfV34lztCsJYGE0CaPj9G1eVUfhiEUJiXjxYHG4mKxyK4BC1zL-Pp61YtV22ukUjFu339RJV7DxSwWj"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-md aspect-[3/4]">
+<img class="w-full h-full object-cover" data-alt="Smiling experienced professional private travel chauffeur standing beside a pristine luxury SUV in Bengaluru, warm hospitality expression, crisp clean attire, bright afternoon light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA5h2sc9DVZfFfKm6WlQvktTUcZZUt2wXSCqUptCZaLA83BflwfqT4jo-9jAJECvawxjBZbSs_-VifDl6mKUKZhvEGgALz4P9UIXm3Fk-ALNLdQwdJf_NhzqVblqvev2TIJNZDFoesEnaMKw2QhyXSQDco6ufXMdOoCQiSUKlYTEzkN0SiWySVsXHvu7Cec8Nk29N89-gCu2SCrn6ny9AdX-54UWZYq75Mp20U8lZazaelJIkF_E7W"/>
+</div>
+</div>
+</div>
+<!-- Experience Badge Float -->
+<div class="absolute -bottom-6 left-6 bg-primary text-on-primary p-6 rounded-xl shadow-xl max-w-[260px] hidden sm:flex flex-col gap-1">
+<span class="font-headline-md text-headline-md font-bold leading-none">100%</span>
+<span class="font-title-md text-title-md leading-tight">Tailor-Made Guarantee</span>
+<span class="font-caption text-caption text-secondary-fixed">Zero forced gift shops or rigid tour-bus schedules.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: OUR TRAVEL PHILOSOPHY (4 Pillars) -->
+<section class="bg-surface-container-low py-20 w-full">
+<div class="max-w-[1280px] w-full mx-auto px-margin-mobile lg:px-margin">
+<div class="max-w-2xl mb-12">
+<span class="font-caption text-caption tracking-widest uppercase text-primary font-bold">The Core Principles</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-2 mb-4">
+          Our Travel Philosophy
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          How we ensure your family vacation, milestone anniversary, or weekend escape feels effortless from the moment you text our Bengaluru team to your safe return home.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Pillar 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-[28px]">design_services</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-3">Thoughtful Planning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              We balance scenic sightseeing with restorative downtime. Travel should never leave you exhausted on Monday morning.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-none">
+<span class="font-caption text-caption uppercase tracking-wider text-secondary">01 • Blueprint</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-[28px]">explore</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-3">Local Authenticity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              From quiet temple sanctums to secluded estate viewpoints, we open doors to intimate regional experiences most tourists miss.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-none">
+<span class="font-caption text-caption uppercase tracking-wider text-secondary">02 • Discovery</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-tertiary-container mb-6">
+<span class="material-symbols-outlined text-[28px]">receipt_long</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-3">Honest Transparency</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Clear itemized pricing with zero surprise surcharges, toll traps, or undisclosed vehicle driver allowances.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-none">
+<span class="font-caption text-caption uppercase tracking-wider text-secondary">03 • Integrity</span>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-[28px]">favorite</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary mb-3">Care at Every Mile</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              A responsive Bangalore desk actively monitoring flight arrivals, road conditions, and hotel check-in readiness in real time.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-none">
+<span class="font-caption text-caption uppercase tracking-wider text-secondary">04 • Concierge</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: WHAT MAKES THE EXPERIENCE SPECIAL (Comparison Matrix) -->
+<section class="max-w-[1280px] w-full mx-auto px-margin-mobile lg:px-margin py-24">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-caption text-caption tracking-widest uppercase text-tertiary-container font-bold">The Distinction</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-2 mb-4">
+        What Makes the Experience Special
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        See how Siri Vacations delivers unmatched value over mass-market aggregator portals and generic packaged coach tours.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Standard Package Tours -->
+<div class="p-8 rounded-2xl bg-surface-container-high/40 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-6">
+<span class="font-title-lg text-title-lg text-on-surface-variant">Ordinary Tour Packages</span>
+<span class="material-symbols-outlined text-outline text-[28px]">block</span>
+</div>
+<ul class="flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">close</span>
+<span>Rigid, rushed schedules packed with mandatory souvenir commission stops.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">close</span>
+<span>Impersonal call centers where you speak to a new representative each time.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">close</span>
+<span>Shared buses with fixed stops and no flexibility for spontaneous tea breaks or viewpoints.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">close</span>
+<span>Mass-market chain hotels on highways far from scenic attractions.</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 pt-4">
+<span class="font-caption text-caption text-outline uppercase tracking-wider">Predictable • Impersonal • Inflexible</span>
+</div>
+</div>
+<!-- Siri Vacations Bespoke Experience -->
+<div class="p-8 rounded-2xl bg-surface-container-lowest shadow-xl ring-2 ring-primary/20 flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-secondary-fixed/50 rounded-full blur-2xl"></div>
+<div>
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-2">
+<span class="font-title-lg text-title-lg text-primary font-bold">The Siri Vacations Way</span>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-tertiary-fixed text-on-tertiary-fixed">Curated</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">verified</span>
+</div>
+<ul class="flex flex-col gap-4 font-body-md text-body-md text-on-surface">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>Tailored Itineraries:</strong> Planned strictly around your family's personal interests and preferred waking pace.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>Private Dedicated Vehicles:</strong> Clean, climate-controlled Innovas, sedans, or luxury coaches with experienced chauffeurs.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>24/7 WhatsApp Concierge:</strong> Single dedicated Bangalore travel manager assigned to your trip from booking to checkout.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<span><strong>Handpicked Character Stays:</strong> Verified boutique estate cottages, riverfront retreats, and heritage villas.</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 pt-4">
+<span class="font-caption text-caption text-tertiary-container font-semibold uppercase tracking-wider">Unrushed • Concierge-Grade • Memorable</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: DOMESTIC & INTERNATIONAL EXPERTISE (Regional Breakdown) -->
+<section class="bg-surface-container py-20 w-full">
+<div class="max-w-[1280px] w-full mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div class="max-w-2xl">
+<span class="font-caption text-caption tracking-widest uppercase text-tertiary-container font-bold">Curated Destinations</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-2">
+            Domestic &amp; International Travel Expertise
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+            Our destination masters specialize in specific regional circuits to ensure insider knowledge, preferred stay tariffs, and flawless logistics.
+          </p>
+</div>
+<div class="shrink-0">
+<span class="px-4 py-2 rounded-full bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm">
+            5 Signature Circuits
+          </span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Karnataka: Home Turf -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Coorg coffee plantation landscape in Karnataka with morning fog filtering through towering silver oak trees and lush green pepper vines, South India travel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqTmEgk7qdiqJ51cRmx3vhKclMkdugb7lPhA28y_Uq6hmdvlVTpAkHAXkvJAW0LdmzFBhqb_jxIAclfUvH3Xbj7sSCZuG4T2hsbW_uij5RoU7b8c5y7fClFyjevWGv9qNNWmCP_-VRyGMbdYnjb7_Qtag9k9S1yN7D53ncO7TZsVLvZJ8730UklFHU6HOBG6WA0rUFS5Iua4uR7JmHIpEiE7X_Q3TBo6ct8zqBHtqojM2lnwvEDlum"/>
+<div class="absolute top-3 left-3 px-3 py-1 rounded bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+              Home Turf
+            </div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-title-lg text-title-lg text-primary mb-2">Karnataka Heartlands</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                Coorg private coffee estates, Chikmagalur cloud walks, UNESCO ruins of Hampi, and historic temple trails of Badami &amp; Belur.
+              </p>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Drive from Bengaluru: 4-6 hrs</span>
+<span class="material-symbols-outlined text-[18px]">east</span>
+</div>
+</div>
+</div>
+<!-- Kerala: Backwaters & Hills -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Traditional luxury wooden houseboat floating on calm Alleppey Kerala backwaters lined with coconut palm trees under a tranquil golden afternoon sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_LKX04TTDT0_jcSRf7DX0LOiPgIC6wEzXxaAPaMoIdRJ4roBmk-TgZ6V4AEF8yDoHk5kD_GasQUqiZ9NEyEX2kUJnTeTb48ZUwGtkR3jenzsngyGRF72mF3W4BK1CAAhvW1foYRZ0oV3fsUYCjhxxnBdSqdONpAUe29lLO2wGA0qsSq2ZoeYlxdH3HN9eMFu2evtGxI3YMD1zDuasXYLB2Xe2YyLlkyg-mxbSHnRiiq3js4BDKpGA"/>
+<div class="absolute top-3 left-3 px-3 py-1 rounded bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+              South Gateway
+            </div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-title-lg text-title-lg text-primary mb-2">Kerala Backwaters &amp; Munnar</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                Houseboat cruises through Alleppey, organic spice garden retreats in Thekkady, and misty tea estate cottages in Munnar.
+              </p>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Overnight sleeper or short flight</span>
+<span class="material-symbols-outlined text-[18px]">east</span>
+</div>
+</div>
+</div>
+<!-- Tamil Nadu: Heritage & Hills -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Historic Nilgiri Mountain Toy Train steaming through eucalyptus blue mountain valleys near Ooty and Coonoor Tamil Nadu on a sunny day." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASWCO7pfl0EjgbovbzzYgTYZ85hZ_vZvjI0tF7RbigRafrTASrXXUcZ3ikckwWa4cmvnJwPNErmt6HcExjxImPY87fEzwdjI2G_0k7kC9WxslZKPYVRtR5mCJdJ8RIbxkRyIfa_rLSP7nJCjjI-psCFH8acz_0_rwMZV7pSnrA4-AwhKrEfim7z-frsx4xNdX-zADWT3cZ82ZTaK7e2rsGo8CyLiBldwp2ztZRzssp95QeSQ88KVg8"/>
+<div class="absolute top-3 left-3 px-3 py-1 rounded bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+              Culture &amp; Hills
+            </div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-title-lg text-title-lg text-primary mb-2">Tamil Nadu Heritage &amp; Nilgiris</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                The charming toy train of Nilgiris, Chettinad royal culinary mansions, and architectural marvels of Madurai &amp; Thanjavur.
+              </p>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Express rail or private chauffeur</span>
+<span class="material-symbols-outlined text-[18px]">east</span>
+</div>
+</div>
+</div>
+<!-- North India: Himalayas -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Snowcapped peaks of the Kashmir valley with traditional Shikara boats floating on Dal Lake Srinagar in late afternoon golden light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADIYrwJ-vVoZqCGztvDi87jay0n_BtMcHpSThJLYFG7zKMkyF8PKmnIL09lHr_Lb77VCJrdWrpssCWPGhPBpu0YtIVRtf5k6GPVXrHCdKbL6BN0ne0N4guWkr-MWkMNYEwnJ9Js_CQLqv2hh-XmyJjPPfRg6PwT8AufOUpLH5oXzZAd7MQIlWHtwNhOQYpXbCKulxpy5CNeSlMbwZgr1SG8dk6XOWuQkcXJJsuS08kzk1CTVXYAO4r"/>
+<div class="absolute top-3 left-3 px-3 py-1 rounded bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+              Mountain Majesty
+            </div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-title-lg text-title-lg text-primary mb-2">Himalayan Circuits</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                Kashmir shikara serenity, Ladakh high altitude passes, and spiritual wellness in Rishikesh and Himachal apple valleys.
+              </p>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Direct flights from BLR</span>
+<span class="material-symbols-outlined text-[18px]">east</span>
+</div>
+</div>
+</div>
+<!-- Southeast Asia & Island Escapes -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group flex flex-col md:col-span-2 lg:col-span-2">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Serene luxury overwater bungalow with turquoise lagoon waters and palm tree reflections in Maldives or Bali during warm twilight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCF4MonlDOefjkd8wR6qTynh6I7HgWL8p-9YvH0Ifwn9MBWA6vnbAWjuF-YDnsrHRA0QwSyEkV5QtZAlx_M773kUqntEVcP67qJEpmC2ySPMqFGNnJdNIUYrkgOvwebmgXIhMehNeUFBkJHUB-y0eOPbl_HPJ3VS-6_qiQ5iDEIQCq550xqCCMfXMl1Eqo4ZaNI84uaYx41n465iRBu138afbDMLAYZUuvRahkNILTjXS_6mnxg9EL"/>
+<div class="absolute top-3 left-3 px-3 py-1 rounded bg-surface-container-lowest/90 backdrop-blur-sm text-tertiary-container font-label-sm text-label-sm font-semibold">
+              International Specials
+            </div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-title-lg text-title-lg text-primary mb-2">Southeast Asia &amp; Island Escapes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                Direct flights connecting Bangalore to Bali private pool villas, Singapore family adventures, Dubai desert glamping, and tranquil Maldives overwater sanctuaries. Complete visa assistance, currency guidance, and airport transfers included.
+              </p>
+</div>
+<div class="flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Hassle-free visa facilitation included</span>
+<span class="material-symbols-outlined text-[18px]">flight_takeoff</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: PERSONALIZED PLANNING WORKFLOW (Step-by-Step) -->
+<section class="max-w-[1280px] w-full mx-auto px-margin-mobile lg:px-margin py-24">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<span class="font-caption text-caption tracking-widest uppercase text-tertiary-container font-bold">The Journey Blueprint</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-2 mb-4">
+        Our 4-Step Planning Process
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        How we translate your vacation dates and travel wish list into a seamless, stress-free holiday.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+<!-- Step 1 -->
+<div class="flex flex-col relative">
+<div class="w-14 h-14 rounded-full bg-primary text-on-primary flex items-center justify-center font-title-lg text-title-lg font-bold mb-6 shadow-md">
+          1
+        </div>
+<h3 class="font-title-lg text-title-lg text-primary mb-2">Listen &amp; Understand</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          We start with a quick WhatsApp chat or phone consultation. We learn who is traveling, their preferred pace, dietary preferences, and expectations.
+        </p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col relative">
+<div class="w-14 h-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-title-lg text-title-lg font-bold mb-6 shadow-md">
+          2
+        </div>
+<h3 class="font-title-lg text-title-lg text-primary mb-2">Bespoke Itinerary</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Within 24 hours, our desk drafts a day-by-day customized plan with realistic driving times, verified resorts, and transparent pricing.
+        </p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col relative">
+<div class="w-14 h-14 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-title-lg text-title-lg font-bold mb-6 shadow-md">
+          3
+        </div>
+<h3 class="font-title-lg text-title-lg text-primary mb-2">Confirm &amp; Coordinate</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          We secure guaranteed room categories, lock in dedicated private vehicles, and verify driver vaccination/licensing documentation.
+        </p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col relative">
+<div class="w-14 h-14 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center font-title-lg text-title-lg font-bold mb-6 shadow-md">
+          4
+        </div>
+<h3 class="font-title-lg text-title-lg text-primary mb-2">Seamless Journey</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          From doorstep pickup to final airport drop-off, your dedicated Bengaluru travel executive monitors every transit milestone.
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 6: MEET THE CONCIERGE & OPERATIONS DESK -->
+<section class="bg-surface-container-low py-20 w-full">
+<div class="max-w-[1280px] w-full mx-auto px-margin-mobile lg:px-margin">
+<div class="bg-surface-container-lowest rounded-2xl p-8 lg:p-12 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+<span class="font-caption text-caption tracking-wider uppercase text-secondary font-bold">Bengaluru Operations Desk</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary">
+            Real People. Local Expertise. Zero Automation Headaches.
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            When you plan with Siri Vacations, you are never routed to an unhelpful automated bot. You are connected directly to our dedicated travel planners stationed in Indiranagar, who know the hill-station road closures before they make the news and who personally know the estate managers in Chikmagalur and Coorg.
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[24px]">timer</span>
+<div>
+<p class="font-title-md text-title-md text-on-surface">&lt; 15 Mins</p>
+<p class="font-caption text-caption text-on-surface-variant">Average WhatsApp response time</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[24px]">support_agent</span>
+<div>
+<p class="font-title-md text-title-md text-on-surface">24/7 Coverage</p>
+<p class="font-caption text-caption text-on-surface-variant">Active support throughout your tour</p>
+</div>
+</div>
+</div>
+<div class="pt-2 flex flex-wrap items-center gap-4">
+<a class="px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md flex items-center gap-2 transition-colors" href="tel:+919845012345">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>+91 98450 12345</span>
+</a>
+<a class="px-space-md py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md flex items-center gap-2 transition-colors" href="mailto:trips@sirivacations.com">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+<span>trips@sirivacations.com</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-4">
+<div class="rounded-xl overflow-hidden aspect-[4/3] shadow-md">
+<img class="w-full h-full object-cover" data-alt="Interior of an authentic boutique Bengaluru travel agency office with bespoke wooden desks, regional South Indian maps on the wall, and friendly travel planners reviewing itineraries." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwgN-tLkdT6_MWSOqMqJxDaP1mntkn36bPFwc2I9uQaHoSPUqU4JBgPhXBR99wXqvsBk1X6X1ZthVA4LIUNe3Pg75J1AhDr83WJq_AOAhMXNulZdBfKiZrmhC9BgB_N59GHXDHhuPaFussYmvwz03bbY2RwunUAGpKPnm-87RYLmuL6jh_1SiLPKyavD4vMOmkqIGK6B4G5Aj_L_42JdbTXftRSfGZQArniO_LEYiwxYlWVLuKabSj"/>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[24px]">location_on</span>
+<span class="font-body-sm text-body-sm text-on-surface">#42, 100 Feet Road, Indiranagar, Bengaluru</span>
+</div>
+<span class="font-caption text-caption text-secondary font-semibold uppercase">Walk-ins Welcome</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: SCENIC CTA BANNER -->
+<section class="max-w-[1280px] w-full mx-auto px-margin-mobile lg:px-margin py-20">
+<div class="relative rounded-2xl overflow-hidden bg-primary shadow-2xl">
+<div class="absolute inset-0 bg-cover bg-center opacity-25 mix-blend-overlay" data-alt="Golden sunset over a quiet coastline with gentle waves, silhouettes of coconut palms, and a clear horizon, evocative of peaceful travel memories." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA1ZNOUv_2BYwFXk1nyg2pYsPyeIN8WQDANX3slX4sgAxrEaP4YE83vJMtmTVDsjjVE8olF-w_70IOQsNaBxwxtndOP32UVvfWYCf0R2cqDlClih-FcMKQCbTal-4nq29psECF7UGT_5Rxeq-LZdWTpUvNZAn4_Q0GWReF5vTMaEafDS6a48YehcYWgVxQt0xQV_FTk0JSH4yKdwvu2EjFA9jQMVHRd3uPmYuMkP2Kj1zBDgRZkSqcj')"></div>
+<div class="relative z-10 p-8 sm:p-12 lg:p-16 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+<div class="max-w-xl flex flex-col gap-3">
+<span class="font-caption text-caption uppercase tracking-widest text-tertiary-fixed font-bold">Start Planning Today</span>
+<h2 class="font-headline-lg text-headline-lg text-on-primary leading-tight">
+            Ready to Experience Travel Planned With Care?
+          </h2>
+<p class="font-body-md text-body-md text-secondary-fixed leading-relaxed">
+            Whether it's a long weekend in the Nilgiris or an international family escape, let our Bengaluru team craft an itinerary you will treasure forever.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 shrink-0">
+<a class="px-6 py-3.5 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container font-label-md text-label-md text-center shadow-md transition-all" data-path="domestic-packages" href="#">
+            Explore Tour Packages
+          </a>
+<a class="px-6 py-3.5 rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md text-center shadow-[0_4px_16px_rgba(143,78,0,0.25)] transition-all" data-path="plan-your-trip" href="#">
+            Plan Your Custom Trip
+          </a>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-inverse-surface text-inverse-on-surface pt-space-xl pb-space-lg"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-gutter pb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md pr-space-md"><div class="flex items-center gap-space-sm"><img alt="Siri Vacations Travel Logo.png" class="h-8 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AEtjO1WxWnWGJbkoGmm6Ur6LzR82t6XEaa0aGClXmIa6OBfxIH-VE69aQ7BYEgJcLlL1HOxJpAH6OEcHRj-wWTJ7qrjzkNPBcmZg7_jC_Q-tk01Z4oEPr0kFYM5-n25GXPSq5cGZbuzmB_DMNf8PrBI6g1Wb7-jzBjn3RWUBzGI_TyKrLYEoYj1enbi-nNgPvnruOGQosnK3YZZ8GtAh6fk8p_OQJD0kTTtP1mpylvwYI9qNE1fTarXXYsme1vynUVITBAhMkepUHTPeFQ"/><div class="flex flex-col"><span class="font-title-lg text-title-lg text-surface-container-lowest tracking-tight leading-none">Siri Vacations</span><span class="font-caption text-caption text-secondary-fixed tracking-wider uppercase">Bengaluru</span></div></div><p class="font-title-md text-title-md text-tertiary-fixed">Plan • Travel • Create Memories</p><p class="font-body-sm text-body-sm text-secondary-fixed leading-relaxed">Premier travel management company in Bengaluru offering handcrafted holiday experiences, luxury car rentals, corporate travel services, and memorable international group tours.</p><div class="flex items-center gap-space-sm pt-space-xs"><a class="w-9 h-9 rounded-full bg-surface-container-high/10 hover:bg-surface-container-high/20 flex items-center justify-center text-inverse-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a class="w-9 h-9 rounded-full bg-surface-container-high/10 hover:bg-surface-container-high/20 flex items-center justify-center text-inverse-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a class="w-9 h-9 rounded-full bg-surface-container-high/10 hover:bg-surface-container-high/20 flex items-center justify-center text-inverse-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">forum</span></a><a class="w-9 h-9 rounded-full bg-surface-container-high/10 hover:bg-surface-container-high/20 flex items-center justify-center text-inverse-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">mail</span></a></div></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-md text-label-md text-surface-container-lowest uppercase tracking-wider">Domestic Packages</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-secondary-fixed"><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Karnataka Getaways</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Kerala Backwaters</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Tamil Nadu Heritage</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">North India Wonders</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Goa Beach Retreats</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-md text-label-md text-surface-container-lowest uppercase tracking-wider">International Packages</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-secondary-fixed"><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Bali Tropical Escapes</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Dubai City &amp; Safari</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Thailand Island Hopping</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Maldives Luxury Stays</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Singapore &amp; Malaysia</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-md text-label-md text-surface-container-lowest uppercase tracking-wider">Travel Services</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-secondary-fixed"><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Car &amp; Coach Rentals</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Fixed Group Departures</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Customized Family Tours</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Honeymoon Specials</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Corporate MICE Travel</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-md text-label-md text-surface-container-lowest uppercase tracking-wider">Contact &amp; Office</h4><div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-secondary-fixed"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed shrink-0 mt-0.5">location_on</span><span>#42, 100 Feet Road, Indiranagar, Bengaluru, Karnataka 560038</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed shrink-0">call</span><span>+91 98450 12345 / 080 4123 4567</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed shrink-0">mail</span><span>trips@sirivacations.com</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed shrink-0">schedule</span><span>Mon - Sat: 9:30 AM - 7:30 PM</span></div></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-secondary-fixed"><p>© 2025 Siri Vacations, Bengaluru. All rights reserved.</p><div class="flex items-center gap-space-lg font-caption text-caption"><a class="hover:text-surface-container-lowest transition-colors" href="#">Privacy Policy</a><a class="hover:text-surface-container-lowest transition-colors" href="#">Terms of Service</a><a class="hover:text-surface-container-lowest transition-colors" href="#">Cancellation &amp; Refund Policy</a><a class="hover:text-surface-container-lowest transition-colors" href="#">Sitemap</a></div></div></div></footer></body></html>

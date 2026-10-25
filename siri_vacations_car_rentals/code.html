@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"background":"#f8f9ff","inverse-on-surface":"#eaf1ff","on-primary":"#ffffff","tertiary-fixed":"#ffdcc2","on-error-container":"#93000a","primary":"#00468c","primary-fixed-dim":"#a9c7ff","primary-fixed":"#d6e3ff","on-surface-variant":"#424752","on-tertiary-fixed":"#2e1500","surface-bright":"#f8f9ff","on-secondary":"#ffffff","tertiary":"#6d3a00","on-secondary-fixed":"#001b3d","on-background":"#081d31","error":"#ba1a1a","on-tertiary":"#ffffff","secondary-fixed":"#d6e3ff","tertiary-container":"#8f4e00","on-error":"#ffffff","surface-variant":"#d2e4ff","outline-variant":"#c2c6d4","inverse-surface":"#1f3247","surface-container-highest":"#d2e4ff","on-secondary-container":"#395581","on-tertiary-container":"#ffd0aa","on-primary-fixed":"#001b3d","primary-container":"#075db5","secondary-fixed-dim":"#acc7fa","on-primary-fixed-variant":"#00468c","on-secondary-fixed-variant":"#2b4772","surface-container-lowest":"#ffffff","surface":"#f8f9ff","secondary":"#435f8c","surface-dim":"#c8dcf7","outline":"#727783","surface-tint":"#085db5","surface-container-low":"#eff4ff","tertiary-fixed-dim":"#ffb77a","on-tertiary-fixed-variant":"#6d3a00","inverse-primary":"#a9c7ff","on-primary-container":"#c6d9ff","on-surface":"#081d31","secondary-container":"#aecafd","error-container":"#ffdad6","surface-container-high":"#dbe9ff","surface-container":"#e5eeff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","space-xl":"2.5rem","space-sm":"0.5rem","margin-mobile":"1.25rem","space-md":"1rem","gutter-sm":"1rem","space-lg":"1.5rem","margin":"3rem","gutter":"1.5rem"},fontFamily:{"label-sm":["Plus Jakarta Sans"],"body-md":["Inter"],"title-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"body-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"body-sm":["Inter"],"title-md":["Plus Jakarta Sans"],"caption":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"]},fontSize:{"label-sm":["12px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"body-md":["15px",{lineHeight:"24px",fontWeight:"400"}],"title-lg":["18px",{lineHeight:"26px",fontWeight:"600"}],"headline-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-xl":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-xl-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"700"}],"body-lg":["18px",{lineHeight:"28px",fontWeight:"400"}],"headline-lg":["40px",{lineHeight:"48px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-sm":["13px",{lineHeight:"20px",fontWeight:"400"}],"title-md":["16px",{lineHeight:"24px",fontWeight:"600"}],"caption":["11px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"500"}],"headline-sm":["22px",{lineHeight:"30px",letterSpacing:"-0.005em",fontWeight:"600"}],"headline-md":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"600"}],"label-md":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-sm border-b border-surface-container-low"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between gap-4 flex-nowrap"><div class="flex items-center shrink-0"><a class="flex items-center" data-path="home" href="#"><img alt="Siri Vacations Logo" class="h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoBHH-zdjNZigt-rQvJzuO2fPLRBtbSl4JhCJpnrRkhApjFjoCI0AKHJ7SJVNI153P0mx_UoTvpQw9vwo39xXalbDvYPyUe4B6gqq47CqDLte4vSIze3pyPwXWaZw6KCnq8sxNdyHIZhEclNhx6-Z161cHVARQePxO6LR4YFnx4aJJnxI4jGNL438Oyo7PvQGGMp9xLo8Rjb3zoyLgxL7nDWKYyamFY6smPyBnOOxvltVmdtXC6gM5NMUiLZAoeZ_lPQ"/></a></div><nav class="hidden xl:flex items-center gap-4 flex-nowrap whitespace-nowrap" data-active-classes="text-primary font-bold border-b-2 border-primary"><a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors py-2 px-1 whitespace-nowrap" data-path="about-us" href="#">About Us</a><a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors py-2 px-1 whitespace-nowrap" data-path="domestic-packages" href="#">Domestic Packages</a><a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors py-2 px-1 whitespace-nowrap" data-path="international-packages" href="#">International Packages</a><a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors py-2 px-1 whitespace-nowrap" data-path="destinations" href="#">Destinations</a><a aria-current="page" class="transition-colors py-2 px-1 whitespace-nowrap text-primary font-bold border-b-2 border-primary" data-path="car-rentals" href="#">Car Rentals</a><a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors py-2 px-1 whitespace-nowrap" data-path="group-departures" href="#">Group Departures</a><a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors py-2 px-1 whitespace-nowrap" data-path="contact-us" href="#">Contact Us</a></nav><div class="flex items-center gap-3 shrink-0 flex-nowrap"><a class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container font-label-md text-label-md transition-colors whitespace-nowrap" href="https://wa.me/919845012345" target="_blank"><span class="material-symbols-outlined text-[18px] text-emerald-600">chat</span><span>WhatsApp Concierge</span></a><a class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg bg-tertiary-container text-on-tertiary font-label-md text-label-md shadow-[0_4px_16px_rgba(143,78,0,0.25)] hover:bg-tertiary hover:text-on-tertiary transition-all whitespace-nowrap" data-path="plan-trip" href="#">Plan Your Trip</a><button aria-label="User Profile" class="w-9 h-9 rounded-full bg-primary flex items-center justify-center shrink-0 hover:bg-on-primary-fixed-variant transition-colors" type="button"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></button></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Immersive Editorial Top Banner / Hero -->
+<section class="relative w-full overflow-hidden bg-primary pb-20 pt-10 text-on-primary">
+<!-- Ambient backdrop highlights -->
+<div class="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-primary-container/40 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 bottom-0 h-80 w-80 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Hero Text & Metrics -->
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-highest/20 backdrop-blur-sm text-tertiary-fixed font-label-sm text-label-sm tracking-wider uppercase">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">verified_user</span>
+<span>Bengaluru's Trusted Fleet Since 2014</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-white tracking-tight leading-tight">
+            Doorstep Outstation Cabs &amp; Luxury Fleet from Bengaluru
+          </h1>
+<p class="font-body-lg text-body-lg text-primary-fixed leading-relaxed max-w-2xl">
+            Travel stress-free with thoroughly sanitized company-owned AC vehicles, vetted courteous multilingual chauffeurs, and 100% transparent pricing with zero hidden driver batta or toll surprises.
+          </p>
+<div class="pt-2 flex flex-wrap items-center gap-6 text-on-primary font-label-md text-label-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">local_police</span>
+<span>Police-Vetted Drivers</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">schedule</span>
+<span>15-Min Prior Doorstep Arrival</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">receipt_long</span>
+<span>Transparent GST Billing</span>
+</div>
+</div>
+</div>
+<!-- Live Metrics / Editorial Badge Panel -->
+<div class="lg:col-span-5 flex flex-col gap-4">
+<div class="p-6 rounded-2xl bg-surface-container-lowest/10 backdrop-blur-md space-y-4">
+<div class="flex items-center justify-between text-on-primary">
+<span class="font-label-md text-label-md text-primary-fixed uppercase tracking-wider">Live Fleet Readiness</span>
+<span class="inline-flex items-center gap-1.5 font-caption text-caption px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300">
+<span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span> 48 Cabs Available Today
+              </span>
+</div>
+<div class="grid grid-cols-3 gap-3 text-center">
+<div class="p-3 rounded-xl bg-surface-container-lowest/5">
+<div class="font-headline-md text-headline-md text-white font-bold">4.92★</div>
+<div class="font-caption text-caption text-primary-fixed-dim">Trip Rating</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-lowest/5">
+<div class="font-headline-md text-headline-md text-white font-bold">18k+</div>
+<div class="font-caption text-caption text-primary-fixed-dim">Trips Completed</div>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-lowest/5">
+<div class="font-headline-md text-headline-md text-white font-bold">0%</div>
+<div class="font-caption text-caption text-primary-fixed-dim">Cancellation Fee*</div>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-between font-caption text-caption text-primary-fixed-dim">
+<span>GPS Telemetry Active Across South India</span>
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">satellite_alt</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Floating Booking Engine Widget -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 -mt-10 relative z-20 w-full">
+<div class="bg-surface-container-lowest rounded-2xl shadow-xl p-6 lg:p-8 space-y-6">
+<!-- Tabs -->
+<div class="flex flex-wrap items-center gap-2 p-1.5 bg-surface-container-low rounded-xl" id="rental-tabs">
+<button class="tab-btn active px-4 py-2 rounded-lg font-label-md text-label-md bg-primary text-on-primary transition-all shadow-sm" data-tab="round-trip" type="button">
+          Outstation Round Trip
+        </button>
+<button class="tab-btn px-4 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" data-tab="one-way" type="button">
+          Outstation One-Way
+        </button>
+<button class="tab-btn px-4 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" data-tab="airport" type="button">
+          Bengaluru Airport (KIA) Transfer
+        </button>
+<button class="tab-btn px-4 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" data-tab="local" type="button">
+          Local Rental (8Hr / 80Km)
+        </button>
+</div>
+<!-- Booking Form Inputs -->
+<form class="space-y-6" id="fareCalculatorForm" onsubmit="event.preventDefault(); calculateQuote();">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+<!-- Pickup City -->
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-low">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">my_location</span> Pickup City
+            </span>
+<input class="w-full bg-transparent font-title-md text-title-md text-on-surface outline-none" id="pickupCity" required="" type="text" value="Bengaluru (Any location)"/>
+</div>
+<!-- Drop / Destination -->
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-low" id="dropCityContainer">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-tertiary-container">location_on</span> Destination City
+            </span>
+<select class="w-full bg-transparent font-title-md text-title-md text-on-surface outline-none cursor-pointer" id="dropCity">
+<option value="coorg">Coorg / Madikeri (265 km)</option>
+<option value="ooty">Ooty &amp; Nilgiris (280 km)</option>
+<option value="mysore">Mysore Heritage (145 km)</option>
+<option value="chikmagalur">Chikmagalur Coffee Hills (245 km)</option>
+<option value="tirupati">Tirupati Balaji (250 km)</option>
+<option value="wayanad">Wayanad Rainforest (290 km)</option>
+<option value="custom">Other South India Destination...</option>
+</select>
+</div>
+<!-- Departure Date & Time -->
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-low">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">calendar_today</span> Departure Date &amp; Time
+            </span>
+<input class="w-full bg-transparent font-title-md text-title-md text-on-surface outline-none cursor-pointer" id="depDateTime" required="" type="datetime-local" value="2025-05-15T06:00"/>
+</div>
+<!-- Return Date -->
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-low" id="returnDateContainer">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">event_repeat</span> Return Date
+            </span>
+<input class="w-full bg-transparent font-title-md text-title-md text-on-surface outline-none cursor-pointer" id="returnDate" type="date" value="2025-05-17"/>
+</div>
+<!-- Vehicle Category -->
+<div class="flex flex-col p-3 rounded-xl bg-surface-container-low">
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">directions_car</span> Vehicle Type
+            </span>
+<select class="w-full bg-transparent font-title-md text-title-md text-on-surface outline-none cursor-pointer" id="vehicleCategory">
+<option value="innova">Executive SUV (Innova Crysta)</option>
+<option value="sedan">Premium Sedan (Dzire / Etios)</option>
+<option value="hycross">Luxury MPV (Innova Hycross)</option>
+<option value="fortuner">Urban 4x4 (Toyota Fortuner)</option>
+<option value="tempo">Tempo Traveller (12-26 Seater)</option>
+</select>
+</div>
+</div>
+<!-- Action Row & Micro Quote Preview -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+<div class="flex items-center gap-3 text-on-surface-variant font-body-sm text-body-sm">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 text-emerald-700">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+<span>All-inclusive quotes: Vehicle, Chauffeur Allowance, Tolls, State Border Permits &amp; GST</span>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<button class="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-tertiary-container text-on-tertiary font-label-md text-label-md hover:bg-tertiary transition-all shadow-md flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[20px]">calculate</span>
+<span>Check Fares &amp; Instant Quote</span>
+</button>
+</div>
+</div>
+</form>
+<!-- Instant Output Box (Dynamic Micro UI) -->
+<div class="hidden p-5 rounded-xl bg-surface-container-high text-on-surface space-y-3" id="quoteResult">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<div class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Estimated Fare Summary</div>
+<div class="font-headline-sm text-headline-sm font-bold text-primary" id="quoteTitle">Innova Crysta • Bengaluru to Coorg (3 Days / 800 km)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Includes Driver Allowance (Batta ₹500/day), Fuel, Karnataka State Permits &amp; AC. Tolls billed at actuals fastag or all-inclusive.</div>
+</div>
+<div class="flex items-baseline md:flex-col md:items-end">
+<span class="font-headline-md text-headline-md font-bold text-on-surface" id="quotePrice">₹15,200</span>
+<span class="font-caption text-caption text-on-surface-variant ml-2 md:ml-0">Estimated Total (Taxes incl.)</span>
+</div>
+</div>
+<div class="flex items-center gap-3 pt-2">
+<a class="px-5 py-2 rounded-lg bg-emerald-600 text-white font-label-md text-label-md hover:bg-emerald-700 transition-colors inline-flex items-center gap-1.5" href="https://wa.me/919845012345?text=Hello%20Siri%20Vacations,%20I%20would%20like%20to%20confirm%20my%20cab%20booking" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span> Reserve over WhatsApp Now
+          </a>
+<button class="px-4 py-2 rounded-lg bg-surface text-on-surface font-label-md text-label-md hover:bg-surface-dim" onclick="document.getElementById('quoteResult').classList.add('hidden')" type="button">
+            Dismiss
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Fleet Showcase -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-20 w-full space-y-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-2">
+<div class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Company-Owned &amp; Maintained Fleet</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Our Luxury &amp; Outstation Fleet Showcase</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Select from meticulously detailed sedans to high-clearance mountain SUVs and luxury executive coaches. Every car undergoes a 32-point inspection before dispatch.
+        </p>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 font-label-md text-label-md text-primary px-3 py-1.5 rounded-lg bg-surface-container-high">
+<span class="material-symbols-outlined text-[18px]">verified</span> Zero Surge Pricing Guaranteed
+        </span>
+</div>
+</div>
+<!-- Fleet Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- 1. Premium Sedan -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group">
+<div class="relative h-56 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A pristine white Toyota Etios sedan parked in front of a modern Bengaluru airport pickup terminal in clean sunny daylight, crisp reflections, luxury chauffeur aesthetic, high resolution commercial photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-VWVO6dVKtZpH1ufuTDoMXn65kT1C84_rE3LkWMldA_mgbxHWmFs-58y6yynf5pwKraklOY5zLcNNJqqzoWpiABhV8YOt_JcPYN4sXpoHEnj6ggxMhumddPDIkZgXmeRwGUHCSwuWWsy_dm80Mf3yCpIsKv7xrgSNR9uumFUJCnTT6iGRVqgsX9_00Eoo_iyzj3Oc8yZFC2Lxzbh1wrgBwq590EKb9zYhqrl4MUyafKzAgmiuon3g"/>
+<div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm font-label-sm text-label-sm text-primary font-semibold">
+            Comfort Choice
+          </div>
+<div class="absolute bottom-4 right-4 px-3 py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm">
+            Starting ₹12 / km
+          </div>
+</div>
+<div class="p-6 flex flex-col flex-1 justify-between space-y-5">
+<div class="space-y-2">
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Premium Sedan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Toyota Etios / Maruti Suzuki Dzire. Ideal for couples, corporate day travel, and budget-friendly small family trips.</p>
+</div>
+<div class="grid grid-cols-2 gap-2 text-on-surface-variant font-body-sm text-body-sm pt-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">groups</span> 4 Pax + 1 Chauffeur
+            </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">luggage</span> 2 Large + 2 Cabin Bags
+            </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">mode_fan</span> Dual Chill AC
+            </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">speed</span> Min 300 km / day
+            </div>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-caption text-caption text-on-surface-variant">Driver Allowance</span>
+<div class="font-label-md text-label-md font-semibold text-on-surface">₹400 / day</div>
+</div>
+<a class="px-4 py-2 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1" href="https://wa.me/919845012345?text=Hi,%20I%20want%20to%20book%20a%20Premium%20Sedan" target="_blank">
+<span>Book Sedan</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 2. Executive SUV (Innova Crysta) -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group ring-2 ring-primary/20">
+<div class="relative h-56 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A metallic silver Toyota Innova Crysta executive vehicle cruising on a scenic smooth Western Ghats highway winding through lush green coffee estates and misty hills, luxury editorial automotive photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjwKrV6JMfEVGClbDV4h-XQ_C4ub1O4WnrgDJw4i1vzoFMXlenCdboODXJn44UtqrslJxrBC3D4BPD_YkjDAzW5NzyRuxB6xM2qSZmukh8XhPx2Jtn5rAbNYyME6cL2Io2rkNO1M9AunEqvXI5hQtnn6yP4VIHN3v6_qS7gLVjmVkuLUWe-SgpwU8LjIZb_3nHNaxRGigzZeKmCx02VYWGBFiMlQ5f-k92Jq9delv2T309Cv2lusz6"/>
+<div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-label-sm font-semibold">
+            Most Popular
+          </div>
+<div class="absolute bottom-4 right-4 px-3 py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm">
+            Starting ₹19 / km
+          </div>
+</div>
+<div class="p-6 flex flex-col flex-1 justify-between space-y-5">
+<div class="space-y-2">
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Executive SUV (Innova Crysta)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bengaluru's undisputed favorite for Coorg, Ooty, Wayanad &amp; Western Ghats mountain hairpin curves.</p>
+</div>
+<div class="grid grid-cols-2 gap-2 text-on-surface-variant font-body-sm text-body-sm pt-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">groups</span> 6-7 Pax + 1 Chauffeur
+            </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">luggage</span> 4 Large Suitcases
+            </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">airline_seat_recline_extra</span> Captain Plush Seats
+            </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">ac_unit</span> Roof Mounted AC
+            </div>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-caption text-caption text-on-surface-variant">Driver Allowance</span>
+<div class="font-label-md text-label-md font-semibold text-on-surface">₹500 / day</div>
+</div>
+<a class="px-4 py-2 rounded-lg bg-tertiary-container text-on-tertiary font-label-md text-label-md hover:bg-tertiary transition-colors flex items-center gap-1 shadow-sm" href="https://wa.me/919845012345?text=Hi,%20I%20want%20to%20book%20Innova%20Crysta" target="_blank">
+<span>Book Crysta</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 3. Luxury MPV (Toyota Hycross Hybrid) -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group">
+<div class="relative h-56 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A sleek black Toyota Innova Hycross Hybrid luxury MPV parked in front of a five-star hotel entrance with warm evening architectural lighting, deep navy sky, crisp editorial shot showcasing the futuristic grille and plush interior." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmGPw0sTRuxH5igVH5u2NFjSNRGwHPH3RK686ww6q-CXeLSZipzi4myFgyoqjH7nT4d2SGk-0vKQMf3qnR2ntIMb7p6lbH2Mt45HjacnitFP7hUBYYi9Yx7U840bsS2c1ligL9N1MPkuVPHV6VuLp5DSvjElhKBds-loWZScf26OK7tVzM6C4XCwnUhny7N9fyO8TWknmhLH9YTpPat_RAvrTDFF0EKG7sZfUcPpQgvGX9JwPVYjx9"/>
+<div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm font-label-sm text-label-sm text-primary font-semibold">
+            Hybrid Luxury
+          </div>
+<div class="absolute bottom-4 right-4 px-3 py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm">
+            Starting ₹24 / km
+          </div>
+</div>
+<div class="p-6 flex flex-col flex-1 justify-between space-y-5">
+<div class="space-y-2">
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Luxury MPV (Hycross Hybrid)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ultra-silent hybrid cruising, ottoman recliner seating, panoramic sunroof, and VIP level suspension for discerning travelers.</p>
+</div>
+<div class="grid grid-cols-2 gap-2 text-on-surface-variant font-body-sm text-body-sm pt-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">groups</span> 6 Passengers
+            </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">airline_seat_flat</span> Ottoman Recliners
+            </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">volume_off</span> Whisper Quiet Cabin
+            </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">shield</span> ADAS Safety Suite
+            </div>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-caption text-caption text-on-surface-variant">Driver Allowance</span>
+<div class="font-label-md text-label-md font-semibold text-on-surface">₹600 / day</div>
+</div>
+<a class="px-4 py-2 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1" href="https://wa.me/919845012345?text=Hi,%20I%20want%20to%20book%20Toyota%20Hycross%20Hybrid" target="_blank">
+<span>Book Hycross</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 4. Urban Executive (Toyota Fortuner 4x4) -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group">
+<div class="relative h-56 w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A powerful pearl white Toyota Fortuner 4x4 parked at an elevation viewpoint overlooking misty Western Ghats plantation roads, dynamic low angle stance, sharp premium details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsJDBaFkpr00aVWZyWmpGBM40XCAveIVFrJa-ycGtqf4gW2IihWrlmIHjEhT6cfgq0r8oGmtDRpxbDJrpumgD1RWbed_KrAiVmFH7Cfv1_FNkt_8qeZ9CUdiLJUZuAOZacY9eA9TzNTODkPzGUp1Da8lqWpRocWFZ7eQA9Im38YB7a2fLoj7djJLkwVRGdQB6WAcM4F8NEfooqUKlz6yJIfStgkH7sPbzZsY6flSip-NK-KgzPS93r"/>
+<div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm font-label-sm text-label-sm text-primary font-semibold">
+            All-Terrain Power
+          </div>
+<div class="absolute bottom-4 right-4 px-3 py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm">
+            Starting ₹35 / km
+          </div>
+</div>
+<div class="p-6 flex flex-col flex-1 justify-between space-y-5">
+<div class="space-y-2">
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Urban Executive (Fortuner 4x4)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rugged luxury built for steep estate trails, offbeat hill resorts, and VIP security escorts across Karnataka &amp; Nilgiris.</p>
+</div>
+<div class="grid grid-cols-2 gap-2 text-on-surface-variant font-body-sm text-body-sm pt-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">groups</span> 7 Passengers
+            </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">terrain</span> 4x4 High Clearance
+            </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">airline_seat_recline_normal</span> Leather Upholstery
+            </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">luggage</span> 4+ Bags Boot Space
+            </div>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-caption text-caption text-on-surface-variant">Driver Allowance</span>
+<div class="font-label-md text-label-md font-semibold text-on-surface">₹700 / day</div>
+</div>
+<a class="px-4 py-2 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-colors flex items-center gap-1" href="https://wa.me/919845012345?text=Hi,%20I%20want%20to%20book%20Toyota%20Fortuner" target="_blank">
+<span>Book Fortuner</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 5. Tempo Traveller & Mini Coach -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group lg:col-span-2">
+<div class="grid grid-cols-1 md:grid-cols-2 h-full">
+<div class="relative h-64 md:h-full w-full overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A luxury customized 16-seater Force Tempo Traveller with wide tinted tourist windows and pristine white exterior parked under coconut palms near a South India heritage retreat, bright clean natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLqR6gCOJ9NGGBbgpZ-knIdVMmjecW3vP4QHlUGjkVJvDXaeMfgTSRPtRxdJQGS_XquWwX1bbIzAmgR1ELQEu_jiQZ2iJ5cJOPeicbrjbOfyQPYByAOkJqKk4Qbsfdr8WFn_MNNsMRmBP4t8mSjwGnuhp3JJMzr0JNAFlfnm4WQS5zKUldii-ikZnDopsjIN0V5kuT5g3qn-fNdVFa54dKbtdBITZhSoJJfkNxdvNzoD1ojkqrEtXs"/>
+<div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm font-label-sm text-label-sm text-primary font-semibold">
+              Group Travel
+            </div>
+<div class="absolute bottom-4 right-4 px-3 py-1 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm">
+              Starting ₹26 / km
+            </div>
+</div>
+<div class="p-6 md:p-8 flex flex-col justify-between space-y-6">
+<div class="space-y-3">
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Tempo Traveller &amp; Mini Coach (12 to 26 Seater)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Crafted for extended joint family gatherings, corporate leadership retreats, and wedding groups. Comes with high roof walk-in cabin, push-back reclining seats, separate luggage carrier, and LED entertainment system.
+              </p>
+</div>
+<div class="grid grid-cols-2 gap-3 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">airline_seat_recline_extra</span> Pushback Ergonomic Seats
+              </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">tv</span> Smart Audio &amp; LED Screens
+              </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">luggage</span> High Luggage Boot + Roof Rail
+              </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">settings_remote</span> Individual AC Vents
+              </div>
+</div>
+<div class="pt-4 flex items-center justify-between">
+<div class="space-y-0.5">
+<span class="font-caption text-caption text-on-surface-variant">Available Capacities</span>
+<div class="font-label-md text-label-md font-semibold text-on-surface">12, 14, 17, 20 &amp; 26 Seater</div>
+</div>
+<a class="px-5 py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors flex items-center gap-1.5 shadow-sm" href="https://wa.me/919845012345?text=Hi,%20I%20want%20to%20inquire%20about%20Tempo%20Traveller%20rental" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Get Group Quotation</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Popular Outstation Packages from Bengaluru -->
+<section class="w-full bg-surface-container-low py-20">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="space-y-2">
+<div class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Hassle-Free Fixed Circuits</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Popular Outstation Routes &amp; Chauffeur Packages</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            Pre-planned round-trip itineraries with kilometer allowances, driver night charges, and route toll estimates included upfront.
+          </p>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-emerald-600">navigation</span> Pick-up from any Bengaluru pincode
+        </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Route 1: Coorg & Mysore -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-surface-variant text-primary font-caption text-caption font-semibold">3 Days / 2 Nights</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">800 km Included</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Bengaluru to Mysore &amp; Coorg</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Palace visit, Abbey Falls, Raja's Seat &amp; coffee estate transfers.</p>
+</div>
+<div class="space-y-1.5 pt-2">
+<div class="flex items-center justify-between font-caption text-caption text-on-surface-variant">
+<span>Sedan (Dzire):</span>
+<span class="font-semibold text-on-surface">₹10,500</span>
+</div>
+<div class="flex items-center justify-between font-caption text-caption text-on-surface-variant">
+<span>Innova Crysta:</span>
+<span class="font-semibold text-primary font-bold">₹15,600</span>
+</div>
+</div>
+</div>
+<div class="p-6 pt-0">
+<a class="w-full py-2.5 rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-md text-label-md text-center block" href="https://wa.me/919845012345?text=Hi,%20I%20am%20interested%20in%20Bengaluru%20to%20Mysore%20Coorg%20cab%20package" target="_blank">
+              Book This Package
+            </a>
+</div>
+</div>
+<!-- Route 2: Chikmagalur & Kemmangundi -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-surface-variant text-primary font-caption text-caption font-semibold">2 Days / 1 Night</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">600 km Included</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Bengaluru to Chikmagalur</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Mullayanagiri peak, Baba Budangiri, and scenic valley drives.</p>
+</div>
+<div class="space-y-1.5 pt-2">
+<div class="flex items-center justify-between font-caption text-caption text-on-surface-variant">
+<span>Sedan (Dzire):</span>
+<span class="font-semibold text-on-surface">₹7,800</span>
+</div>
+<div class="flex items-center justify-between font-caption text-caption text-on-surface-variant">
+<span>Innova Crysta:</span>
+<span class="font-semibold text-primary font-bold">₹11,800</span>
+</div>
+</div>
+</div>
+<div class="p-6 pt-0">
+<a class="w-full py-2.5 rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-md text-label-md text-center block" href="https://wa.me/919845012345?text=Hi,%20I%20am%20interested%20in%20Chikmagalur%20cab%20package" target="_blank">
+              Book This Package
+            </a>
+</div>
+</div>
+<!-- Route 3: Ooty & Wayanad -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-surface-variant text-primary font-caption text-caption font-semibold">4 Days / 3 Nights</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1000 km Included</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Bengaluru to Ooty &amp; Wayanad</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Nilgiris hairpin turns, tea gardens, Bandipur forest safari road.</p>
+</div>
+<div class="space-y-1.5 pt-2">
+<div class="flex items-center justify-between font-caption text-caption text-on-surface-variant">
+<span>Sedan (Dzire):</span>
+<span class="font-semibold text-on-surface">₹13,500</span>
+</div>
+<div class="flex items-center justify-between font-caption text-caption text-on-surface-variant">
+<span>Innova Crysta:</span>
+<span class="font-semibold text-primary font-bold">₹19,800</span>
+</div>
+</div>
+</div>
+<div class="p-6 pt-0">
+<a class="w-full py-2.5 rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-md text-label-md text-center block" href="https://wa.me/919845012345?text=Hi,%20I%20am%20interested%20in%20Ooty%20Wayanad%20cab%20package" target="_blank">
+              Book This Package
+            </a>
+</div>
+</div>
+<!-- Route 4: Tirupati Balaji Darshan -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between">
+<span class="px-3 py-1 rounded-full bg-surface-variant text-primary font-caption text-caption font-semibold">Same Day or 2 Days</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">520 km Included</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Tirupati Balaji Darshan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">AP state permit handled, experienced drivers familiar with Alipiri checkpoints.</p>
+</div>
+<div class="space-y-1.5 pt-2">
+<div class="flex items-center justify-between font-caption text-caption text-on-surface-variant">
+<span>Sedan (Dzire):</span>
+<span class="font-semibold text-on-surface">₹7,200</span>
+</div>
+<div class="flex items-center justify-between font-caption text-caption text-on-surface-variant">
+<span>Innova Crysta:</span>
+<span class="font-semibold text-primary font-bold">₹10,900</span>
+</div>
+</div>
+</div>
+<div class="p-6 pt-0">
+<a class="w-full py-2.5 rounded-lg bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-md text-label-md text-center block" href="https://wa.me/919845012345?text=Hi,%20I%20am%20interested%20in%20Tirupati%20Darshan%20cab%20package" target="_blank">
+              Book This Package
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Bengaluru Chooses Siri Vacations Chauffeurs (4 Value Pillars) -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-20 w-full space-y-12">
+<div class="text-center max-w-3xl mx-auto space-y-3">
+<div class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">The Siri Vacations Distinction</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Why Bengaluru Chooses Our Chauffeur Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Unlike anonymous aggregator platforms, every driver is on our direct payroll, thoroughly background checked, and trained in courteous hospitality.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Feature 1 -->
+<div class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow space-y-4">
+<div class="w-12 h-12 rounded-xl bg-surface-variant text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">badge</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Uniformed &amp; Vetted Drivers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Fluent in Kannada, English, Hindi &amp; Tamil. Non-smoking, background-verified professionals trained for quiet, respectful family comfort.
+        </p>
+<div class="pt-2 text-primary font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span> 100% Background Cleared
+        </div>
+</div>
+<!-- Feature 2 -->
+<div class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow space-y-4">
+<div class="w-12 h-12 rounded-xl bg-surface-variant text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">health_and_safety</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Inspected &amp; Sanitized Fleet</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Real-time GPS telematics, emergency SOS button, odorless vacuumed interiors, fresh bottled water, and umbrella amenities on board.
+        </p>
+<div class="pt-2 text-primary font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span> 32-Point Dispatch Audit
+        </div>
+</div>
+<!-- Feature 3 -->
+<div class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow space-y-4">
+<div class="w-12 h-12 rounded-xl bg-surface-variant text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">receipt</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Zero-Surprise Transparent Billing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          No mid-way rate inflation or surprise night charges. Inter-state border permits (TN, KL, AP, GA) explained with upfront itemized GST bills.
+        </p>
+<div class="pt-2 text-primary font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span> No Hidden Surcharges
+        </div>
+</div>
+<!-- Feature 4 -->
+<div class="p-8 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow space-y-4">
+<div class="w-12 h-12 rounded-xl bg-surface-variant text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">timer</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Punctual Doorstep Pickup</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Guaranteed chauffeur arrival at your doorstep 15 minutes before your scheduled departure across Indiranagar, Whitefield, Koramangala &amp; all Bengaluru zones.
+        </p>
+<div class="pt-2 text-primary font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span> On-Time Guarantee
+        </div>
+</div>
+</div>
+</section>
+<!-- Visual Chauffeur Standard & Safety Split Banner -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 pb-16 w-full">
+<div class="rounded-3xl bg-inverse-surface text-inverse-on-surface p-8 lg:p-14 overflow-hidden relative">
+<div class="absolute right-0 top-0 bottom-0 w-1/2 opacity-10 bg-gradient-to-l from-primary-fixed to-transparent pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+<div class="lg:col-span-8 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-lowest/10 text-primary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">support_agent</span> 24/7 Bengaluru Dispatch Operations Control
+          </div>
+<h2 class="font-headline-md text-headline-md text-white font-bold">Planning a Corporate Retreat or Wedding Guest Transit?</h2>
+<p class="font-body-md text-body-md text-surface-dim leading-relaxed max-w-2xl">
+            We operate dedicated transportation logistics desks for Bengaluru companies and family destination weddings across Coorg resorts, Chikmagalur plantations, and Kabini lodges with dedicated onsite managers.
+          </p>
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="px-6 py-3 rounded-lg bg-tertiary-container text-on-tertiary font-label-md text-label-md hover:bg-tertiary transition-colors shadow-md inline-flex items-center gap-2" href="https://wa.me/919845012345?text=Hi,%20I%20have%20a%20corporate/wedding%20cab%20requirement" target="_blank">
+<span class="material-symbols-outlined text-[20px]">assignment</span>
+<span>Speak to Fleet Manager</span>
+</a>
+<a class="px-6 py-3 rounded-lg bg-surface-container-lowest/10 text-white font-label-md text-label-md hover:bg-surface-container-lowest/20 transition-colors inline-flex items-center gap-2" href="tel:+919845012345">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span>+91 98450 12345</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-4 bg-surface-container-lowest/10 backdrop-blur-md rounded-2xl p-6 space-y-4">
+<div class="font-label-md text-label-md text-white font-semibold">Chauffeur Safety Audit</div>
+<ul class="space-y-3 font-body-sm text-body-sm text-surface-dim">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-400 text-[18px]">verified</span>
+<span>Zero Alcohol &amp; Breathalyzer Dispatched</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-400 text-[18px]">verified</span>
+<span>Minimum 5+ Years Western Ghats Driving</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-400 text-[18px]">verified</span>
+<span>First-Aid &amp; Hill Driving Certified</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-emerald-400 text-[18px]">verified</span>
+<span>Real-Time Speed Governor Capped (80 km/h)</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Customer FAQs Accordion -->
+<section class="max-w-4xl mx-auto px-6 lg:px-8 py-12 w-full space-y-8">
+<div class="text-center space-y-2">
+<div class="font-label-sm text-label-sm text-tertiary-container uppercase tracking-wider">Clear Answers</div>
+<h2 class="font-headline-md text-headline-md text-primary">Frequently Asked Questions on Car Rentals</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Everything you need to know about our chauffeur-driven rental service.</p>
+</div>
+<div class="space-y-4" id="faq-accordion">
+<!-- FAQ 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm space-y-2 cursor-pointer transition-colors" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">How is the outstation fare calculated?</h3>
+<span class="material-symbols-outlined text-primary text-[20px] faq-icon transition-transform">expand_more</span>
+</div>
+<div class="faq-content text-on-surface-variant font-body-sm text-body-sm leading-relaxed hidden pt-2">
+          Outstation fares are charged on a round-trip basis with a standard minimum billing of 300 kilometers per calendar day. The total charge comprises: (Total KM x Rate/KM) + (Number of days x Daily Driver Allowance) + actual toll taxes, state permits, and GST.
+        </div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm space-y-2 cursor-pointer transition-colors" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">What is Driver Batta / Driver Allowance?</h3>
+<span class="material-symbols-outlined text-primary text-[20px] faq-icon transition-transform">expand_more</span>
+</div>
+<div class="faq-content text-on-surface-variant font-body-sm text-body-sm leading-relaxed hidden pt-2">
+          Driver batta covers the chauffeur's daily food and accommodation expenses (typically ₹400 for sedans, ₹500 for Innova Crysta, and ₹600-700 for luxury vehicles per calendar day). You do not need to provide room or meals for the chauffeur at resorts.
+        </div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm space-y-2 cursor-pointer transition-colors" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Do you handle inter-state road taxes for Tamil Nadu, Kerala, and Andhra Pradesh?</h3>
+<span class="material-symbols-outlined text-primary text-[20px] faq-icon transition-transform">expand_more</span>
+</div>
+<div class="faq-content text-on-surface-variant font-body-sm text-body-sm leading-relaxed hidden pt-2">
+          Yes! When crossing Karnataka borders into Wayanad (Kerala), Ooty (Tamil Nadu), or Tirupati (Andhra Pradesh), our drivers carry all legitimate commercial permits and pay the necessary state commercial entry taxes online before arrival to prevent roadside checkpoint delays.
+        </div>
+</div>
+<!-- FAQ 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm space-y-2 cursor-pointer transition-colors" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">Can I hire a car for local Bengaluru meetings or airport pickups?</h3>
+<span class="material-symbols-outlined text-primary text-[20px] faq-icon transition-transform">expand_more</span>
+</div>
+<div class="faq-content text-on-surface-variant font-body-sm text-body-sm leading-relaxed hidden pt-2">
+          Yes, we offer local Bengaluru 4Hr/40Km, 8Hr/80Km, and 12Hr/120Km packages, as well as fixed airport drop and pickup transfers to Kempegowda International Airport (KIA) in sedans, Innova Crystas, and Hycross MPVs.
+        </div>
+</div>
+<!-- FAQ 5 -->
+<div class="bg-surface-container-lowest rounded-xl p-5 shadow-sm space-y-2 cursor-pointer transition-colors" onclick="toggleFaq(this)">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold">What is the cancellation and refund policy?</h3>
+<span class="material-symbols-outlined text-primary text-[20px] faq-icon transition-transform">expand_more</span>
+</div>
+<div class="faq-content text-on-surface-variant font-body-sm text-body-sm leading-relaxed hidden pt-2">
+          Free cancellations are permitted up to 24 hours prior to the scheduled departure time with 100% refund. For cancellations within 12 hours of pickup, a nominal token dispatch charge applies.
+        </div>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Hotline CTA Bar -->
+<div class="w-full bg-surface-container-highest py-6 border-t-0 shadow-inner">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">phone_in_talk</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface font-bold">Need an immediate cab confirmation in Bengaluru?</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Our dispatchers respond on WhatsApp within 90 seconds.</div>
+</div>
+</div>
+<div class="flex items-center gap-3 w-full sm:w-auto">
+<a class="w-full sm:w-auto px-6 py-2.5 rounded-lg bg-emerald-600 text-white font-label-md text-label-md hover:bg-emerald-700 transition-colors inline-flex items-center justify-center gap-2 shadow-sm" href="https://wa.me/919845012345?text=Hello%20Siri%20Vacations,%20I%20need%20a%20cab%20quote" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>WhatsApp Hotline (+91 98450 12345)</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Tab switcher behavior
+  const tabs = document.querySelectorAll('#rental-tabs .tab-btn');
+  const returnContainer = document.getElementById('returnDateContainer');
+  const dropCitySelect = document.getElementById('dropCity');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        t.classList.remove('active', 'bg-primary', 'text-on-primary', 'shadow-sm');
+        t.classList.add('text-on-surface-variant');
+      });
+      tab.classList.add('active', 'bg-primary', 'text-on-primary', 'shadow-sm');
+      tab.classList.remove('text-on-surface-variant');
+
+      const mode = tab.getAttribute('data-tab');
+      if (mode === 'airport') {
+        dropCitySelect.innerHTML = `
+          <option value="kia">Bengaluru Airport Terminal 1 & 2</option>
+          <option value="city">Bengaluru City Center</option>
+        `;
+        returnContainer.style.display = 'none';
+      } else if (mode === 'local') {
+        dropCitySelect.innerHTML = `
+          <option value="local-8">Within Bengaluru City (8 Hr / 80 Km)</option>
+          <option value="local-12">Within Bengaluru City (12 Hr / 120 Km)</option>
+        `;
+        returnContainer.style.display = 'none';
+      } else if (mode === 'one-way') {
+        dropCitySelect.innerHTML = `
+          <option value="mysore-oneway">Mysore Drop (One-Way)</option>
+          <option value="coorg-oneway">Coorg / Madikeri (One-Way)</option>
+          <option value="chikmagalur-oneway">Chikmagalur (One-Way)</option>
+          <option value="chennai-oneway">Chennai (One-Way)</option>
+        `;
+        returnContainer.style.display = 'none';
+      } else {
+        dropCitySelect.innerHTML = `
+          <option value="coorg">Coorg / Madikeri (265 km)</option>
+          <option value="ooty">Ooty & Nilgiris (280 km)</option>
+          <option value="mysore">Mysore Heritage (145 km)</option>
+          <option value="chikmagalur">Chikmagalur Coffee Hills (245 km)</option>
+          <option value="tirupati">Tirupati Balaji (250 km)</option>
+          <option value="wayanad">Wayanad Rainforest (290 km)</option>
+          <option value="custom">Other South India Destination...</option>
+        `;
+        returnContainer.style.display = 'flex';
+      }
+    });
+  });
+
+  // Dynamic Fare Calculator demo function
+  function calculateQuote() {
+    const vehicle = document.getElementById('vehicleCategory').value;
+    const dest = document.getElementById('dropCity').options[document.getElementById('dropCity').selectedIndex].text;
+    const resultBox = document.getElementById('quoteResult');
+    const quoteTitle = document.getElementById('quoteTitle');
+    const quotePrice = document.getElementById('quotePrice');
+
+    let baseRate = 19;
+    let vehicleName = 'Innova Crysta';
+
+    if (vehicle === 'sedan') {
+      baseRate = 12;
+      vehicleName = 'Premium Sedan (Dzire)';
+    } else if (vehicle === 'hycross') {
+      baseRate = 24;
+      vehicleName = 'Luxury MPV (Hycross)';
+    } else if (vehicle === 'fortuner') {
+      baseRate = 35;
+      vehicleName = 'Toyota Fortuner 4x4';
+    } else if (vehicle === 'tempo') {
+      baseRate = 26;
+      vehicleName = 'Tempo Traveller 12-Seater';
+    }
+
+    // Rough calculation based on 700km base estimate + driver batta
+    const estKm = 750;
+    const days = 3;
+    const batta = 500 * days;
+    const total = Math.round((estKm * baseRate) + batta + 1000);
+
+    quoteTitle.textContent = `${vehicleName} • Bengaluru to ${dest}`;
+    quotePrice.textContent = '₹' + total.toLocaleString('en-IN');
+
+    resultBox.classList.remove('hidden');
+    resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Accordion toggle handler
+  function toggleFaq(el) {
+    const content = el.querySelector('.faq-content');
+    const icon = el.querySelector('.faq-icon');
+    const isHidden = content.classList.contains('hidden');
+
+    if (isHidden) {
+      content.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    } else {
+      content.classList.add('hidden');
+      icon.style.transform = 'rotate(0deg)';
+    }
+  }
+</script></main><footer class="w-full bg-[#082B55] text-white pt-16 pb-8"><div class="max-w-7xl mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 pb-12"><div class="lg:col-span-2 space-y-4"><div class="flex items-center gap-3"><img alt="Siri Vacations" class="h-11 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqwDBxAM9BPKg98Vd82Se14gq4bEK3oglwRrX0xNs7eFOaR7um01CuP6av_qScH1SlVAtXXzUHYLKXP7-VLdEKCbosO3McYeX1LPFYOjBsX2h8RUH1pmInx-5JK5PaSymkzvZI-y4yKJziG5GQRusHOeVhQZbMs8jGHmAF2H11pE-TqdoEyK67nqBJGT1FDodjLQ7AydRK90-AGCb7UaV2e-sA8PjkcwUTgPPZixmr584jZAHRVvfGUoqPiAdHch6UgQ"/></div><p class="font-body-sm text-body-sm text-white/80 max-w-sm leading-relaxed">Siri Vacations crafts thoughtfully planned domestic and international journeys, offering local South India expertise and memorable vacations for families, couples, and group travelers.</p><div class="flex items-start gap-2 pt-2 text-white/80 font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-white shrink-0 mt-0.5">location_on</span><span class="">#42, 100 Feet Road, Indiranagar, Bengaluru 560038</span></div><div class="flex items-center gap-2 text-white/80 font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-white shrink-0">call</span><span class="">+91 98450 12345 / 080 4123 4567</span></div><div class="flex items-center gap-2 text-white/80 font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-white shrink-0">mail</span><span class="">trips@sirivacations.com</span></div></div><div class="space-y-3"><h3 class="font-label-md text-label-md font-bold text-white uppercase tracking-wider">Domestic Packages</h3><ul class="space-y-2 font-body-sm text-body-sm text-white/70"><li class="hover:text-white transition-colors"><a class="" data-path="domestic-packages" href="#">South India Tours</a></li><li class="hover:text-white transition-colors"><a class="" data-path="domestic-packages" href="#">North India Circuits</a></li><li class="hover:text-white transition-colors"><a class="" data-path="domestic-packages" href="#">Karnataka Heritage</a></li><li class="hover:text-white transition-colors"><a class="" data-path="domestic-packages" href="#">Kerala Packages</a></li><li class="hover:text-white transition-colors"><a class="" data-path="domestic-packages" href="#">Tamil Nadu Temple Tours</a></li><li class="hover:text-white transition-colors"><a class="" data-path="domestic-packages" href="#">Honeymoon Specials</a></li></ul></div><div class="space-y-3"><h3 class="font-label-md text-label-md font-bold text-white uppercase tracking-wider">International Packages</h3><ul class="space-y-2 font-body-sm text-body-sm text-white/70"><li class="hover:text-white transition-colors"><a class="" data-path="international-packages" href="#">Southeast Asia</a></li><li class="hover:text-white transition-colors"><a class="" data-path="international-packages" href="#">Island Holidays</a></li><li class="hover:text-white transition-colors"><a class="" data-path="international-packages" href="#">Dubai Vacations</a></li><li class="hover:text-white transition-colors"><a class="" data-path="international-packages" href="#">Bali Escapes</a></li><li class="hover:text-white transition-colors"><a class="" data-path="international-packages" href="#">Maldives Getaways</a></li><li class="hover:text-white transition-colors"><a class="" data-path="international-packages" href="#">Singapore City Tours</a></li></ul></div><div class="space-y-3"><h3 class="font-label-md text-label-md font-bold text-white uppercase tracking-wider">Travel Services</h3><ul class="space-y-2 font-body-sm text-body-sm text-white/70"><li class="hover:text-white transition-colors"><a class="" data-path="car-rentals" href="#">Car Rentals &amp; Chauffeurs</a></li><li class="hover:text-white transition-colors"><a class="" data-path="group-departures" href="#">Fixed Group Departures</a></li><li class="hover:text-white transition-colors"><a class="" data-path="destinations" href="#">Destinations Directory</a></li><li class="hover:text-white transition-colors"><a class="" data-path="domestic-packages" href="#">Customized Itineraries</a></li><li class="hover:text-white transition-colors"><a class="" data-path="contact-us" href="#">Corporate Desk</a></li></ul></div><div class="space-y-3"><h3 class="font-label-md text-label-md font-bold text-white uppercase tracking-wider">Quick Links</h3><ul class="space-y-2 font-body-sm text-body-sm text-white/70"><li class="hover:text-white transition-colors"><a class="" data-path="about-us" href="#">About Us</a></li><li class="hover:text-white transition-colors"><a class="" data-path="destinations" href="#">Popular Destinations</a></li><li class="hover:text-white transition-colors"><a class="" data-path="contact-us" href="#">Contact Us</a></li><li class="hover:text-white transition-colors"><a class="" data-path="plan-trip" href="#">Plan Your Trip</a></li></ul></div></div><div class="py-8 bg-white/5 rounded-xl px-6 flex flex-col md:flex-row items-center justify-between gap-6 my-6"><div class="space-y-1 text-center md:text-left"><h4 class="font-title-md text-title-md text-white font-semibold">Subscribe for Curated Travel Deals</h4><p class="font-body-sm text-body-sm text-white/70">Get secret South India deals and holiday itineraries straight to your inbox.</p></div><div class="flex w-full md:w-auto items-center gap-2"><input class="px-4 py-2.5 rounded-lg bg-white/10 text-white placeholder-white/50 text-body-sm outline-none focus:ring-2 focus:ring-white/40 w-full md:w-64" placeholder="Enter your email" type="email"/><button class="px-5 py-2.5 rounded-lg bg-tertiary-container text-on-tertiary font-label-md text-label-md whitespace-nowrap hover:bg-tertiary hover:text-on-tertiary transition-all">Subscribe</button></div></div><div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 font-caption text-caption text-white/60"><p class="">© 2025 Siri Vacations. All rights reserved. Registered Travel &amp; Destination Concierge.</p><div class="flex items-center gap-6"><a class="hover:text-white transition-colors" data-path="about-us" href="#">Privacy Policy</a><a class="hover:text-white transition-colors" data-path="about-us" href="#">Terms &amp; Conditions</a><a class="hover:text-white transition-colors" data-path="contact-us" href="#">Cancellation Policy</a></div></div></div></footer></body></html>

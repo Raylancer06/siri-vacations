@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed": "#001b3d", "surface-container-high": "#dbe9ff", "surface": "#f8f9ff", "surface-container-low": "#eff4ff", "primary-fixed-dim": "#a9c7ff", "inverse-on-surface": "#eaf1ff", "on-surface-variant": "#424752", "on-secondary-fixed-variant": "#2b4772", "error-container": "#ffdad6", "surface-tint": "#085db5", "surface-container-highest": "#d2e4ff", "on-primary-fixed-variant": "#00468c", "primary": "#00468c", "tertiary-fixed": "#ffdcc2", "on-primary": "#ffffff", "on-primary-container": "#c6d9ff", "secondary-fixed": "#d6e3ff", "outline": "#727783", "secondary": "#435f8c", "tertiary": "#6d3a00", "on-secondary": "#ffffff", "primary-fixed": "#d6e3ff", "surface-variant": "#d2e4ff", "secondary-fixed-dim": "#acc7fa", "on-secondary-fixed": "#001b3d", "on-tertiary-fixed": "#2e1500", "on-secondary-container": "#395581", "tertiary-fixed-dim": "#ffb77a", "on-surface": "#081d31", "outline-variant": "#c2c6d4", "surface-container-lowest": "#ffffff", "background": "#f8f9ff", "on-error-container": "#93000a", "tertiary-container": "#8f4e00", "secondary-container": "#aecafd", "surface-bright": "#f8f9ff", "inverse-primary": "#a9c7ff", "on-background": "#081d31", "on-error": "#ffffff", "surface-container": "#e5eeff", "on-tertiary-fixed-variant": "#6d3a00", "on-tertiary-container": "#ffd0aa", "on-tertiary": "#ffffff", "surface-dim": "#c8dcf7", "inverse-surface": "#1f3247", "primary-container": "#075db5", "error": "#ba1a1a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "gutter-sm": "1rem", "space-sm": "0.5rem", "margin": "3rem", "space-xl": "2.5rem", "margin-mobile": "1.25rem", "space-xs": "0.25rem", "gutter": "1.5rem", "space-md": "1rem" }, "fontFamily": { "label-sm": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-xl-mobile": ["Plus Jakarta Sans"], "body-md": ["Inter"], "title-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "caption": ["Inter"], "headline-xl": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"] }, "fontSize": { "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "600"}], "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}], "headline-xl-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}], "title-lg": ["18px", {"lineHeight": "26px", "fontWeight": "600"}], "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}], "headline-md": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700"}], "body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}], "caption": ["11px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}], "headline-xl": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "headline-sm": ["22px", {"lineHeight": "30px", "letterSpacing": "-0.005em", "fontWeight": "600"}] } } } };</script></head><body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_4px_20px_-2px_rgba(8,43,85,0.06)]"><div class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-sm shrink-0"><img alt="Siri Vacations Travel Logo.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WxWnWGJbkoGmm6Ur6LzR82t6XEaa0aGClXmIa6OBfxIH-VE69aQ7BYEgJcLlL1HOxJpAH6OEcHRj-wWTJ7qrjzkNPBcmZg7_jC_Q-tk01Z4oEPr0kFYM5-n25GXPSq5cGZbuzmB_DMNf8PrBI6g1Wb7-jzBjn3RWUBzGI_TyKrLYEoYj1enbi-nNgPvnruOGQosnK3YZZ8GtAh6fk8p_OQJD0kTTtP1mpylvwYI9qNE1fTarXXYsme1vynUVITBAhMkepUHTPeFQ"/><div class="flex flex-col"><span class="font-title-lg text-title-lg text-primary tracking-tight leading-none">Siri Vacations</span><span class="font-caption text-caption text-secondary tracking-wider uppercase">Bengaluru</span></div></div><nav class="hidden xl:flex items-center gap-space-lg whitespace-nowrap" data-active-classes="text-primary font-label-md"><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="home" href="#">Home</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="about-us" href="#">About Us</a><a aria-current="page" class="transition-colors text-primary font-label-md" data-path="domestic-packages" href="#">Domestic Packages</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="international-packages" href="#">International Packages</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="destinations" href="#">Destinations</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="car-rentals" href="#">Car Rentals</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="group-departures" href="#">Group Departures</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact-us" href="#">Contact Us</a></nav><div class="flex items-center gap-space-md shrink-0"><a class="hidden sm:flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px] text-primary">chat</span><span class="font-label-md text-label-md">WhatsApp</span></a><a class="px-space-md py-space-sm rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md shadow-[0_4px_16px_rgba(143,78,0,0.25)] transition-all shrink-0" data-path="plan-your-trip" href="#">Plan Your Trip</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface flex-1"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Status Scrim -->
+<section class="w-full bg-surface-container-low py-space-sm border-b-0">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between">
+<nav class="flex items-center gap-space-xs text-secondary font-label-md text-label-md">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">home</span>
+          Home
+        </a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Domestic Packages</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">Karnataka</a>
+<span class="text-outline-variant">/</span>
+<span class="text-on-surface font-title-md truncate max-w-[200px] sm:max-w-none">Coorg Coffee Trails</span>
+</nav>
+<div class="hidden md:flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-highest text-primary font-caption text-caption uppercase tracking-wider font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          Instant Confirmation Available
+        </span>
+<span class="font-body-sm text-body-sm text-secondary">Package Code: <strong class="text-on-surface">SV-KAR-032</strong></span>
+</div>
+</div>
+</section>
+<!-- Title & Summary Header -->
+<section class="w-full bg-surface pt-space-lg pb-space-md">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<!-- Badges Cluster -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-sm py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">landscape</span>
+              Karnataka Hill Station
+            </span>
+<span class="px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+              3 Days / 2 Nights
+            </span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">family_restroom</span>
+              Ideal for Couples &amp; Families
+            </span>
+<span class="px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">directions_car</span>
+              Private Chauffeur Included
+            </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-space-xs">
+            Coorg Coffee Trails, Abbey Falls &amp; Raja's Seat
+          </h1>
+<div class="flex items-center gap-space-md text-secondary font-body-sm text-body-sm">
+<div class="flex items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="font-title-md text-title-md text-on-surface ml-1">4.9</span>
+<span class="text-secondary">(128 guest reviews)</span>
+</div>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span>
+              Bengaluru Pickup &amp; Drop
+            </span>
+</div>
+</div>
+<!-- Quick Price & Top CTA Block -->
+<div class="flex flex-col sm:flex-row lg:flex-col items-start lg:items-end justify-between bg-surface-container-low p-space-md rounded-xl lg:bg-transparent lg:p-0">
+<div>
+<span class="font-caption text-caption uppercase tracking-wider text-secondary">Customizable Package</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-body-sm text-body-sm text-secondary">Starting from</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">₹6,499</span>
+<span class="font-body-sm text-body-sm text-secondary">/ person</span>
+</div>
+<p class="font-caption text-caption text-secondary">Taxes included • Ex-Bengaluru / Mysore</p>
+</div>
+<div class="flex items-center gap-space-xs mt-space-sm sm:mt-0 lg:mt-space-xs">
+<a class="px-space-md py-space-sm rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface flex items-center gap-1.5 shadow-sm font-label-md text-label-md transition-all" href="https://wa.me/919845012345?text=Hello%20Siri%20Vacations,%20I%20am%20interested%20in%20the%20Coorg%20Coffee%20Trails%20package." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-[#25D366]">chat</span>
+              WhatsApp
+            </a>
+<a class="px-space-lg py-space-sm rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md shadow-[0_4px_16px_rgba(143,78,0,0.25)] hover:shadow-[0_8px_24px_rgba(143,78,0,0.35)] transition-all" href="#booking-inquiry">
+              Enquire Now
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Hero Photo Gallery (1 Primary + 3 Thumbnails Bento) -->
+<section class="w-full bg-surface pb-space-lg">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm rounded-2xl overflow-hidden p-space-xs bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(8,43,85,0.06)]">
+<!-- Main Large Photo (8 cols on desktop) -->
+<div class="md:col-span-8 relative h-[320px] sm:h-[420px] lg:h-[480px] rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Cinematic wide shot of misty emerald green coffee plantations in Coorg Kodagu with rolling hills, tall silver oak trees, tropical morning fog, warm sunrays breaking through lush canopy, editorial luxury travel aesthetics with deep blues and natural greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcICUANHSdyDooRAM0abn_uPo56ZBce01e7A_EAmhsC4r2exyA_VF2nv1JuMaoZMezuEX50BE3aYpElzjpUsf6NE6np2Jm2iAZsoDHZ_rvXir-NaTpOAoHLMzK9XrUTRujdKYxhZFe34O8nZYNIV6u2Yp1mdOooQ9D6QMLnuKEG-eB81FMbcSiF3g4x06M2rJAQqlksQBhxz0WMhg3VbpKEeOoNAn9U8wl01JrkGMeVi6BaEM-Zqbp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-black/20 pointer-events-none"></div>
+<div class="absolute top-space-md left-space-md">
+<span class="px-space-md py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md text-primary font-label-sm text-label-sm shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">verified</span>
+              Handcrafted Experience
+            </span>
+</div>
+<div class="absolute bottom-space-md left-space-md right-space-md text-surface-container-lowest flex items-end justify-between">
+<div>
+<p class="font-headline-sm text-headline-sm font-semibold tracking-tight text-white drop-shadow-sm">Verdant Estate Haven, Kodagu</p>
+<p class="font-body-sm text-body-sm text-surface-container-high drop-shadow-sm">Experience private heritage homestays immersed in wild robusta and arabica groves</p>
+</div>
+<button class="hidden sm:flex items-center gap-1 px-space-md py-space-xs rounded-lg bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm hover:bg-surface-container-lowest transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">photo_library</span>
+              14 Photos
+            </button>
+</div>
+</div>
+<!-- 3 Thumbnails Stacked (4 cols on desktop) -->
+<div class="md:col-span-4 grid grid-cols-2 md:grid-cols-1 gap-space-sm h-full">
+<div class="relative h-[155px] lg:h-[152px] rounded-xl overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Spectacular Abbey Falls in Coorg rushing down rugged mossy granite rocks surrounded by dense tropical foliage, hanging pedestrian bridge in view, pristine white waterfalls under diffused natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZspT0J2FgnTw019-Vza-47QGSZsJtC0jI4cFBB3EgBv2mLsgBZixH5_6DazS795HT1OK3m5YQIXTS770LhnDmJ5PnKqKWpBlmsuKbQHclrUUJkMgDWkhG0qVzHukElHLwwNSvBJOjQzEZXONLrd5VltVUClSEkGytBRhP7zXiYzNizhk8PZM1GjfjHzNFbnYVkHuHx3xV8i9OEBNHYuUQBkzWjIl7ngRKRzNPKX4ot3Z2Fu19JerO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 via-transparent to-transparent"></div>
+<span class="absolute bottom-2 left-3 text-surface-container-lowest font-label-sm text-label-sm font-semibold">Abbey Waterfalls</span>
+</div>
+<div class="relative h-[155px] lg:h-[152px] rounded-xl overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Golden Buddha statues inside the majestic Namdroling Monastery Golden Temple in Bylakuppe Coorg, ornate Tibetan Buddhist mural paintings, maroon robed monks, serene spiritual atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYA5VkkODES55H7E5jLlaRBeyhhMkp6e8gBcfxQ6Y0wVl7JmwaN52HeAscGUdG6XlLt3WReUwUcXX5VkL1DNAeSmkmwDbB8kauCHTWg0iNH7WThhgReRD2MSGUEQ8XjAMBczhpKcUbx9zGUy5zoUPlNHuKEC_IQ435iQZMtoTL_pEotZiUyVrbapQm_I-dLXPfCHI8nc3zYCl1wRFblAK7qpGRcchbzu5SBPc1IdUJYTSXbOl8fNDV"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 via-transparent to-transparent"></div>
+<span class="absolute bottom-2 left-3 text-surface-container-lowest font-label-sm text-label-sm font-semibold">Bylakuppe Golden Temple</span>
+</div>
+<div class="col-span-2 md:col-span-1 relative h-[155px] lg:h-[152px] rounded-xl overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Panoramic sunset viewpoint from Raja's Seat in Madikeri Coorg overlooking misty rolling blue valley hills, vibrant orange and purple twilight sky, colonial garden viewpoint pavilions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxITKkafdj_upAYYvwxGtG6IXWetmBAozZUM_79U7SCeiUTBZWNxvoOE_5TD7NgmYphNOcyqVQ4Disqy89vasBg9HapdYmW05SIz0S04AiYz5jwB4i0lcSOxOQ6XxE77cX3AruIeT4Q41WISbqsQni2LABFw15oR5SMYPjG5wtrV7bHLbZJEzcuVLNgHukjpmSs-ZK0baRYqWei8zAgpKUgYSmHbUYRHEbr-urRPEIt43x5JaSO2Sr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/70 via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-3 right-3 flex items-center justify-between text-surface-container-lowest font-label-sm text-label-sm font-semibold">
+<span>Sunset at Raja's Seat</span>
+<span class="material-symbols-outlined text-[18px]">fullscreen</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 2: Quick Overview Bar -->
+<section class="w-full bg-surface-container-lowest py-space-md shadow-[0_2px_12px_rgba(8,43,85,0.04)]">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-space-md items-center">
+<!-- Item 1 -->
+<div class="flex items-center gap-space-sm p-space-xs">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">timelapse</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-secondary uppercase tracking-wider">Duration</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">3 Days / 2 Nights</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-space-sm p-space-xs">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">departure_board</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-secondary uppercase tracking-wider">Pickup / Drop</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Bengaluru / Mysore</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center gap-space-sm p-space-xs">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">calendar_month</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-secondary uppercase tracking-wider">Best Season</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Oct to May (Year-Round)</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex items-center gap-space-sm p-space-xs">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center shrink-0 text-tertiary-container">
+<span class="material-symbols-outlined text-[24px]">airport_shuttle</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-secondary uppercase tracking-wider">Vehicle</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Private AC Sedan / SUV</span>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="flex items-center gap-space-sm p-space-xs col-span-2 sm:col-span-1">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">restaurant</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-secondary uppercase tracking-wider">Meal Plan</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Daily Breakfast Included</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Body: Two-Column Split (Content Left + Sticky Form Right) -->
+<section class="w-full bg-surface py-space-xl">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Content Area (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-xl">
+<!-- Section 3: Package Story & Highlights -->
+<div class="flex flex-col gap-space-md bg-surface-container-lowest p-space-lg rounded-2xl shadow-[0_4px_20px_-2px_rgba(8,43,85,0.04)]">
+<div class="flex items-center gap-2">
+<span class="w-2 h-6 rounded-full bg-primary"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface">The Scotland of India Beckons</h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              Tucked into the misty folds of Karnataka's Western Ghats, Kodagu (Coorg) is a timeless sanctuary of rolling hills, aroma-rich coffee plantations, cascading cascades, and warm Kodava hospitality. With Siri Vacations' bespoke chauffeur-driven holiday, escape Bangalore’s bustle for three curated days of sensory rejuvenation.
+            </p>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              From traversing the tranquil forest trails of Cauvery Nisargadhama and exploring the spiritual serenity of the Golden Tibetan Temple in Bylakuppe, to soaking in the roaring Abbey Falls and capturing golden hour from Raja’s Seat—every moment is designed for effortless leisure and unforgettable family memories.
+            </p>
+<!-- Key Highlights Grid -->
+<div class="mt-space-sm pt-space-md border-t-0">
+<h3 class="font-title-lg text-title-lg text-on-surface mb-space-sm">Key Tour Highlights</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">nature_people</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Private Plantation Walk</h4>
+<p class="font-body-sm text-body-sm text-secondary">Expert naturalist walk through cardamom, pepper vines &amp; coffee groves.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">temple_buddhist</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Tibetan Cultural Immersion</h4>
+<p class="font-body-sm text-body-sm text-secondary">Witness peaceful prayer chants at Namdroling Monastery (Bylakuppe).</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">waterfall_chart</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Abbey Falls &amp; Hanging Bridge</h4>
+<p class="font-body-sm text-body-sm text-secondary">Walk through spice forests to catch roaring falls tumbling into Kaveri basin.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors">
+<div class="w-8 h-8 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">pets</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface">Dubare Elephant Camp</h4>
+<p class="font-body-sm text-body-sm text-secondary">Interact with gentle giants along the bank of the pristine Cauvery river.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 4: Day-Wise Expandable Itinerary -->
+<div class="flex flex-col gap-space-md bg-surface-container-lowest p-space-lg rounded-2xl shadow-[0_4px_20px_-2px_rgba(8,43,85,0.04)]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-6 rounded-full bg-primary"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Day-Wise Detailed Itinerary</h2>
+</div>
+<button class="text-primary font-label-md text-label-md hover:underline" id="toggle-all-days">
+                Expand All Days
+              </button>
+</div>
+<!-- Timeline Container -->
+<div class="flex flex-col gap-space-md mt-space-sm">
+<!-- Day 1 Card -->
+<div class="day-accordion-item rounded-xl bg-surface-container-low overflow-hidden transition-all duration-300">
+<div class="accordion-trigger p-space-md flex items-center justify-between cursor-pointer select-none">
+<div class="flex items-center gap-space-md">
+<span class="w-10 h-10 rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center font-bold">1</span>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-caption text-caption uppercase tracking-wider text-secondary">Day 01 • Approx 260 KM</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-caption text-caption">Breakfast Included</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Bengaluru to Coorg via Bylakuppe &amp; Nisargadhama</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary accordion-icon transform transition-transform duration-300">expand_more</span>
+</div>
+<div class="accordion-content px-space-md pb-space-md pt-space-xs">
+<div class="pl-14 flex flex-col gap-space-md">
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+                      Early morning private pickup from your doorstep or Bengaluru Airport in a sanitised sedan/SUV. Cruise down the Mysuru expressway towards Kushalnagar, enjoying the transition from urban landscapes to the aromatic hills of Kodagu.
+                    </p>
+<!-- Day 1 Schedule breakdown -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-caption text-caption text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">wb_twilight</span>
+                          Morning (06:00 - 11:30)
+                        </span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">Pickup from Bengaluru, scenic highway breakfast stop, drive past Srirangapatna.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-caption text-caption text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sunny</span>
+                          Afternoon (12:00 - 15:30)
+                        </span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">Visit Bylakuppe Namdroling Monastery, Tibetan flea market and Cauvery Nisargadhama bamboo island.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-caption text-caption text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bedtime</span>
+                          Evening (16:30 onwards)
+                        </span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">Check-in at luxury estate resort/homestay. Fresh plantation coffee welcome drink. Leisure evening by campfire.</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs font-caption text-caption text-secondary">
+<span class="font-semibold text-on-surface">Sightseeing:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Golden Temple</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Nisargadhama Deer Park</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Plantation Resort</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Day 2 Card -->
+<div class="day-accordion-item rounded-xl bg-surface-container-low overflow-hidden transition-all duration-300">
+<div class="accordion-trigger p-space-md flex items-center justify-between cursor-pointer select-none">
+<div class="flex items-center gap-space-md">
+<span class="w-10 h-10 rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center font-bold">2</span>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-caption text-caption uppercase tracking-wider text-secondary">Day 02 • Sightseeing Tour</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-caption text-caption">Breakfast Included</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Abbey Falls, Madikeri Fort &amp; Sunset at Raja's Seat</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary accordion-icon transform transition-transform duration-300">expand_more</span>
+</div>
+<div class="accordion-content px-space-md pb-space-md pt-space-xs">
+<div class="pl-14 flex flex-col gap-space-md">
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+                      Wake up to the birdsong of Malabar whistling thrushes. Savor freshly brewed estate coffee before setting out for Madikeri’s celebrated architectural landmarks, lush waterfalls, and unforgettable valley sunsets.
+                    </p>
+<!-- Day 2 Schedule breakdown -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-caption text-caption text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">wb_twilight</span>
+                          Morning (09:00 - 12:30)
+                        </span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">Visit Abbey Falls nestled amid coffee estates; walk through spice plantations with private guide.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-caption text-caption text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sunny</span>
+                          Afternoon (13:30 - 16:30)
+                        </span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">Tour Madikeri Fort museum and the unique Gothic-Islamic Omkareshwara Temple built in 1820.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-caption text-caption text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bedtime</span>
+                          Evening (17:00 - 19:30)
+                        </span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">Catch magical sunset panoramic views over the cliffs of Raja's Seat followed by musical fountain show.</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs font-caption text-caption text-secondary">
+<span class="font-semibold text-on-surface">Sightseeing:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Abbey Falls</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Omkareshwara Temple</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Madikeri Fort</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Raja's Seat</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Day 3 Card -->
+<div class="day-accordion-item rounded-xl bg-surface-container-low overflow-hidden transition-all duration-300">
+<div class="accordion-trigger p-space-md flex items-center justify-between cursor-pointer select-none">
+<div class="flex items-center gap-space-md">
+<span class="w-10 h-10 rounded-xl bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center font-bold">3</span>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-caption text-caption uppercase tracking-wider text-secondary">Day 03 • Approx 250 KM</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-caption text-caption">Breakfast Included</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface">Dubare Elephant Camp &amp; Return Drive to Bengaluru</h3>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary accordion-icon transform transition-transform duration-300">expand_more</span>
+</div>
+<div class="accordion-content px-space-md pb-space-md pt-space-xs">
+<div class="pl-14 flex flex-col gap-space-md">
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+                      Check-out after a traditional South Indian breakfast. Visit Dubare for elephant observation along the Cauvery bank, indulge in homemade chocolate and pure honey shopping, and return safely to Bengaluru.
+                    </p>
+<!-- Day 3 Schedule breakdown -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-caption text-caption text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">wb_twilight</span>
+                          Morning (08:30 - 11:30)
+                        </span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">Dubare Elephant Camp: Boat ride across river Cauvery to witness elephant bathing and feeding sessions.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-caption text-caption text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sunny</span>
+                          Afternoon (12:00 - 14:00)
+                        </span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">Spice and coffee powder shopping in Madikeri town; authentic Coorg pork curry / veg lunch stop.</p>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<span class="font-caption text-caption text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">bedtime</span>
+                          Evening (14:30 - 20:30)
+                        </span>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">Relaxing chauffeur drive back to Bengaluru. Drop-off at your residence or Kempegowda International Airport.</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs font-caption text-caption text-secondary">
+<span class="font-semibold text-on-surface">Sightseeing:</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Dubare Camp</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Local Spice Market</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">Bengaluru Drop</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 5: Inclusions & Exclusions -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-2 h-6 rounded-full bg-primary"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Inclusions &amp; Exclusions</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Inclusions Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(8,43,85,0.04)] flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">What's Included</h3>
+<p class="font-caption text-caption text-secondary">Comprehensive tour coverage</p>
+</div>
+</div>
+<ul class="flex flex-col gap-space-sm">
+<li class="flex items-start gap-space-xs font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">check</span>
+<span>Dedicated AC vehicle (Dzire / Etios or Innova Crysta) for entire 3-day itinerary from Bengaluru.</span>
+</li>
+<li class="flex items-start gap-space-xs font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">check</span>
+<span>2 Nights stay in handpicked 3-star / 4-star coffee estate resort or certified heritage homestay.</span>
+</li>
+<li class="flex items-start gap-space-xs font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">check</span>
+<span>Daily freshly prepared gourmet breakfast at resort dining room.</span>
+</li>
+<li class="flex items-start gap-space-xs font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">check</span>
+<span>All toll taxes, state road taxes, parking fees, and chauffeur allowances included.</span>
+</li>
+<li class="flex items-start gap-space-xs font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">check</span>
+<span>Guided walking tour of an active coffee &amp; black pepper plantation.</span>
+</li>
+<li class="flex items-start gap-space-xs font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5">check</span>
+<span>24x7 dedicated Siri Vacations travel concierge support.</span>
+</li>
+</ul>
+</div>
+<!-- Exclusions Card -->
+<div class="p-space-lg rounded-2xl bg-surface-container-low shadow-[0_4px_20px_-2px_rgba(8,43,85,0.04)] flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-error-container text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">cancel</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-semibold">What's Excluded</h3>
+<p class="font-caption text-caption text-secondary">Pay-as-you-go items</p>
+</div>
+</div>
+<ul class="flex flex-col gap-space-sm">
+<li class="flex items-start gap-space-xs font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-error shrink-0 mt-0.5">close</span>
+<span>Airfare or train tickets to / from Bengaluru origin.</span>
+</li>
+<li class="flex items-start gap-space-xs font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-error shrink-0 mt-0.5">close</span>
+<span>Lunch and dinners (plenty of verified local restaurant recommendations provided).</span>
+</li>
+<li class="flex items-start gap-space-xs font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-error shrink-0 mt-0.5">close</span>
+<span>Entry monument tickets, river rafting tickets, or boat fare at Dubare Camp.</span>
+</li>
+<li class="flex items-start gap-space-xs font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-error shrink-0 mt-0.5">close</span>
+<span>Camera fees, personal laundry, alcoholic drinks, or tips for chauffeur.</span>
+</li>
+<li class="flex items-start gap-space-xs font-body-sm text-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[18px] text-error shrink-0 mt-0.5">close</span>
+<span>Anything not clearly mentioned in the inclusions list.</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Section 6: Photo Lightbox Gallery -->
+<div class="flex flex-col gap-space-md bg-surface-container-lowest p-space-lg rounded-2xl shadow-[0_4px_20px_-2px_rgba(8,43,85,0.04)]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-6 rounded-full bg-primary"></span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Glimpses of Kodagu</h2>
+</div>
+<span class="font-body-sm text-body-sm text-secondary">Captured by Siri Vacations Travelers</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm">
+<div class="relative h-44 rounded-xl overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close up of ripe red coffee cherries growing on green lush coffee branches in Kodagu Coorg plantation with sunlight sparkling on leaves." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC19T1VVMse7XvmKf2HkbuK67Unm6LJZkyVBH1FRKde3jsJIAREsnfdb3viNmTyIFc5KSACEoVWthc1rr4Y_UQ85FLFJJ1A_g1c51sLVGcho3oCVxOo-bN_xOu71bkg66lfPphPg2dvk8mxbCws8Su-oOcxXxMB7xJCRiNCriqWGnmCajzTWV9Ogk1NMrcSFGbDx1Dt27_EwzNFY2FCuD4x_zks_Yi0YlJUlj7690NfRtWmo3DoIoTz"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<div class="relative h-44 rounded-xl overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Elephants bathing in the shallow waters of the Cauvery river at Dubare Elephant Camp Coorg with mahouts under lush forest canopy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcGtSuNCPybcqDwczjjCycbZfZNYcV4ITcWCASDwOlv4TdVcy_pExp_huVRubwLVrpwTUAzAxEMeBltSXhen7qmu0GihqSqIkJFmcmpebegcvRqA7uLJi-5fnDZtIjlEdq2TxEcTJuhHX1AnnfwaoZMSKVOUuOXTMUDHS6dON33u6j-KduwRgb1WQlEERw9vrEDKzzNPkM2uP1pk8Wu_OYHKT9wQVIQH7UYkPOWsFaktuiis9oHZoA"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<div class="relative h-44 rounded-xl overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Traditional luxury colonial style Coorg estate bungalow veranda with red terracotta roof tiles, wooden armchairs overlooking rain-drenched gardens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMsizm5pHgU6_B3dBXHGhIJzEMOUdA7QXjrdAxHtFkxbq7u-eJE1DS-HXqvMgp8tQzl77h93S0KV5AbvbqMiKd58uwp6MSYjJ5ceRXXI1fzhCsYKrl-opTR8Fz8f1OgS8CT5y7rZnKIjgBBLTBn6Jr3vC8Ji_7HgyX-HTqfic5yfknxrckBMun9Eg7Y4cCrgi1cYAgGaEx9f_hwuTCOrKd9d5huqz0FJ4Wsm6txRgCf-0kFfHqoX8r"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+</div>
+<div class="relative h-44 rounded-xl overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Scenic drive on winding mountain roads passing through misty pine forests and tea slopes in Western Ghats Coorg Karnataka." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBel1vgHZCI5v4fVSBFQdLWFXYiqi32tZogzXHbeHtmm1-8-wcEWTZLYDn6kl7MRmRdfYsHbxLospibQ2WnGG84C_g6XkeFmuWGUpXEcevwfgmMDaPx7oPbNd0S7kz5IYNyE5mRC_wmHc13qiNpRjKD6jrH5fTGD3pica09Ff7rZHNCRgw1UJJn43bjOSQ1gLvpRAovTW4P5LFxWG-GLBc8Dx05v-tBKwc-4VJ-wfNtTtEmsP3ScLzi"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+</div>
+</div>
+</div>
+<!-- Trip Route Map Banner -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded-2xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-primary font-title-md text-title-md">
+<span class="material-symbols-outlined text-[20px]">map</span>
+                Route Map: Bengaluru – Bylakuppe – Madikeri – Dubare – Bengaluru
+              </div>
+<span class="font-caption text-caption text-secondary">Total ~550 KM Circuit</span>
+</div>
+<div class="w-full h-64 bg-cover bg-center rounded-xl shadow-inner relative overflow-hidden" data-location="Madikeri, Coorg, Karnataka, India" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQKl-vEBqa7SLv31TUIIMRXqIYJy7SN7Me0aSOm7XlMnJL1OWxGHOvuAhjB3oikm4wLooUPRqdCiPq3CmbjhLL0rzHEGjdc1Y9RM7PdvK5lu577b7G6fCI0vgSQtB9Iu038VnRGweP7J4uEwccCu-nfOoT17fHgUr0R_627vDxLqzanupFV4jv_zyhvQ-fv5begjyTknLvteOZTucy-B60k5WmRPF_EQHZKU6-L1JQcV5xl8hck3Dl')">
+<div class="absolute inset-0 bg-on-surface/10 pointer-events-none"></div>
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1.5 rounded-lg text-on-surface font-caption text-caption shadow-sm flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Scenic Highway Route Via NH 275 Mysore-Madikeri</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Sticky Booking & Enquiry Form (4 Cols) -->
+<div class="lg:col-span-4 sticky top-24">
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-[0_16px_32px_-4px_rgba(8,43,85,0.08),0_4px_12px_-2px_rgba(8,43,85,0.04)] flex flex-col gap-space-md" id="booking-inquiry">
+<div class="flex flex-col border-b-0 pb-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-caption text-caption uppercase tracking-wider text-secondary">Get Free Instant Quote</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-caption text-caption font-semibold">Customizable</span>
+</div>
+<div class="flex items-baseline gap-space-xs mt-1">
+<span class="font-headline-md text-headline-md text-primary font-bold">₹6,499</span>
+<span class="font-body-sm text-body-sm text-secondary">/ adult</span>
+</div>
+<p class="font-caption text-caption text-secondary">Ex-Bengaluru • Twin Sharing Basis</p>
+</div>
+<!-- Form -->
+<form class="flex flex-col gap-space-sm" id="package-enquiry-form" onsubmit="event.preventDefault(); handleEnquirySubmit();">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1" for="fullName">Full Name</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-outline">person</span>
+<input class="w-full pl-9 pr-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors" id="fullName" placeholder="e.g. Ramesh Kumar" required="" type="text"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1" for="whatsappNumber">WhatsApp Mobile Number</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-outline">call</span>
+<input class="w-full pl-9 pr-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors" id="whatsappNumber" placeholder="+91 98765 43210" required="" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1" for="emailAddress">Email ID</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-outline">mail</span>
+<input class="w-full pl-9 pr-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors" id="emailAddress" placeholder="ramesh@example.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1" for="travelDate">Preferred Travel Date</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-outline">event</span>
+<input class="w-full pl-9 pr-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors" id="travelDate" required="" type="date"/>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1" for="adultCount">Adults (12+ yrs)</label>
+<select class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" id="adultCount">
+<option value="1">1 Adult</option>
+<option selected="" value="2">2 Adults</option>
+<option value="3">3 Adults</option>
+<option value="4">4 Adults</option>
+<option value="5+">5+ Adults</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1" for="childCount">Children (0-11 yrs)</label>
+<select class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" id="childCount">
+<option selected="" value="0">0 Children</option>
+<option value="1">1 Child</option>
+<option value="2">2 Children</option>
+<option value="3+">3+ Children</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1" for="roomType">Stay Category</label>
+<select class="w-full px-3 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none" id="roomType">
+<option value="standard">Standard Heritage Homestay</option>
+<option selected="" value="deluxe">Deluxe Coffee Estate Resort</option>
+<option value="luxury">Luxury Private Pool Villa</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1" for="specialRequests">Custom Preferences (Optional)</label>
+<textarea class="w-full p-2.5 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors" id="specialRequests" placeholder="Need wheelchair support, vegetarian meals, airport pickup..." rows="2"></textarea>
+</div>
+<button class="w-full py-space-sm mt-space-xs rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-md text-label-md shadow-[0_4px_16px_rgba(143,78,0,0.25)] hover:shadow-[0_8px_24px_rgba(143,78,0,0.35)] transition-all flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+                Send Package Enquiry
+              </button>
+<div class="hidden p-space-sm rounded-lg bg-surface-container text-primary font-body-sm text-body-sm text-center" id="enquiry-success">
+                ✓ Thank you! Our travel expert will call you within 15 minutes.
+              </div>
+</form>
+<!-- Trust badges in booking box -->
+<div class="flex flex-col gap-space-xs pt-space-xs border-t-0">
+<div class="flex items-center gap-space-xs text-secondary font-caption text-caption">
+<span class="material-symbols-outlined text-[16px] text-primary">verified_user</span>
+                100% Verified Kodava plantation properties
+              </div>
+<div class="flex items-center gap-space-xs text-secondary font-caption text-caption">
+<span class="material-symbols-outlined text-[16px] text-primary">currency_rupee</span>
+                Best price guarantee with zero hidden charges
+              </div>
+<div class="flex items-center gap-space-xs text-secondary font-caption text-caption">
+<span class="material-symbols-outlined text-[16px] text-primary">support_agent</span>
+                Bangalore-based native Kannada &amp; English guides
+              </div>
+</div>
+<!-- Direct phone assist -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div>
+<span class="font-caption text-caption text-secondary">Need immediate help?</span>
+<p class="font-label-md text-label-md text-primary font-semibold">+91 98450 12345</p>
+</div>
+<a class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors" href="tel:+919845012345">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 8: Related Packages -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs">
+<div>
+<span class="font-caption text-caption uppercase tracking-wider text-secondary">Explore More Karnataka Escapes</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">You Might Also Love These Hills</h2>
+</div>
+<a class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1" href="#">
+          View All Domestic Packages
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Related Card 1: Chikmagalur -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_20px_-2px_rgba(8,43,85,0.06)] hover:shadow-[0_16px_32px_-4px_rgba(8,43,85,0.12)] transition-all flex flex-col group">
+<div class="relative h-52 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Mullayanagiri peak highest point in Karnataka with rolling green hills of Chikmagalur, winding trekking trails, clear blue skies and scenic mountain ridges." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXTNToBaB0IKMPjRPwEWaPvwNdY68eAYNif6cUhB--jYObKTB_ctOAXlvzQ1yXmGStiie2qjv570CiUA9tNNdCma3-PSJ5SvXFGJhlpOMLuLvPbygPIWFjLLq_W9nwlIb8xlLFA-IOYtSle3oe7BxiYeBKI3FaiEY-cZ6MDI8KDc7JVlJhRbQ7ed-_jLRoWHDswJjiCQ3dahUM6LeUS5pp90TFgfGsMseGGICUc6j34Ef26vZSq40t"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+              3 Days / 2 Nights
+            </span>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-1 text-tertiary-container mb-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface">4.9</span>
+<span class="font-caption text-caption text-secondary">(94 reviews)</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">
+                Chikmagalur Peak &amp; Coffee Escapes
+              </h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1 line-clamp-2">
+                Mullayanagiri peak trek, Baba Budangiri caves, Hebbe falls, and high-altitude estate stay.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0">
+<div>
+<span class="font-caption text-caption text-secondary">Starting from</span>
+<p class="font-title-lg text-title-lg text-primary font-bold">₹5,999 <span class="font-caption text-caption text-secondary font-normal">/ person</span></p>
+</div>
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md transition-colors">
+                View Details
+              </button>
+</div>
+</div>
+</div>
+<!-- Related Card 2: Wayanad -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_20px_-2px_rgba(8,43,85,0.06)] hover:shadow-[0_16px_32px_-4px_rgba(8,43,85,0.12)] transition-all flex flex-col group">
+<div class="relative h-52 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Scenic Banasura Sagar dam earthen dam surrounded by lush misty hills in Wayanad Kerala with crystal clear lake waters and bamboo rafts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEptiG5NS8uSMwDj0AUYRjnp4g8YBZYPyEqEj4u9g0UnZKeQeBINe81IqegIow6jZf77GC9G_SW-oB6frSUP5OZOsYn9FzwLLlM8fBK-T80D78qiKRZhVjVRDeogtXyBiflXMY0c3TDZ2V0TUxHmCLri4Me4-1dAX6FBhzvTOOr0u__M5q8yIJLvKyUlfbm3XABNyD5UbGMwk5uH14cVT8_6Eq_IM1nsj4NT32V9-l4g1HBZdzxmRP"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+              3 Days / 2 Nights
+            </span>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-1 text-tertiary-container mb-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface">4.8</span>
+<span class="font-caption text-caption text-secondary">(112 reviews)</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">
+                Wayanad Rainforest Retreat
+              </h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1 line-clamp-2">
+                Banasura Sagar dam, Edakkal prehistoric caves, Pookode lake boating and luxury treehouse experience.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0">
+<div>
+<span class="font-caption text-caption text-secondary">Starting from</span>
+<p class="font-title-lg text-title-lg text-primary font-bold">₹7,299 <span class="font-caption text-caption text-secondary font-normal">/ person</span></p>
+</div>
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md transition-colors">
+                View Details
+              </button>
+</div>
+</div>
+</div>
+<!-- Related Card 3: Sakleshpur -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_4px_20px_-2px_rgba(8,43,85,0.06)] hover:shadow-[0_16px_32px_-4px_rgba(8,43,85,0.12)] transition-all flex flex-col group">
+<div class="relative h-52 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Star shaped historic Manjarabad fort ramparts overlooking misty Western Ghats mountain layers in Sakleshpur Karnataka under warm golden hour sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTtXcRxRRNxMKd34xf8jD4MPCKZRlTE340sDV5q4so-QqbrcILCx_MYkMqWwjfcwt4h_sCsoBLd-sSwhXDXEkjErMk9uzc2VF72fyoWnqVzeAXtw7qEr7oCdPPlurF3exZ8MsKx-d_XbRV1F8DqchjNtj-0kNreSzJQK_kOl4eUCosRxRkLHpL9KgZrtdm85n8Gxs_fnAMlCF1WOMuRwEK4xeFUe7QuF0n7seEzyMEev8QChyojVR_"/>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm">
+              2 Days / 1 Night
+            </span>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-1 text-tertiary-container mb-1">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface">4.7</span>
+<span class="font-caption text-caption text-secondary">(83 reviews)</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-on-surface group-hover:text-primary transition-colors">
+                Sakleshpur Offbeat Escapes
+              </h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1 line-clamp-2">
+                Manjarabad star fort, Magajahalli water stream, rustic cardamom plantation trek, and stream walks.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t-0">
+<div>
+<span class="font-caption text-caption text-secondary">Starting from</span>
+<p class="font-title-lg text-title-lg text-primary font-bold">₹4,499 <span class="font-caption text-caption text-secondary font-normal">/ person</span></p>
+</div>
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-label-md text-label-md transition-colors">
+                View Details
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Bottom Quick Action Bar for Mobile Devices -->
+<div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-xl border-t-0 px-space-md py-space-sm shadow-[0_-4px_20px_rgba(8,43,85,0.08)] flex items-center justify-between">
+<div>
+<span class="font-caption text-caption text-secondary">Starting from</span>
+<p class="font-headline-sm text-headline-sm text-primary font-bold leading-none">₹6,499</p>
+<span class="font-caption text-caption text-secondary">per person</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<a class="p-2.5 rounded-lg bg-surface-container text-[#25D366] flex items-center justify-center" href="https://wa.me/919845012345?text=Hi%20Siri%20Vacations,%20please%20share%20Coorg%20package%20details">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</a>
+<a class="px-space-md py-2.5 rounded-lg bg-tertiary-container text-on-tertiary font-label-md text-label-md font-semibold shadow-sm" href="#booking-inquiry">
+        Book / Enquire
+      </a>
+</div>
+</div>
+<script>
+    // Day Accordion Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const accordions = document.querySelectorAll('.day-accordion-item');
+      const toggleAllBtn = document.getElementById('toggle-all-days');
+      let allExpanded = false;
+
+      accordions.forEach((item, index) => {
+        const trigger = item.querySelector('.accordion-trigger');
+        const content = item.querySelector('.accordion-content');
+        const icon = item.querySelector('.accordion-icon');
+
+        // Open day 1 by default, collapse others
+        if (index === 0) {
+          content.style.display = 'block';
+          icon.style.transform = 'rotate(180deg)';
+        } else {
+          content.style.display = 'none';
+          icon.style.transform = 'rotate(0deg)';
+        }
+
+        trigger.addEventListener('click', () => {
+          const isVisible = content.style.display === 'block';
+          content.style.display = isVisible ? 'none' : 'block';
+          icon.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(180deg)';
+        });
+      });
+
+      if (toggleAllBtn) {
+        toggleAllBtn.addEventListener('click', () => {
+          allExpanded = !allExpanded;
+          accordions.forEach(item => {
+            const content = item.querySelector('.accordion-content');
+            const icon = item.querySelector('.accordion-icon');
+            content.style.display = allExpanded ? 'block' : 'none';
+            icon.style.transform = allExpanded ? 'rotate(180deg)' : 'rotate(0deg)';
+          });
+          toggleAllBtn.textContent = allExpanded ? 'Collapse All Days' : 'Expand All Days';
+        });
+      }
+    });
+
+    function handleEnquirySubmit() {
+      const successMsg = document.getElementById('enquiry-success');
+      if (successMsg) {
+        successMsg.classList.remove('hidden');
+        setTimeout(() => {
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-inverse-surface text-inverse-on-surface pt-space-xl pb-space-lg"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-gutter pb-space-xl"><div class="lg:col-span-2 flex flex-col gap-space-md pr-space-md"><div class="flex items-center gap-space-sm"><img alt="Siri Vacations Travel Logo.png" class="h-8 w-auto object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AEtjO1WxWnWGJbkoGmm6Ur6LzR82t6XEaa0aGClXmIa6OBfxIH-VE69aQ7BYEgJcLlL1HOxJpAH6OEcHRj-wWTJ7qrjzkNPBcmZg7_jC_Q-tk01Z4oEPr0kFYM5-n25GXPSq5cGZbuzmB_DMNf8PrBI6g1Wb7-jzBjn3RWUBzGI_TyKrLYEoYj1enbi-nNgPvnruOGQosnK3YZZ8GtAh6fk8p_OQJD0kTTtP1mpylvwYI9qNE1fTarXXYsme1vynUVITBAhMkepUHTPeFQ"/><div class="flex flex-col"><span class="font-title-lg text-title-lg text-surface-container-lowest tracking-tight leading-none">Siri Vacations</span><span class="font-caption text-caption text-secondary-fixed tracking-wider uppercase">Bengaluru</span></div></div><p class="font-title-md text-title-md text-tertiary-fixed">Plan • Travel • Create Memories</p><p class="font-body-sm text-body-sm text-secondary-fixed leading-relaxed">Premier travel management company in Bengaluru offering handcrafted holiday experiences, luxury car rentals, corporate travel services, and memorable international group tours.</p><div class="flex items-center gap-space-sm pt-space-xs"><a class="w-9 h-9 rounded-full bg-surface-container-high/10 hover:bg-surface-container-high/20 flex items-center justify-center text-inverse-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">public</span></a><a class="w-9 h-9 rounded-full bg-surface-container-high/10 hover:bg-surface-container-high/20 flex items-center justify-center text-inverse-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">photo_camera</span></a><a class="w-9 h-9 rounded-full bg-surface-container-high/10 hover:bg-surface-container-high/20 flex items-center justify-center text-inverse-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">forum</span></a><a class="w-9 h-9 rounded-full bg-surface-container-high/10 hover:bg-surface-container-high/20 flex items-center justify-center text-inverse-on-surface transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">mail</span></a></div></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-md text-label-md text-surface-container-lowest uppercase tracking-wider">Domestic Packages</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-secondary-fixed"><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Karnataka Getaways</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Kerala Backwaters</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Tamil Nadu Heritage</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">North India Wonders</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Goa Beach Retreats</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-md text-label-md text-surface-container-lowest uppercase tracking-wider">International Packages</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-secondary-fixed"><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Bali Tropical Escapes</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Dubai City &amp; Safari</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Thailand Island Hopping</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Maldives Luxury Stays</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Singapore &amp; Malaysia</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-md text-label-md text-surface-container-lowest uppercase tracking-wider">Travel Services</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-secondary-fixed"><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Car &amp; Coach Rentals</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Fixed Group Departures</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Customized Family Tours</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Honeymoon Specials</a></li><li class="hover:text-surface-container-lowest transition-colors"><a href="#">Corporate MICE Travel</a></li></ul></div><div class="flex flex-col gap-space-sm"><h4 class="font-label-md text-label-md text-surface-container-lowest uppercase tracking-wider">Contact &amp; Office</h4><div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-secondary-fixed"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed shrink-0 mt-0.5">location_on</span><span>#42, 100 Feet Road, Indiranagar, Bengaluru, Karnataka 560038</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed shrink-0">call</span><span>+91 98450 12345 / 080 4123 4567</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed shrink-0">mail</span><span>trips@sirivacations.com</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary-fixed shrink-0">schedule</span><span>Mon - Sat: 9:30 AM - 7:30 PM</span></div></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-secondary-fixed"><p>© 2025 Siri Vacations, Bengaluru. All rights reserved.</p><div class="flex items-center gap-space-lg font-caption text-caption"><a class="hover:text-surface-container-lowest transition-colors" href="#">Privacy Policy</a><a class="hover:text-surface-container-lowest transition-colors" href="#">Terms of Service</a><a class="hover:text-surface-container-lowest transition-colors" href="#">Cancellation &amp; Refund Policy</a><a class="hover:text-surface-container-lowest transition-colors" href="#">Sitemap</a></div></div></div></footer></body></html>
