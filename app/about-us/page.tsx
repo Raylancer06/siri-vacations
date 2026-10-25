@@ -50,7 +50,7 @@ export default function AboutUsPage() {
   ];
 
   return (
-    <div className="w-full flex flex-col bg-background pt-24 sm:pt-28">
+    <div className="w-full flex flex-col bg-background pt-32 sm:pt-36">
       {/* 1. HERO SECTION */}
       <section className="relative w-full py-20 lg:py-28 bg-gradient-to-r from-[#082B55] to-[#00468c] text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -17,7 +17,12 @@ import {
   Car, 
   Users, 
   Info,
-  Calendar
+  Calendar,
+  Clock,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Youtube
 } from "lucide-react";
 
 export default function Navbar() {
@@ -60,8 +65,6 @@ export default function Navbar() {
     { name: "About Us", href: "/about-us" },
     {
       name: "Domestic Packages",
-      shortName: "Domestic",
-      extraName: "Packages",
       href: "/domestic-packages",
       dropdown: [
         { label: "Coorg Coffee Trails (3D/2N) ⭐", href: "/packages/coorg", badge: "Featured" },
@@ -74,8 +77,6 @@ export default function Navbar() {
     },
     {
       name: "International Packages",
-      shortName: "International",
-      extraName: "Packages",
       href: "/international-packages",
       dropdown: [
         { label: "Dubai & Emirates Safari", href: "/international-packages?dest=dubai" },
@@ -105,156 +106,212 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-xl shadow-[0_4px_24px_-2px_rgba(8,43,85,0.08)] border-b border-surface-container-high py-2"
-          : "bg-white/95 backdrop-blur-md border-b border-surface-container-low py-2.5 sm:py-3"
+          ? "shadow-[0_6px_24px_-2px_rgba(8,43,85,0.12)]"
+          : ""
       }`}
     >
-      <div className="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-3 lg:gap-4 2xl:gap-6 h-16 sm:h-[72px] lg:h-20">
-          {/* Brand Logo - 20% larger size with exact aspect ratio */}
-          <Link href="/" className="flex items-center shrink-0 group py-1" title="Siri Vacations Home">
-            <div className="relative h-[52px] sm:h-[58px] lg:h-[64px] aspect-[1410/730] transition-transform group-hover:scale-105 duration-200">
-              <Image
-                src="/logo.png"
-                alt="Siri Vacations Logo"
-                fill
-                priority
-                className="object-contain object-left"
-                sizes="(max-width: 768px) 130px, 160px"
-              />
+      {/* 1. TOP UTILITY HEADER BAR */}
+      <div className="w-full bg-[#082B55] text-white text-[11px] py-1.5 sm:py-2 px-4 sm:px-6 lg:px-8 border-b border-white/10 transition-colors">
+        <div className="max-w-[1600px] w-full mx-auto flex items-center justify-between gap-3">
+          {/* Top Left: Social Media Icons & Direct Helpline */}
+          <div className="flex items-center gap-3 sm:gap-4 shrink-0">
+            <span className="text-white/70 hidden sm:inline font-medium">Follow Us:</span>
+            <div className="flex items-center gap-2">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#1877F2] text-white/90 hover:text-white flex items-center justify-center transition-all hover:scale-110"
+                aria-label="Follow Siri Vacations on Facebook"
+                title="Facebook"
+              >
+                <Facebook className="w-3.5 h-3.5" />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-6 h-6 rounded-full bg-white/10 hover:bg-gradient-to-tr hover:from-amber-500 hover:to-pink-500 text-white/90 hover:text-white flex items-center justify-center transition-all hover:scale-110"
+                aria-label="Follow Siri Vacations on Instagram"
+                title="Instagram"
+              >
+                <Instagram className="w-3.5 h-3.5" />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#0A66C2] text-white/90 hover:text-white flex items-center justify-center transition-all hover:scale-110"
+                aria-label="Follow Siri Vacations on LinkedIn"
+                title="LinkedIn"
+              >
+                <Linkedin className="w-3.5 h-3.5" />
+              </a>
+              <a
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-6 h-6 rounded-full bg-white/10 hover:bg-[#FF0000] text-white/90 hover:text-white flex items-center justify-center transition-all hover:scale-110"
+                aria-label="Follow Siri Vacations on YouTube"
+                title="YouTube"
+              >
+                <Youtube className="w-3.5 h-3.5" />
+              </a>
             </div>
-          </Link>
 
-          {/* Desktop Navigation Links - Single line guarantee with whitespace-nowrap */}
-          <nav className="hidden xl:flex items-center gap-1 xl:gap-1.5 2xl:gap-2.5 shrink-0">
-            {navLinks.map((link) => {
-              const isActive =
-                pathname === link.href ||
-                (link.href !== "/" && pathname.startsWith(link.href));
+            <span className="text-white/20 hidden md:inline">|</span>
 
-              if (link.dropdown) {
-                return (
-                  <div key={link.name} className="relative group shrink-0">
-                    <Link
-                      href={link.href}
-                      className={`flex items-center gap-1 px-2.5 py-1.5 2xl:px-3 2xl:py-2 text-xs 2xl:text-[13px] font-semibold rounded-xl whitespace-nowrap shrink-0 transition-all duration-200 ${
-                        isActive
-                          ? "text-primary font-bold bg-primary-fixed/40"
-                          : "text-on-surface hover:text-primary hover:bg-surface-container-low"
-                      }`}
-                    >
-                      <span className="whitespace-nowrap">
-                        {link.shortName ? (
-                          <>
-                            <span>{link.shortName}</span>
-                            <span className="hidden 2xl:inline"> {link.extraName}</span>
-                          </>
-                        ) : (
-                          link.name
-                        )}
-                      </span>
-                      <ChevronDown className="w-3.5 h-3.5 shrink-0 transition-transform duration-200 group-hover:rotate-180 text-outline" />
-                    </Link>
+            <div className="hidden md:flex items-center gap-2 text-white/80">
+              <MapPin className="w-3 h-3 text-accent-gold shrink-0" />
+              <span className="truncate">100 Feet Rd, Indiranagar, Bengaluru</span>
+            </div>
+          </div>
 
-                    {/* Dropdown Menu */}
-                    <div className="absolute top-full left-0 hidden group-hover:flex flex-col bg-surface-container-lowest shadow-[0_20px_40px_-4px_rgba(8,43,85,0.16)] rounded-2xl py-2.5 min-w-[260px] border border-surface-container-high z-50 animate-in fade-in slide-in-from-top-2 duration-150">
-                      {link.dropdown.map((item) => (
-                        <Link
-                          key={item.label}
-                          href={item.href}
-                          className="px-4 py-2.5 text-xs sm:text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low flex items-center justify-between transition-colors group/item whitespace-nowrap"
-                        >
-                          <span className="group-hover/item:translate-x-1 transition-transform whitespace-nowrap">
-                            {item.label}
-                          </span>
-                          {item.badge && (
-                            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-accent-orange/15 text-accent-orange ml-2">
-                              {item.badge}
-                            </span>
-                          )}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                );
-              }
+          {/* Top Right: WhatsApp and Callback Buttons */}
+          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+            <a
+              href="tel:+919480123456"
+              className="hidden lg:flex items-center gap-1.5 text-white/90 hover:text-accent-gold transition-colors font-medium mr-1"
+              title="Direct Concierge Helpline"
+            >
+              <Phone className="w-3 h-3 text-accent-gold" />
+              <span>+91 94801 23456</span>
+            </a>
 
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={`px-2.5 py-1.5 2xl:px-3 2xl:py-2 text-xs 2xl:text-[13px] font-semibold rounded-xl whitespace-nowrap shrink-0 transition-all duration-200 ${
-                    isActive
-                      ? "text-primary font-bold bg-primary-fixed/40"
-                      : "text-on-surface hover:text-primary hover:bg-surface-container-low"
-                  }`}
-                >
-                  <span className="whitespace-nowrap">{link.name}</span>
-                </Link>
-              );
-            })}
-          </nav>
-
-          {/* Right Action CTAs (Desktop xl+) - Never wrap onto two lines */}
-          <div className="hidden xl:flex items-center gap-2 2xl:gap-3 shrink-0">
-            {/* WhatsApp */}
+            {/* WhatsApp Button on Top Header */}
             <a
               href="https://wa.me/919480123456?text=Hello%20Siri%20Vacations,%20I%20am%20interested%20in%20planning%20a%20holiday!"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-emerald-50 text-emerald-800 hover:bg-emerald-100 text-xs font-semibold whitespace-nowrap transition-all border border-emerald-200 shadow-sm shrink-0"
+              className="inline-flex items-center gap-1.5 px-3 py-1 sm:py-1.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-[11px] shadow-sm hover:shadow transition-all shrink-0 active:scale-95"
               title="Chat with Tour Expert on WhatsApp"
             >
-              <MessageCircle className="w-4 h-4 fill-emerald-600 text-emerald-600 shrink-0" />
+              <MessageCircle className="w-3.5 h-3.5 fill-white text-white shrink-0" />
               <span className="whitespace-nowrap">WhatsApp</span>
             </a>
 
-            {/* Quick Callback Trigger */}
+            {/* Callback Button on Top Header */}
             <button
-              onClick={() => openModal("Website Header Callback")}
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-semibold text-xs whitespace-nowrap transition-colors shrink-0"
+              onClick={() => openModal("Top Header Callback")}
+              className="inline-flex items-center gap-1.5 px-3 py-1 sm:py-1.5 rounded-full bg-white/15 hover:bg-white/25 border border-white/25 text-white font-bold text-[11px] shadow-sm transition-all shrink-0 active:scale-95"
+              title="Request an instant callback"
             >
-              <Phone className="w-3.5 h-3.5 shrink-0" />
-              <span className="whitespace-nowrap">Callback</span>
+              <Phone className="w-3 h-3 text-accent-gold shrink-0" />
+              <span className="whitespace-nowrap">Request Callback</span>
             </button>
-
-            {/* Plan Your Trip Flagship CTA */}
-            <Link
-              href="/plan-your-trip"
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-tertiary-container hover:bg-tertiary text-on-tertiary font-bold text-xs whitespace-nowrap shadow-[0_4px_16px_rgba(143,78,0,0.25)] hover:shadow-[0_8px_24px_rgba(143,78,0,0.35)] hover:scale-[1.02] active:scale-[0.98] transition-all shrink-0"
-            >
-              <Sparkles className="w-3.5 h-3.5 shrink-0" />
-              <span className="whitespace-nowrap">Plan Your Trip</span>
-            </Link>
           </div>
+        </div>
+      </div>
 
-          {/* Tablet & Mobile Nav Triggers (< xl) */}
-          <div className="flex xl:hidden items-center gap-2 sm:gap-3">
-            <a
-              href="https://wa.me/919480123456?text=Hello%20Siri%20Vacations,%20I%20am%20interested%20in%20planning%20a%20holiday!"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-semibold"
-              title="Chat on WhatsApp"
-            >
-              <MessageCircle className="w-3.5 h-3.5 fill-emerald-600 text-emerald-600" />
-              <span>WhatsApp</span>
-            </a>
-
-            <Link
-              href="/plan-your-trip"
-              className="px-3.5 py-2 rounded-xl bg-tertiary-container text-on-tertiary text-xs font-bold shadow-sm"
-            >
-              Plan Trip
+      {/* 2. MAIN HEADER NAVIGATION BAR */}
+      <div className={`w-full bg-white/98 backdrop-blur-xl border-b border-surface-container-high transition-all ${
+        isScrolled ? "py-1.5 sm:py-2" : "py-2.5 sm:py-3"
+      }`}>
+        <div className="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between gap-4 lg:gap-8 h-16 sm:h-[72px] lg:h-20">
+            {/* Brand Logo - 20% larger size with exact aspect ratio */}
+            <Link href="/" className="flex items-center shrink-0 group py-1" title="Siri Vacations Home">
+              <div className="relative h-[52px] sm:h-[58px] lg:h-[64px] aspect-[1410/730] transition-transform group-hover:scale-105 duration-200">
+                <Image
+                  src="/logo.png"
+                  alt="Siri Vacations Logo"
+                  fill
+                  priority
+                  className="object-contain object-left"
+                  sizes="(max-width: 768px) 130px, 160px"
+                />
+              </div>
             </Link>
 
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors"
-              aria-label="Toggle Navigation Menu"
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            {/* Desktop Navigation Links - Single line guarantee with whitespace-nowrap */}
+            <nav className="hidden xl:flex items-center gap-1.5 2xl:gap-3 shrink-0">
+              {navLinks.map((link) => {
+                const isActive =
+                  pathname === link.href ||
+                  (link.href !== "/" && pathname.startsWith(link.href));
+
+                if (link.dropdown) {
+                  return (
+                    <div key={link.name} className="relative group shrink-0">
+                      <Link
+                        href={link.href}
+                        className={`flex items-center gap-1.5 px-3 py-2 text-xs 2xl:text-[13.5px] font-semibold rounded-xl whitespace-nowrap shrink-0 transition-all duration-200 ${
+                          isActive
+                            ? "text-primary font-bold bg-primary-fixed/40"
+                            : "text-on-surface hover:text-primary hover:bg-surface-container-low"
+                        }`}
+                      >
+                        <span className="whitespace-nowrap">{link.name}</span>
+                        <ChevronDown className="w-3.5 h-3.5 shrink-0 transition-transform duration-200 group-hover:rotate-180 text-outline" />
+                      </Link>
+
+                      {/* Dropdown Menu */}
+                      <div className="absolute top-full left-0 hidden group-hover:flex flex-col bg-surface-container-lowest shadow-[0_20px_40px_-4px_rgba(8,43,85,0.16)] rounded-2xl py-2.5 min-w-[260px] border border-surface-container-high z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                        {link.dropdown.map((item) => (
+                          <Link
+                            key={item.label}
+                            href={item.href}
+                            className="px-4 py-2.5 text-xs sm:text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-low flex items-center justify-between transition-colors group/item whitespace-nowrap"
+                          >
+                            <span className="group-hover/item:translate-x-1 transition-transform whitespace-nowrap">
+                              {item.label}
+                            </span>
+                            {item.badge && (
+                              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-accent-orange/15 text-accent-orange ml-2">
+                                {item.badge}
+                              </span>
+                            )}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={`px-3 py-2 text-xs 2xl:text-[13.5px] font-semibold rounded-xl whitespace-nowrap shrink-0 transition-all duration-200 ${
+                      isActive
+                        ? "text-primary font-bold bg-primary-fixed/40"
+                        : "text-on-surface hover:text-primary hover:bg-surface-container-low"
+                    }`}
+                  >
+                    <span className="whitespace-nowrap">{link.name}</span>
+                  </Link>
+                );
+              })}
+            </nav>
+
+            {/* Right Action CTA (Desktop xl+) - Flagship Plan Your Trip */}
+            <div className="hidden xl:flex items-center gap-3 shrink-0">
+              <Link
+                href="/plan-your-trip"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-tertiary-container hover:bg-tertiary text-on-tertiary font-bold text-xs sm:text-sm whitespace-nowrap shadow-[0_4px_16px_rgba(143,78,0,0.25)] hover:shadow-[0_8px_24px_rgba(143,78,0,0.35)] hover:scale-[1.02] active:scale-[0.98] transition-all shrink-0"
+              >
+                <Sparkles className="w-4 h-4 shrink-0" />
+                <span className="whitespace-nowrap">Plan Your Trip</span>
+              </Link>
+            </div>
+
+            {/* Tablet & Mobile Nav Triggers (< xl) */}
+            <div className="flex xl:hidden items-center gap-2 sm:gap-3">
+              <Link
+                href="/plan-your-trip"
+                className="px-3.5 py-2 rounded-xl bg-tertiary-container text-on-tertiary text-xs font-bold shadow-sm"
+              >
+                Plan Trip
+              </Link>
+
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors"
+                aria-label="Toggle Navigation Menu"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
       </div>

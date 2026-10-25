@@ -90,7 +90,7 @@ export default function CoorgPackageDetailsPage() {
     (calculatedRate * 0.5) * parseInt(form.children || "0");
 
   return (
-    <div className="w-full flex flex-col bg-background pt-24 sm:pt-28">
+    <div className="w-full flex flex-col bg-background pt-32 sm:pt-36">
       {/* 1. TOP BREADCRUMB & STATUS BAR */}
       <section className="w-full bg-surface-container-low py-3 border-b border-surface-container-high">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">

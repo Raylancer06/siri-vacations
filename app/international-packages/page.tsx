@@ -128,7 +128,7 @@ function InternationalPackagesContent() {
 
 export default function InternationalPackagesPage() {
   return (
-    <div className="w-full flex flex-col bg-background pt-24 sm:pt-28">
+    <div className="w-full flex flex-col bg-background pt-32 sm:pt-36">
       {/* 1. HERO BANNER */}
       <section className="bg-gradient-to-r from-[#082B55] via-[#00468c] to-[#075db5] text-white py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

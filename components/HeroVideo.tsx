@@ -35,7 +35,7 @@ export default function HeroVideo() {
   };
 
   return (
-    <section className="relative w-full min-h-[92vh] flex items-center justify-center overflow-hidden pt-24 sm:pt-28 pb-16">
+    <section className="relative w-full min-h-[92vh] flex items-center justify-center overflow-hidden pt-32 sm:pt-36 lg:pt-40 pb-16">
       {/* Background Video */}
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <video

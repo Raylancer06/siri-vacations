@@ -44,7 +44,7 @@ export default function PlanYourTripPage() {
   };
 
   return (
-    <div className="w-full flex flex-col bg-background pt-24 sm:pt-28">
+    <div className="w-full flex flex-col bg-background pt-32 sm:pt-36">
       {/* HERO BANNER */}
       <section className="bg-gradient-to-r from-[#00468c] to-[#082B55] text-white py-14 lg:py-18">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
