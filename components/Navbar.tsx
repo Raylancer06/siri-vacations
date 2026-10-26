@@ -36,8 +36,9 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 15);
+      setIsScrolled(window.scrollY > 20);
     };
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -103,15 +104,15 @@ export default function Navbar() {
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "shadow-[0_6px_24px_-2px_rgba(8,43,85,0.12)]"
-          : ""
-      }`}
-    >
-      {/* 1. TOP UTILITY HEADER BAR */}
-      <div className="w-full bg-[#082B55] text-white text-[11px] py-1.5 sm:py-2 px-4 sm:px-6 lg:px-8 border-b border-white/10 transition-colors">
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      {/* 1. TOP UTILITY HEADER BAR - Only visible at top of page; collapses and hides on scroll */}
+      <div
+        className={`w-full bg-[#082B55] text-white text-[11px] px-4 sm:px-6 lg:px-8 transition-all duration-300 overflow-hidden ${
+          isScrolled
+            ? "max-h-0 opacity-0 py-0 pointer-events-none"
+            : "max-h-12 opacity-100 py-1.5 sm:py-2"
+        }`}
+      >
         <div className="max-w-[1600px] w-full mx-auto flex items-center justify-between gap-3">
           {/* Top Left: Social Media Icons & Direct Helpline */}
           <div className="flex items-center gap-3 sm:gap-4 shrink-0">
@@ -203,15 +204,17 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* 2. MAIN HEADER NAVIGATION BAR */}
-      <div className={`w-full transition-all duration-300 ${
-        isScrolled
-          ? "bg-white/98 backdrop-blur-xl border-b border-surface-container-high shadow-[0_8px_30px_rgba(8,43,85,0.08)] py-1.5 sm:py-2"
-          : "bg-gradient-to-b from-[#082B55]/80 via-[#082B55]/45 to-transparent backdrop-blur-[2px] border-b border-white/10 py-2.5 sm:py-3.5"
-      }`}>
+      {/* 2. MAIN HEADER NAVIGATION BAR - Transparent at top, turns pure white on scroll with NO harsh divider */}
+      <div
+        className={`w-full transition-all duration-300 ${
+          isScrolled
+            ? "bg-white/95 backdrop-blur-xl border-b border-slate-100 shadow-[0_4px_24px_-2px_rgba(8,43,85,0.08)] py-1.5 sm:py-2"
+            : "bg-transparent py-2.5 sm:py-3.5 border-b-0"
+        }`}
+      >
         <div className="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4 lg:gap-8 h-16 sm:h-[72px] lg:h-20">
-            {/* Brand Logo - Crossfades between white logo (transparent mode) and navy logo (sticky mode) */}
+            {/* Brand Logo - Smooth crossfade between white logo (transparent mode) and navy logo (sticky mode) */}
             <Link href="/" className="flex items-center shrink-0 group py-1" title="Siri Vacations Home">
               <div className="relative h-[52px] sm:h-[58px] lg:h-[64px] aspect-[1410/730] transition-transform group-hover:scale-105 duration-200">
                 {/* Standard Navy Logo (shown when sticky white navbar) */}
