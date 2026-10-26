@@ -34,6 +34,11 @@ export default function Navbar() {
   const [internationalOpen, setInternationalOpen] = useState(false);
   const [destinationsOpen, setDestinationsOpen] = useState(false);
 
+  // Only the homepage with full-bleed hero video uses transparent navbar at top.
+  // All inner pages always display the high-contrast solid white navbar.
+  const isHomePage = pathname === "/";
+  const isTransparent = isHomePage && !isScrolled;
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -204,38 +209,38 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* 2. MAIN HEADER NAVIGATION BAR - Transparent at top, turns pure white on scroll with NO harsh divider */}
+      {/* 2. MAIN HEADER NAVIGATION BAR - Transparent on homepage hero, solid white on inner pages & on scroll */}
       <div
         className={`w-full transition-all duration-300 ${
-          isScrolled
-            ? "bg-white/95 backdrop-blur-xl border-b border-slate-100 shadow-[0_4px_24px_-2px_rgba(8,43,85,0.08)] py-1.5 sm:py-2"
-            : "bg-transparent py-2.5 sm:py-3.5 border-b-0"
+          isTransparent
+            ? "bg-transparent py-2.5 sm:py-3.5 border-b-0"
+            : "bg-white/95 backdrop-blur-xl border-b border-slate-100 shadow-[0_4px_24px_-2px_rgba(8,43,85,0.08)] py-1.5 sm:py-2"
         }`}
       >
         <div className="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4 lg:gap-8 h-16 sm:h-[72px] lg:h-20">
-            {/* Brand Logo - Smooth crossfade between white logo (transparent mode) and navy logo (sticky mode) */}
+            {/* Brand Logo - Smooth crossfade between white logo (homepage hero transparent mode) and navy logo (solid white mode) */}
             <Link href="/" className="flex items-center shrink-0 group py-1" title="Siri Vacations Home">
               <div className="relative h-[52px] sm:h-[58px] lg:h-[64px] aspect-[1410/730] transition-transform group-hover:scale-105 duration-200">
-                {/* Standard Navy Logo (shown when sticky white navbar) */}
+                {/* Standard Navy Logo (shown when sticky white navbar or on inner pages) */}
                 <Image
                   src="/logo.png"
                   alt="Siri Vacations Logo"
                   fill
                   priority
                   className={`object-contain object-left transition-opacity duration-300 ${
-                    isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
+                    isTransparent ? "opacity-0 pointer-events-none" : "opacity-100"
                   }`}
                   sizes="(max-width: 768px) 130px, 160px"
                 />
-                {/* Brilliant White Logo (shown when transparent header over dark hero/video) */}
+                {/* Brilliant White Logo (shown ONLY when transparent header over dark hero/video on homepage) */}
                 <Image
                   src="/logo_white.png"
                   alt="Siri Vacations Logo"
                   fill
                   priority
                   className={`object-contain object-left transition-opacity duration-300 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] ${
-                    isScrolled ? "opacity-0 pointer-events-none" : "opacity-100"
+                    isTransparent ? "opacity-100" : "opacity-0 pointer-events-none"
                   }`}
                   sizes="(max-width: 768px) 130px, 160px"
                 />
@@ -255,18 +260,18 @@ export default function Navbar() {
                       <Link
                         href={link.href}
                         className={`flex items-center gap-1.5 px-3 py-2 text-xs 2xl:text-[13.5px] font-semibold rounded-xl whitespace-nowrap shrink-0 transition-all duration-200 ${
-                          isScrolled
+                          isTransparent
                             ? isActive
-                              ? "text-primary font-bold bg-primary-fixed/40"
-                              : "text-[#082B55] hover:text-primary hover:bg-surface-container-low"
-                            : isActive
                               ? "text-white font-bold bg-white/20 backdrop-blur-md border border-white/30 shadow-sm"
                               : "text-white hover:text-accent-gold hover:bg-white/10 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
+                            : isActive
+                              ? "text-primary font-bold bg-primary-fixed/40"
+                              : "text-[#082B55] hover:text-primary hover:bg-surface-container-low"
                         }`}
                       >
                         <span className="whitespace-nowrap">{link.name}</span>
                         <ChevronDown className={`w-3.5 h-3.5 shrink-0 transition-transform duration-200 group-hover:rotate-180 ${
-                          isScrolled ? "text-outline" : "text-white/80 group-hover:text-accent-gold"
+                          isTransparent ? "text-white/80 group-hover:text-accent-gold" : "text-outline"
                         }`} />
                       </Link>
 
@@ -298,13 +303,13 @@ export default function Navbar() {
                     key={link.name}
                     href={link.href}
                     className={`px-3 py-2 text-xs 2xl:text-[13.5px] font-semibold rounded-xl whitespace-nowrap shrink-0 transition-all duration-200 ${
-                      isScrolled
+                      isTransparent
                         ? isActive
-                          ? "text-primary font-bold bg-primary-fixed/40"
-                          : "text-[#082B55] hover:text-primary hover:bg-surface-container-low"
-                        : isActive
                           ? "text-white font-bold bg-white/20 backdrop-blur-md border border-white/30 shadow-sm"
                           : "text-white hover:text-accent-gold hover:bg-white/10 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
+                        : isActive
+                          ? "text-primary font-bold bg-primary-fixed/40"
+                          : "text-[#082B55] hover:text-primary hover:bg-surface-container-low"
                     }`}
                   >
                     <span className="whitespace-nowrap">{link.name}</span>
@@ -336,9 +341,9 @@ export default function Navbar() {
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className={`p-2 rounded-xl transition-colors ${
-                  isScrolled
-                    ? "text-on-surface hover:bg-surface-container-low"
-                    : "text-white hover:bg-white/15 drop-shadow-sm"
+                  isTransparent
+                    ? "text-white hover:bg-white/15 drop-shadow-sm"
+                    : "text-on-surface hover:bg-surface-container-low"
                 }`}
                 aria-label="Toggle Navigation Menu"
               >
