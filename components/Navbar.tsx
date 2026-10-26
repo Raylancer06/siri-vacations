@@ -204,26 +204,42 @@ export default function Navbar() {
       </div>
 
       {/* 2. MAIN HEADER NAVIGATION BAR */}
-      <div className={`w-full bg-white/98 backdrop-blur-xl border-b border-surface-container-high transition-all ${
-        isScrolled ? "py-1.5 sm:py-2" : "py-2.5 sm:py-3"
+      <div className={`w-full transition-all duration-300 ${
+        isScrolled
+          ? "bg-white/98 backdrop-blur-xl border-b border-surface-container-high shadow-[0_8px_30px_rgba(8,43,85,0.08)] py-1.5 sm:py-2"
+          : "bg-gradient-to-b from-[#082B55]/80 via-[#082B55]/45 to-transparent backdrop-blur-[2px] border-b border-white/10 py-2.5 sm:py-3.5"
       }`}>
         <div className="max-w-[1600px] w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4 lg:gap-8 h-16 sm:h-[72px] lg:h-20">
-            {/* Brand Logo - 20% larger size with exact aspect ratio */}
+            {/* Brand Logo - Crossfades between white logo (transparent mode) and navy logo (sticky mode) */}
             <Link href="/" className="flex items-center shrink-0 group py-1" title="Siri Vacations Home">
               <div className="relative h-[52px] sm:h-[58px] lg:h-[64px] aspect-[1410/730] transition-transform group-hover:scale-105 duration-200">
+                {/* Standard Navy Logo (shown when sticky white navbar) */}
                 <Image
                   src="/logo.png"
                   alt="Siri Vacations Logo"
                   fill
                   priority
-                  className="object-contain object-left"
+                  className={`object-contain object-left transition-opacity duration-300 ${
+                    isScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
+                  }`}
+                  sizes="(max-width: 768px) 130px, 160px"
+                />
+                {/* Brilliant White Logo (shown when transparent header over dark hero/video) */}
+                <Image
+                  src="/logo_white.png"
+                  alt="Siri Vacations Logo"
+                  fill
+                  priority
+                  className={`object-contain object-left transition-opacity duration-300 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] ${
+                    isScrolled ? "opacity-0 pointer-events-none" : "opacity-100"
+                  }`}
                   sizes="(max-width: 768px) 130px, 160px"
                 />
               </div>
             </Link>
 
-            {/* Desktop Navigation Links - Single line guarantee with whitespace-nowrap */}
+            {/* Desktop Navigation Links - Single line guarantee with adaptive contrast */}
             <nav className="hidden xl:flex items-center gap-1.5 2xl:gap-3 shrink-0">
               {navLinks.map((link) => {
                 const isActive =
@@ -236,17 +252,23 @@ export default function Navbar() {
                       <Link
                         href={link.href}
                         className={`flex items-center gap-1.5 px-3 py-2 text-xs 2xl:text-[13.5px] font-semibold rounded-xl whitespace-nowrap shrink-0 transition-all duration-200 ${
-                          isActive
-                            ? "text-primary font-bold bg-primary-fixed/40"
-                            : "text-on-surface hover:text-primary hover:bg-surface-container-low"
+                          isScrolled
+                            ? isActive
+                              ? "text-primary font-bold bg-primary-fixed/40"
+                              : "text-[#082B55] hover:text-primary hover:bg-surface-container-low"
+                            : isActive
+                              ? "text-white font-bold bg-white/20 backdrop-blur-md border border-white/30 shadow-sm"
+                              : "text-white hover:text-accent-gold hover:bg-white/10 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
                         }`}
                       >
                         <span className="whitespace-nowrap">{link.name}</span>
-                        <ChevronDown className="w-3.5 h-3.5 shrink-0 transition-transform duration-200 group-hover:rotate-180 text-outline" />
+                        <ChevronDown className={`w-3.5 h-3.5 shrink-0 transition-transform duration-200 group-hover:rotate-180 ${
+                          isScrolled ? "text-outline" : "text-white/80 group-hover:text-accent-gold"
+                        }`} />
                       </Link>
 
-                      {/* Dropdown Menu */}
-                      <div className="absolute top-full left-0 hidden group-hover:flex flex-col bg-surface-container-lowest shadow-[0_20px_40px_-4px_rgba(8,43,85,0.16)] rounded-2xl py-2.5 min-w-[260px] border border-surface-container-high z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                      {/* Dropdown Menu (always solid background for perfect readability) */}
+                      <div className="absolute top-full left-0 hidden group-hover:flex flex-col bg-surface-container-lowest shadow-[0_20px_40px_-4px_rgba(8,43,85,0.18)] rounded-2xl py-2.5 min-w-[260px] border border-surface-container-high z-50 animate-in fade-in slide-in-from-top-2 duration-150">
                         {link.dropdown.map((item) => (
                           <Link
                             key={item.label}
@@ -273,9 +295,13 @@ export default function Navbar() {
                     key={link.name}
                     href={link.href}
                     className={`px-3 py-2 text-xs 2xl:text-[13.5px] font-semibold rounded-xl whitespace-nowrap shrink-0 transition-all duration-200 ${
-                      isActive
-                        ? "text-primary font-bold bg-primary-fixed/40"
-                        : "text-on-surface hover:text-primary hover:bg-surface-container-low"
+                      isScrolled
+                        ? isActive
+                          ? "text-primary font-bold bg-primary-fixed/40"
+                          : "text-[#082B55] hover:text-primary hover:bg-surface-container-low"
+                        : isActive
+                          ? "text-white font-bold bg-white/20 backdrop-blur-md border border-white/30 shadow-sm"
+                          : "text-white hover:text-accent-gold hover:bg-white/10 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]"
                     }`}
                   >
                     <span className="whitespace-nowrap">{link.name}</span>
@@ -306,7 +332,11 @@ export default function Navbar() {
 
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 rounded-xl text-on-surface hover:bg-surface-container-low transition-colors"
+                className={`p-2 rounded-xl transition-colors ${
+                  isScrolled
+                    ? "text-on-surface hover:bg-surface-container-low"
+                    : "text-white hover:bg-white/15 drop-shadow-sm"
+                }`}
                 aria-label="Toggle Navigation Menu"
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
