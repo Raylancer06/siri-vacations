@@ -68,7 +68,7 @@ export default function DestinationsPage() {
       distance: "340 km from Bengaluru",
       bestTime: "Oct to March",
       highlights: ["Virupaksha Temple", "Stone Chariot", "Tungabhadra Coracle", "Badami Caves"],
-      imageUrl: "https://images.unsplash.com/photo-1600100397608-f010f4438fa7?auto=format&fit=crop&w=800&q=80",
+      imageUrl: "/images/heritage_hampi.jpg",
       packageLink: "/domestic-packages?region=karnataka",
     },
     {

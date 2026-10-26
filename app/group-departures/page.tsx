@@ -40,7 +40,7 @@ export default function GroupDeparturesPage() {
       seatsLeft: 3,
       price: 11999,
       originalPrice: 14500,
-      imageUrl: "https://images.unsplash.com/photo-1600100397608-f010f4438fa7?auto=format&fit=crop&w=600&q=80",
+      imageUrl: "/images/heritage_hampi.jpg",
       inclusions: ["AC Tempo Traveller", "Archaeological Historian", "3-Star Stays", "Coracle Boat Ride"],
     },
     {
